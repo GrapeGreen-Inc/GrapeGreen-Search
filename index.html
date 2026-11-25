@@ -6,12 +6,12 @@
     <title>GrapeGreen Search</title>
     <style>
         :root {
-            --bg-primary: #3b1c63;      /* Deep Grape Purple from branding */
-            --bg-secondary: #2a1249;    /* Darker purple for cards/containers */
-            --bg-surface: #4a247a;      /* Elevated surface */
-            --accent-green: #8ce03f;    /* Lime/Leaf Green from branding */
+            --bg-primary: #3b1c63;
+            --bg-secondary: #2a1249;
+            --bg-surface: #4a247a;
+            --accent-green: #8ce03f;
             --accent-green-hover: #76c72e;
-            --accent-purple: #9d71e8;   /* Soft grape highlight */
+            --accent-purple: #9d71e8;
             --text-primary: #ffffff;
             --text-secondary: #d4c5e8;
             --border-color: rgba(157, 113, 232, 0.25);
@@ -33,24 +33,25 @@
             overflow-x: hidden;
         }
 
-        /* Custom Grape SVG Logo */
+        /* Brand Header */
         .brand-header {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
+            cursor: pointer;
+            transition: all 0.25s ease;
         }
 
         .grape-svg {
-            width: 80px;
-            height: 95px;
+            width: 82px;
+            height: 98px;
             margin-bottom: 12px;
-            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 8px 18px rgba(0,0,0,0.3));
         }
 
         .brand-title {
-            font-size: 3.2rem;
+            font-size: 3.3rem;
             font-weight: 800;
             letter-spacing: -1px;
             line-height: 1;
@@ -60,14 +61,7 @@
             color: var(--accent-green);
         }
 
-        .brand-tagline {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-top: 8px;
-            opacity: 0.9;
-        }
-
-        /* Home / Search Hero Layout */
+        /* Main Layout */
         #main-container {
             flex: 1;
             display: flex;
@@ -76,36 +70,30 @@
             justify-content: center;
             padding: 20px;
             width: 100%;
-            max-width: 960px;
+            max-width: 920px;
             margin: 0 auto;
-            transition: all 0.3s ease;
         }
 
         #main-container.has-results {
             justify-content: flex-start;
-            padding-top: 30px;
+            padding-top: 28px;
         }
 
         #main-container.has-results .grape-svg {
-            width: 42px;
-            height: 50px;
+            width: 40px;
+            height: 48px;
             margin-bottom: 4px;
         }
 
         #main-container.has-results .brand-title {
-            font-size: 2rem;
+            font-size: 1.9rem;
         }
 
-        #main-container.has-results .brand-tagline {
-            display: none;
-        }
-
-        /* Huge Search Bar Area */
+        /* Search Bar */
         .search-wrapper {
             width: 100%;
-            max-width: 740px;
-            margin: 28px 0 20px 0;
-            position: relative;
+            max-width: 720px;
+            margin: 28px 0 22px 0;
         }
 
         .search-box {
@@ -116,12 +104,12 @@
             border-radius: 50px;
             padding: 8px 14px 8px 26px;
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-            transition: border-color 0.25s, box-shadow 0.25s;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }
 
         .search-box:focus-within {
             border-color: var(--accent-green);
-            box-shadow: 0 12px 35px rgba(140, 224, 63, 0.18);
+            box-shadow: 0 12px 34px rgba(140, 224, 63, 0.18);
         }
 
         #search-input {
@@ -136,7 +124,7 @@
         }
 
         #search-input::placeholder {
-            color: rgba(212, 197, 232, 0.5);
+            color: rgba(212, 197, 232, 0.45);
         }
 
         .search-actions {
@@ -181,33 +169,15 @@
             background: linear-gradient(135deg, #7e49db, #5b29b0);
         }
 
-        /* Fuzzy Match Banner */
-        #fuzzy-banner {
-            display: none;
-            width: 100%;
-            background: rgba(140, 224, 63, 0.12);
-            border: 1px solid rgba(140, 224, 63, 0.35);
-            color: var(--text-secondary);
-            padding: 10px 18px;
-            border-radius: 12px;
-            font-size: 0.92rem;
-            margin-bottom: 4px;
-        }
-
-        #fuzzy-banner strong {
-            color: var(--accent-green);
-        }
-
-        /* Results Section */
+        /* Results Area */
         #results-area {
             width: 100%;
             display: none;
             flex-direction: column;
-            gap: 24px;
+            gap: 22px;
             padding-bottom: 60px;
         }
 
-        /* Filter Tabs */
         .filter-tabs {
             display: flex;
             gap: 10px;
@@ -220,7 +190,7 @@
             background: transparent;
             border: 1px solid transparent;
             color: var(--text-secondary);
-            padding: 8px 16px;
+            padding: 8px 18px;
             border-radius: 20px;
             cursor: pointer;
             font-weight: 600;
@@ -234,7 +204,6 @@
             border-color: var(--accent-green);
         }
 
-        /* Section Cards */
         .section-block {
             background: var(--bg-secondary);
             border: 1px solid var(--border-color);
@@ -244,28 +213,15 @@
         }
 
         .section-heading {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             color: var(--accent-green);
             margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 8px;
+            font-weight: 700;
         }
 
-        .match-tag {
-            font-size: 0.72rem;
-            background: rgba(157, 113, 232, 0.25);
-            color: var(--text-secondary);
-            padding: 2px 8px;
-            border-radius: 8px;
-            text-transform: none;
-            letter-spacing: 0;
-        }
-
-        /* AI Overview Box */
+        /* AI Overview */
         .ai-overview-card {
             background: linear-gradient(145deg, #2d144d, #3a1a63);
             border: 1px solid var(--accent-green);
@@ -277,7 +233,7 @@
             color: var(--text-primary);
         }
 
-        /* Videos List (Name + URL to video) */
+        /* Videos */
         .video-list {
             display: flex;
             flex-direction: column;
@@ -335,7 +291,7 @@
             white-space: nowrap;
         }
 
-        /* Images Grid (URL iframe to image) */
+        /* Images (URL Iframes) */
         .image-iframe-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -392,11 +348,11 @@
             text-decoration: underline;
         }
 
-        /* Indexed Sites List */
+        /* Sites */
         .site-list {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
         }
 
         .site-item {
@@ -418,19 +374,9 @@
             font-size: 0.85rem;
             color: var(--accent-green);
             margin-bottom: 4px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .popular-badge {
-            background: rgba(140, 224, 63, 0.2);
-            color: var(--accent-green);
-            padding: 2px 8px;
-            border-radius: 10px;
-            font-size: 0.75rem;
-            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .site-title {
@@ -444,32 +390,14 @@
             font-size: 0.95rem;
             color: var(--text-secondary);
             line-height: 1.45;
-            margin-bottom: 10px;
-        }
-
-        .site-meta {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            font-size: 0.8rem;
-            color: var(--accent-purple);
-        }
-
-        .meta-pill {
-            background: var(--bg-secondary);
-            padding: 3px 9px;
-            border-radius: 8px;
         }
 
         .empty-state {
             color: var(--text-secondary);
-            font-style: italic;
             font-size: 0.95rem;
         }
 
-        /* =========================================
-           FULLSCREEN AI MODE OVERLAY
-           ========================================= */
+        /* Fullscreen AI Mode */
         #ai-mode-screen {
             position: fixed;
             inset: 0;
@@ -596,10 +524,8 @@
 </head>
 <body>
 
-    <!-- MAIN SEARCH ENGINE VIEW -->
     <div id="main-container">
-        <div class="brand-header" onclick="resetHome()" style="cursor: pointer;" title="Back to Home">
-            <!-- Custom SVG matching GrapeGreen logo -->
+        <div class="brand-header" onclick="resetHome()">
             <svg class="grape-svg" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <radialGradient id="grapeGrad" cx="35%" cy="35%" r="65%">
@@ -608,30 +534,23 @@
                         <stop offset="100%" stop-color="#4e2a8e"/>
                     </radialGradient>
                 </defs>
-                <!-- Green Leaf -->
                 <path d="M58 2 C72 2, 82 14, 84 26 C70 24, 60 14, 58 2 Z" fill="#8ce03f"/>
-                <!-- Row 1 (3 grapes) -->
                 <circle cx="34" cy="36" r="15" fill="url(#grapeGrad)"/>
                 <circle cx="60" cy="36" r="15" fill="url(#grapeGrad)"/>
                 <circle cx="86" cy="36" r="15" fill="url(#grapeGrad)"/>
-                <!-- Row 2 (3 grapes) -->
                 <circle cx="46" cy="60" r="15" fill="url(#grapeGrad)"/>
                 <circle cx="72" cy="60" r="15" fill="url(#grapeGrad)"/>
                 <circle cx="96" cy="60" r="15" fill="url(#grapeGrad)"/>
-                <!-- Row 3 (2 grapes) -->
                 <circle cx="58" cy="84" r="15" fill="url(#grapeGrad)"/>
                 <circle cx="84" cy="84" r="15" fill="url(#grapeGrad)"/>
-                <!-- Row 4 (1 grape) -->
                 <circle cx="71" cy="108" r="15" fill="url(#grapeGrad)"/>
             </svg>
             <h1 class="brand-title">Grape<span>Green</span> Search</h1>
-            <p class="brand-tagline">Your dashboard, your tabs, your memes.</p>
         </div>
 
-        <!-- Huge Search Bar & AI Mode Button -->
         <div class="search-wrapper">
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Search indexed sites, videos, images (fuzzy match enabled)..." autocomplete="off">
+                <input type="text" id="search-input" placeholder="Search the web or enter a URL..." autocomplete="off">
                 <div class="search-actions">
                     <button class="btn btn-search" id="search-btn">Search</button>
                     <button class="btn btn-ai" id="open-ai-btn">✨ AI Mode</button>
@@ -639,68 +558,563 @@
             </div>
         </div>
 
-        <!-- Search Results Container -->
         <div id="results-area">
-            <div id="fuzzy-banner"></div>
-
             <div class="filter-tabs">
-                <button class="tab-btn active" onclick="filterSection('all', this)">All Results</button>
+                <button class="tab-btn active" onclick="filterSection('all', this)">All</button>
                 <button class="tab-btn" onclick="filterSection('overview', this)">AI Overview</button>
                 <button class="tab-btn" onclick="filterSection('sites', this)">Sites</button>
                 <button class="tab-btn" onclick="filterSection('videos', this)">Videos</button>
                 <button class="tab-btn" onclick="filterSection('images', this)">Images</button>
             </div>
 
-            <!-- 1. AI Overview Section -->
             <div id="sec-overview" class="section-block ai-overview-card">
-                <div class="section-heading">
-                    <span>✨ AI Overview</span>
-                    <span id="overview-match-badge" class="match-tag" style="display:none;"></span>
-                </div>
+                <div class="section-heading">✨ AI Overview</div>
                 <div id="ai-overview-content" class="ai-overview-text"></div>
             </div>
 
-            <!-- 2. Videos Section (Name of video + URL to video) -->
+            <div id="sec-sites" class="section-block">
+                <div class="section-heading">Sites</div>
+                <div id="sites-content" class="site-list"></div>
+            </div>
+
             <div id="sec-videos" class="section-block">
-                <div class="section-heading"><span>🎬 Videos</span></div>
+                <div class="section-heading">Videos</div>
                 <div id="videos-content" class="video-list"></div>
             </div>
 
-            <!-- 3. Images Section (URL iframe to image) -->
             <div id="sec-images" class="section-block">
-                <div class="section-heading"><span>🖼️ Images</span></div>
+                <div class="section-heading">Images</div>
                 <div id="images-content" class="image-iframe-grid"></div>
-            </div>
-
-            <!-- 4. Sites Section (reads from indexed/) -->
-            <div id="sec-sites" class="section-block">
-                <div class="section-heading"><span>🌐 Indexed Sites</span></div>
-                <div id="sites-content" class="site-list"></div>
             </div>
         </div>
     </div>
 
-    <!-- FULLSCREEN AI MODE DIV -->
     <div id="ai-mode-screen">
         <div class="ai-topbar">
-            <div class="ai-topbar-title">🍇 Grape<span>Green</span> AI Mode</div>
-            <button class="btn-close-ai" id="close-ai-btn">✕ Back to Search</button>
+            <div class="ai-topbar-title">Grape<span>Green</span> AI</div>
+            <button class="btn-close-ai" id="close-ai-btn">✕ Close</button>
         </div>
 
-        <div id="chat-history">
-            <div class="chat-msg ai">
-                Welcome to <strong>GrapeGreen AI Mode</strong>! Ask me anything—your messages are sent directly to <code>ai/API.js</code>.
-            </div>
-        </div>
+        <div id="chat-history"></div>
 
         <div class="ai-input-bar">
             <div class="ai-input-container">
-                <input type="text" id="ai-textbox" placeholder="Ask GrapeGreen AI anything..." autocomplete="off">
+                <input type="text" id="ai-textbox" placeholder="Ask anything..." autocomplete="off">
                 <button class="btn btn-search" id="ai-send-btn">Send</button>
             </div>
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script>
+        const AI_OVERVIEWS = [
+            {
+                Q: "grapegreen",
+                A: "GrapeGreen Search is a fast search engine with built-in AI Overviews, video links, image previews, and an interactive AI assistant."
+            },
+            {
+                Q: "poop",
+                A: "Poop (feces) is the solid or semisolid remains of food that was not digested in the small intestine, broken down by bacteria in the large intestine."
+            },
+            {
+                Q: "wikipedia",
+                A: "Wikipedia is a free online encyclopedia written and maintained by a community of volunteers through open collaboration."
+            },
+            {
+                Q: "google",
+                A: "Google is a multinational technology company specializing in internet search, cloud computing, online advertising, and software."
+            },
+            {
+                Q: "youtube",
+                A: "YouTube is an online video sharing and social media platform where users can upload, view, rate, share, and comment on videos."
+            }
+        ];
+
+        function levenshteinDistance(a, b) {
+            const m = a.length;
+            const n = b.length;
+            if (m === 0) return n;
+            if (n === 0) return m;
+
+            const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+            for (let i = 0; i <= m; i++) dp[i][0] = i;
+            for (let j = 0; j <= n; j++) dp[0][j] = j;
+
+            for (let i = 1; i <= m; i++) {
+                for (let j = 1; j <= n; j++) {
+                    const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+                    dp[i][j] = Math.min(
+                        dp[i - 1][j] + 1,
+                        dp[i][j - 1] + 1,
+                        dp[i - 1][j - 1] + cost
+                    );
+                }
+            }
+            return dp[m][n];
+        }
+
+        function computeFuzzyScore(query, targetText) {
+            const q = String(query || '').toLowerCase().trim();
+            const t = String(targetText || '').toLowerCase().trim();
+            if (!q || !t) return 0;
+
+            if (q === t) return 1.0;
+
+            if (t.includes(q)) {
+                return 0.88 + (0.1 * (q.length / t.length));
+            }
+
+            const queryWords = q.split(/\s+/);
+            const targetWords = t.split(/[^a-z0-9]+/).filter(Boolean);
+            let totalBestWordScore = 0;
+
+            for (const qWord of queryWords) {
+                let bestForThisWord = 0;
+
+                const fullDist = levenshteinDistance(qWord, t);
+                const fullSim = 1 - fullDist / Math.max(qWord.length, t.length);
+                if (fullSim > bestForThisWord) bestForThisWord = fullSim;
+
+                for (const tWord of targetWords) {
+                    if (tWord.startsWith(qWord) || qWord.startsWith(tWord)) {
+                        const prefixSim = 0.82 * (Math.min(qWord.length, tWord.length) / Math.max(qWord.length, tWord.length));
+                        if (prefixSim > bestForThisWord) bestForThisWord = prefixSim;
+                    }
+                    const dist = levenshteinDistance(qWord, tWord);
+                    const sim = 1 - dist / Math.max(qWord.length, tWord.length);
+                    if (sim > bestForThisWord) bestForThisWord = sim;
+                }
+
+                totalBestWordScore += bestForThisWord;
+            }
+
+            return totalBestWordScore / queryWords.length;
+        }
+
+        const FUZZY_THRESHOLD = 0.52;
+
+        async function fetchVideos(query) {
+            let rawItems = [];
+
+            for (const file of ['videos/videos.json', 'videos/manifest.json']) {
+                try {
+                    const res = await fetch(file);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (Array.isArray(data)) {
+                            rawItems = data.map(entry => {
+                                if (typeof entry === 'string') {
+                                    const isUrl = /^https?:\/\//i.test(entry);
+                                    return {
+                                        name: entry.split('/').pop(),
+                                        url: isUrl ? entry : `videos/${entry}`
+                                    };
+                                }
+                                return {
+                                    name: entry.name || entry.title || entry.url || 'Video',
+                                    url: entry.url || '#'
+                                };
+                            });
+                            break;
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            if (rawItems.length === 0) {
+                try {
+                    const dirRes = await fetch('videos/');
+                    if (dirRes.ok) {
+                        const html = await dirRes.text();
+                        const doc = new DOMParser().parseFromString(html, 'text/html');
+                        const exts = ['.mp4', '.webm', '.ogg', '.mov'];
+                        Array.from(doc.querySelectorAll('a')).forEach(a => {
+                            const href = decodeURIComponent(a.getAttribute('href') || '');
+                            const fname = href.split('/').pop();
+                            if (exts.some(ext => fname.toLowerCase().endsWith(ext))) {
+                                rawItems.push({ name: fname, url: `videos/${fname}` });
+                            }
+                        });
+                    }
+                } catch (e) {}
+            }
+
+            return rawItems
+                .map(vid => {
+                    const score = Math.max(
+                        computeFuzzyScore(query, vid.name),
+                        computeFuzzyScore(query, vid.url) * 0.8
+                    );
+                    return { ...vid, score };
+                })
+                .filter(vid => vid.score >= FUZZY_THRESHOLD)
+                .sort((a, b) => b.score - a.score);
+        }
+
+        async function fetchImages(query) {
+            let rawItems = [];
+
+            for (const file of ['images/images.json', 'images/manifest.json']) {
+                try {
+                    const res = await fetch(file);
+                    if (res.ok) {
+                        const data = await res.json();
+                        if (Array.isArray(data)) {
+                            rawItems = data.map(entry => {
+                                if (typeof entry === 'string') {
+                                    const isUrl = /^https?:\/\//i.test(entry);
+                                    return {
+                                        name: entry.split('/').pop(),
+                                        url: isUrl ? entry : `images/${entry}`
+                                    };
+                                }
+                                return {
+                                    name: entry.name || entry.title || entry.url || 'Image',
+                                    url: entry.url || ''
+                                };
+                            });
+                            break;
+                        }
+                    }
+                } catch (e) {}
+            }
+
+            if (rawItems.length === 0) {
+                try {
+                    const dirRes = await fetch('images/');
+                    if (dirRes.ok) {
+                        const html = await dirRes.text();
+                        const doc = new DOMParser().parseFromString(html, 'text/html');
+                        const exts = ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg'];
+                        Array.from(doc.querySelectorAll('a')).forEach(a => {
+                            const href = decodeURIComponent(a.getAttribute('href') || '');
+                            const fname = href.split('/').pop();
+                            if (exts.some(ext => fname.toLowerCase().endsWith(ext))) {
+                                rawItems.push({ name: fname, url: `images/${fname}` });
+                            }
+                        });
+                    }
+                } catch (e) {}
+            }
+
+            return rawItems
+                .map(img => {
+                    const score = Math.max(
+                        computeFuzzyScore(query, img.name),
+                        computeFuzzyScore(query, img.url) * 0.8
+                    );
+                    return { ...img, score };
+                })
+                .filter(img => img.score >= FUZZY_THRESHOLD && img.url)
+                .sort((a, b) => b.score - a.score);
+        }
+
+        async function fetchIndexedSites(query) {
+            const candidateFiles = new Set();
+            const safeName = query.toLowerCase().trim().replace(/[^a-z0-9_-]/g, '_');
+            if (safeName) candidateFiles.add(`indexed/${safeName}.json`);
+
+            try {
+                const manifestRes = await fetch('indexed/manifest.json');
+                if (manifestRes.ok) {
+                    const list = await manifestRes.json();
+                    if (Array.isArray(list)) {
+                        list.forEach(f => {
+                            const clean = f.endsWith('.json') ? f : `${f}.json`;
+                            candidateFiles.add(clean.startsWith('indexed/') ? clean : `indexed/${clean}`);
+                        });
+                    }
+                }
+            } catch (e) {}
+
+            try {
+                const dirRes = await fetch('indexed/');
+                if (dirRes.ok) {
+                    const html = await dirRes.text();
+                    const doc = new DOMParser().parseFromString(html, 'text/html');
+                    Array.from(doc.querySelectorAll('a')).forEach(a => {
+                        const href = decodeURIComponent(a.getAttribute('href') || '');
+                        const fname = href.split('/').pop();
+                        if (fname.toLowerCase().endsWith('.json') && fname.toLowerCase() !== 'manifest.json') {
+                            candidateFiles.add(`indexed/${fname}`);
+                        }
+                    });
+                }
+            } catch (e) {}
+
+            let allSites = [];
+
+            for (const filePath of candidateFiles) {
+                try {
+                    const res = await fetch(filePath);
+                    if (!res.ok) continue;
+                    const data = await res.json();
+                    const entries = Array.isArray(data) ? data : [data];
+                    const fileStem = filePath.split('/').pop().replace(/\.json$/i, '');
+
+                    entries.forEach(site => {
+                        allSites.push({ ...site, _sourceFile: fileStem });
+                    });
+                } catch (e) {}
+            }
+
+            const scoredSites = allSites.map(site => {
+                const titleScore = computeFuzzyScore(query, site.title || '');
+                const descScore = computeFuzzyScore(query, site.description || '') * 0.9;
+                const fileScore = computeFuzzyScore(query, site._sourceFile || '');
+
+                const kwList = Array.isArray(site.keywords) ? site.keywords : [site.keywords || ''];
+                const kwScore = kwList.reduce((max, k) => Math.max(max, computeFuzzyScore(query, k)), 0);
+
+                const metaList = Array.isArray(site["meta tags"]) ? site["meta tags"] : [site["meta tags"] || ''];
+                const metaScore = metaList.reduce((max, m) => Math.max(max, computeFuzzyScore(query, m)), 0) * 0.95;
+
+                const bestScore = Math.max(titleScore, descScore, fileScore, kwScore, metaScore);
+                return { ...site, _score: bestScore };
+            });
+
+            return scoredSites
+                .filter(s => s._score >= FUZZY_THRESHOLD)
+                .sort((a, b) => {
+                    if (Math.abs(b._score - a._score) > 0.12) {
+                        return b._score - a._score;
+                    }
+                    return (Number(b.popular) || 0) - (Number(a.popular) || 0);
+                });
+        }
+
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const mainContainer = document.getElementById('main-container');
+        const resultsArea = document.getElementById('results-area');
+
+        async function performSearch() {
+            const query = searchInput.value.trim();
+            if (!query) return;
+
+            const isFullUrl = /^https?:\/\/[^\s/$.?#].[^\s]*$/i.test(query);
+            const isDomain = /^[a-z0-9-]+(\.[a-z0-9-]+)+([\/?#].*)?$/i.test(query);
+
+            if (isFullUrl) {
+                window.location.href = query;
+                return;
+            }
+            if (isDomain) {
+                window.location.href = 'https://' + query;
+                return;
+            }
+
+            mainContainer.classList.add('has-results');
+            resultsArea.style.display = 'flex';
+
+            // 1. AI Overview
+            const overviewSection = document.getElementById('sec-overview');
+            const overviewBox = document.getElementById('ai-overview-content');
+
+            const scoredQA = AI_OVERVIEWS
+                .map(item => ({ ...item, score: computeFuzzyScore(query, item.Q) }))
+                .filter(item => item.score >= FUZZY_THRESHOLD)
+                .sort((a, b) => b.score - a.score);
+
+            const bestQA = scoredQA[0];
+
+            if (bestQA) {
+                overviewSection.style.display = 'block';
+                overviewBox.textContent = bestQA.A;
+            } else {
+                overviewSection.style.display = 'none';
+            }
+
+            // 2. Sites
+            const sitesContainer = document.getElementById('sites-content');
+            sitesContainer.innerHTML = '<span class="empty-state">Searching...</span>';
+            const sites = await fetchIndexedSites(query);
+
+            if (sites.length > 0) {
+                sitesContainer.innerHTML = sites.map(site => {
+                    const targetUrl = site.url || '#';
+                    return `
+                        <div class="site-item" onclick="window.location.href='${escapeHTML(targetUrl)}'">
+                            <div class="site-url">${escapeHTML(targetUrl)}</div>
+                            <div class="site-title">${escapeHTML(site.title || 'Untitled')}</div>
+                            <div class="site-desc">${escapeHTML(site.description || '')}</div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                sitesContainer.innerHTML = `<span class="empty-state">No results found for "${escapeHTML(query)}".</span>`;
+            }
+
+            // 3. Videos
+            const videosContainer = document.getElementById('videos-content');
+            videosContainer.innerHTML = '<span class="empty-state">Searching...</span>';
+            const videos = await fetchVideos(query);
+
+            if (videos.length > 0) {
+                videosContainer.innerHTML = videos.map(vid => `
+                    <a class="video-link-card" href="${escapeHTML(vid.url)}">
+                        <div class="video-info">
+                            <div class="video-name">▶ ${escapeHTML(vid.name)}</div>
+                            <div class="video-url-text">${escapeHTML(vid.url)}</div>
+                        </div>
+                        <span class="video-play-pill">Watch</span>
+                    </a>
+                `).join('');
+            } else {
+                videosContainer.innerHTML = `<span class="empty-state">No videos found for "${escapeHTML(query)}".</span>`;
+            }
+
+            // 4. Images
+            const imagesContainer = document.getElementById('images-content');
+            imagesContainer.innerHTML = '<span class="empty-state">Searching...</span>';
+            const images = await fetchImages(query);
+
+            if (images.length > 0) {
+                imagesContainer.innerHTML = images.map(img => `
+                    <div class="image-iframe-card">
+                        <iframe class="image-iframe-frame" src="${escapeHTML(img.url)}" title="${escapeHTML(img.name)}" loading="lazy"></iframe>
+                        <div class="image-iframe-footer">
+                            <div class="image-iframe-title">${escapeHTML(img.name)}</div>
+                            <a class="image-iframe-link" href="${escapeHTML(img.url)}">${escapeHTML(img.url)}</a>
+                        </div>
+                    </div>
+                `).join('');
+            } else {
+                imagesContainer.innerHTML = `<span class="empty-state">No images found for "${escapeHTML(query)}".</span>`;
+            }
+        }
+
+        function filterSection(type, btnElement) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            const sections = {
+                overview: document.getElementById('sec-overview'),
+                sites: document.getElementById('sec-sites'),
+                videos: document.getElementById('sec-videos'),
+                images: document.getElementById('sec-images')
+            };
+
+            Object.entries(sections).forEach(([key, el]) => {
+                if (type === 'all') {
+                    if (key === 'overview') {
+                        el.style.display = document.getElementById('ai-overview-content').textContent.trim() ? 'block' : 'none';
+                    } else {
+                        el.style.display = 'block';
+                    }
+                } else {
+                    el.style.display = (type === key) ? 'block' : 'none';
+                }
+            });
+        }
+
+        function resetHome() {
+            mainContainer.classList.remove('has-results');
+            resultsArea.style.display = 'none';
+            searchInput.value = '';
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        /* Fullscreen AI Mode */
+        const aiModeScreen = document.getElementById('ai-mode-screen');
+        const openAiBtn = document.getElementById('open-ai-btn');
+        const closeAiBtn = document.getElementById('close-ai-btn');
+        const aiTextbox = document.getElementById('ai-textbox');
+        const aiSendBtn = document.getElementById('ai-send-btn');
+        const chatHistory = document.getElementById('chat-history');
+
+        let conversationHistory = [];
+
+        openAiBtn.addEventListener('click', () => {
+            aiModeScreen.classList.add('active');
+            if (searchInput.value.trim() && !aiTextbox.value.trim()) {
+                aiTextbox.value = searchInput.value.trim();
+            }
+            aiTextbox.focus();
+        });
+
+        closeAiBtn.addEventListener('click', () => {
+            aiModeScreen.classList.remove('active');
+        });
+
+        function appendChatMessage(role, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-msg ${role}`;
+            msgDiv.textContent = text;
+            chatHistory.appendChild(msgDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+            return msgDiv;
+        }
+
+        async function sendToAI() {
+            const userText = aiTextbox.value.trim();
+            if (!userText) return;
+
+            aiTextbox.value = '';
+            appendChatMessage('user', userText);
+            conversationHistory.push({ role: 'user', content: userText });
+
+            const loadingBubble = appendChatMessage('ai', '...');
+
+            try {
+                const response = await fetch('ai/API.js', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        prompt: userText,
+                        history: conversationHistory
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const contentType = response.headers.get('content-type') || '';
+                let replyText = '';
+
+                if (contentType.includes('application/json')) {
+                    const data = await response.json();
+                    replyText = data.reply || data.response || data.answer || JSON.stringify(data);
+                } else {
+                    replyText = await response.text();
+                }
+
+                loadingBubble.textContent = replyText;
+                conversationHistory.push({ role: 'assistant', content: replyText });
+
+            } catch (err) {
+                try {
+                    const apiModule = await import('./ai/API.js');
+                    if (typeof apiModule.askAI === 'function') {
+                        const modReply = await apiModule.askAI(userText, conversationHistory);
+                        loadingBubble.textContent = modReply;
+                        conversationHistory.push({ role: 'assistant', content: modReply });
+                        return;
+                    }
+                } catch (moduleErr) {
+                    loadingBubble.textContent = 'Unable to connect right now.';
+                }
+            }
+        }
+
+        aiSendBtn.addEventListener('click', sendToAI);
+        aiTextbox.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') sendToAI();
+        });
+
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;')
+                .replace(/`/g, '&#96;');
+        }
+    </script>
 </body>
 </html>
