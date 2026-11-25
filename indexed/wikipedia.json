@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Wikipedia, the free encyclopedia",
+    "url": "https://en.wikipedia.org",
+    "description": "Free online encyclopedia created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+    "keywords": ["wikipedia", "wiki", "encyclopedia", "knowledge", "facts", "articles"],
+    "meta tags": ["reference", "encyclopedia", "education", "wikimedia"],
+    "popular": 100,
+    "launguage": "en"
+  }
+]
