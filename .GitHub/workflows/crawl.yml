@@ -1,0 +1,66 @@
+name: Run GrapeGreen Crawler
+
+on:
+  schedule:
+    # Runs at 12:00 AM (00:00) and 12:00 PM (12:00) UTC every day
+    - cron: '0 0,12 * * *'
+
+  issues:
+    types: [opened]
+
+  # Optional: keeps a manual "Run workflow" button in the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    # Runs on schedule/manual dispatch, OR when the opened issue matches title "crawl_300" and body contains "command"
+    if: >
+      github.event_name != 'issues' ||
+      (github.event.issue.title == 'crawl_300' && contains(github.event.issue.body, 'command'))
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright and Chromium
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: Run crawler.py
+        run: python crawler.py
+
+      - name: Commit and push indexed sites
+        run: |
+          git config --local user.email "github-actions[bot]@://github.com"
+          git config --local user.name "github-actions[bot]"
+          git add indexed/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update indexed sites" && git push)
+
+      - name: Close trigger issue
+        if: github.event_name == 'issues'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: 'Crawled 300 sites and updated `indexed/`!'
+            });
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              state: 'closed'
+            });
