@@ -6,15 +6,16 @@ import random
 from collections import deque
 from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
 TARGET_SITES = 300
 OUTPUT_DIR = "indexed"
-NAV_TIMEOUT_MS = 12000
+NAV_TIMEOUT_MS = 10000      # 10s page load timeout
 SAVE_EVERY = 10
 BOT_NAME = "GrapeGreenBot"
 DEFAULT_CRAWL_DELAY = 0.8   # 800ms default delay
-MAX_CRAWL_DELAY = 10.0      # Skip site if robots.txt asks for more than 10 seconds
+MAX_CRAWL_DELAY = 10.0      # Skip site if robots.txt or Retry-After asks for > 10s
+SLOW_SERVER_THRESHOLD = 4.0 # If page takes > 4s to load, double the delay
 
 SEED_URLS = [
     "https://wikipedia.org",
@@ -36,10 +37,10 @@ GUEST_BUTTON_PATTERNS = re.compile(
 )
 
 robots_cache = {}
+domain_backoff = {}  # Tracks extra delay per domain if a server returns 429/503 or responds slowly
 
 
 def check_robots(url, user_agent=BOT_NAME):
-    """Returns (allowed: bool, delay_seconds: float)."""
     parsed = urlparse(url)
     base = f"{parsed.scheme}://{parsed.netloc}"
     if base not in robots_cache:
@@ -187,6 +188,41 @@ def inspect_rendered_dom(page, base_url):
             lang: htmlLang
         };
     }""", base_url)
+def handle_http_status(response, domain, current_delay):
+    """Checks 404, 429, 503, and other HTTP errors. Returns (ok_to_index, updated_delay)."""
+    if response is None:
+        print(f"[SKIPPED - No response] {domain}")
+        return False, current_delay
+
+    status = response.status
+
+    if status == 404 or status == 410:
+        print(f"[SKIPPED - {status} Not Found] {response.url}")
+        return False, current_delay
+
+    if status in (429, 503):
+        retry_after = response.headers.get("retry-after", "")
+        if retry_after.isdigit():
+            wait_sec = float(retry_after)
+            if wait_sec > MAX_CRAWL_DELAY:
+                print(f"[SKIPPED - {status} Retry-After {wait_sec}s > {MAX_CRAWL_DELAY}s] {domain}")
+                return False, current_delay
+            domain_backoff[domain] = max(current_delay, wait_sec)
+            print(f"[BACKOFF - {status} on {domain}, waiting {wait_sec}s]")
+            time.sleep(wait_sec)
+        else:
+            backoff_sec = min(MAX_CRAWL_DELAY, current_delay * 3)
+            domain_backoff[domain] = backoff_sec
+            print(f"[SKIPPED - {status} Rate Limited/Unavailable] {domain} (backoff set to {backoff_sec}s)")
+        return False, domain_backoff.get(domain, current_delay)
+
+    if status >= 400:
+        print(f"[SKIPPED - HTTP {status}] {response.url}")
+        return False, current_delay
+
+    return True, current_delay
+
+
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -199,7 +235,7 @@ def main():
         if fn.endswith(".json") and fn != "manifest.json"
     )
 
-    print(f"Starting Codespaces crawler (800ms default delay + robots.txt check) to index {TARGET_SITES} sites...\n")
+    print(f"Starting crawler (800ms delay + 404/429/503 + timeout handling) for {TARGET_SITES} sites...\n")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -227,15 +263,28 @@ def main():
                 visited_domains.add(domain)
 
                 allowed, delay = check_robots(url)
-                if not allowed:
+                delay = max(delay, domain_backoff.get(domain, 0))
+
+                if not allowed or delay > MAX_CRAWL_DELAY:
                     reason = f"delay {delay}s > {MAX_CRAWL_DELAY}s" if delay > MAX_CRAWL_DELAY else "disallowed"
                     print(f"[SKIPPED - robots.txt ({reason})] {url}")
                     continue
 
                 try:
-                    page.goto(url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
-                    page.wait_for_timeout(1500)
+                    start_time = time.monotonic()
+                    response = page.goto(url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
+                    load_time = time.monotonic() - start_time
 
+                    ok, delay = handle_http_status(response, domain, delay)
+                    if not ok:
+                        continue
+
+                    # Adaptive slowdown if server responded slowly
+                    if load_time > SLOW_SERVER_THRESHOLD:
+                        delay = min(MAX_CRAWL_DELAY, delay * 2)
+                        domain_backoff[domain] = delay
+
+                    page.wait_for_timeout(1500)
                     click_guest_or_dismiss_buttons(page)
 
                     final_url = page.url
@@ -244,7 +293,7 @@ def main():
 
                     if final_url != url:
                         final_allowed, final_delay = check_robots(final_url)
-                        if not final_allowed:
+                        if not final_allowed or final_delay > MAX_CRAWL_DELAY:
                             print(f"[SKIPPED - robots.txt] {final_url}")
                             continue
                         delay = max(delay, final_delay)
@@ -315,13 +364,16 @@ def main():
 
                     manifest_files.add(filename)
                     saved_count += 1
-                    print(f"[{saved_count}/{TARGET_SITES}] Indexed: {final_domain} -> {filepath} (wait: {delay}s)")
+                    print(f"[{saved_count}/{TARGET_SITES}] Indexed: {final_domain} -> {filepath} (load: {load_time:.1f}s, wait: {delay}s)")
 
                     if saved_count % SAVE_EVERY == 0:
                         save_manifest(manifest_files)
 
                     time.sleep(delay)
 
+                except PlaywrightTimeoutError:
+                    print(f"[SKIPPED - Timeout > {NAV_TIMEOUT_MS // 1000}s] {url}")
+                    continue
                 except Exception:
                     continue
         finally:
