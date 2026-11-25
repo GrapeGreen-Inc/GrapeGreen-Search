@@ -310,120 +310,133 @@
         const fuzzyBanner = document.getElementById('fuzzy-banner');
 
         async function performSearch() {
-            const query = searchInput.value.trim();
-            if (!query) return;
+    const query = searchInput.value.trim();
+    if (!query) return;
 
-            mainContainer.classList.add('has-results');
-            resultsArea.style.display = 'flex';
-            fuzzyBanner.style.display = 'none';
+    // Detect full URL (http:// or https://) or domain name (e.g., google.com)
+    const isFullUrl = /^https?:\/\/[^\s/$.?#].[^\s]*$/i.test(query);
+    const isDomain = /^[a-z0-9-]+(\.[a-z0-9-]+)+([\/?#].*)?$/i.test(query);
 
-            // 1. Render AI Overview with Fuzzy Matching
-            const overviewBox = document.getElementById('ai-overview-content');
-            const overviewBadge = document.getElementById('overview-match-badge');
+    if (isFullUrl) {
+        window.location.href = query;
+        return;
+    }
+    if (isDomain) {
+        window.location.href = 'https://' + query;
+        return;
+    }
 
-            const scoredQA = AI_OVERVIEWS
-                .map(item => ({ ...item, score: computeFuzzyScore(query, item.Q) }))
-                .filter(item => item.score >= FUZZY_THRESHOLD)
-                .sort((a, b) => b.score - a.score);
+    mainContainer.classList.add('has-results');
+    resultsArea.style.display = 'flex';
+    fuzzyBanner.style.display = 'none';
 
-            const bestQA = scoredQA[0];
+    // 1. Render AI Overview with Fuzzy Matching
+    const overviewBox = document.getElementById('ai-overview-content');
+    const overviewBadge = document.getElementById('overview-match-badge');
 
-            if (bestQA) {
-                const isExact = bestQA.Q.toLowerCase() === query.toLowerCase();
-                overviewBadge.style.display = 'inline-block';
-                overviewBadge.textContent = isExact
-                    ? 'Exact match'
-                    : `Closest match: "${bestQA.Q}" (${Math.round(bestQA.score * 100)}%)`;
+    const scoredQA = AI_OVERVIEWS
+        .map(item => ({ ...item, score: computeFuzzyScore(query, item.Q) }))
+        .filter(item => item.score >= FUZZY_THRESHOLD)
+        .sort((a, b) => b.score - a.score);
 
-                overviewBox.innerHTML = `<strong>Q: ${escapeHTML(bestQA.Q)}</strong><br><br>${escapeHTML(bestQA.A)}`;
+    const bestQA = scoredQA[0];
 
-                if (!isExact) {
-                    fuzzyBanner.style.display = 'block';
-                    fuzzyBanner.innerHTML = `Showing closest fuzzy results for <strong>"${escapeHTML(query)}"</strong> (nearest topic: <strong>${escapeHTML(bestQA.Q)}</strong>)`;
-                }
-            } else {
-                overviewBadge.style.display = 'none';
-                overviewBox.innerHTML = `<span class="empty-state">No close AI Overview found for "${escapeHTML(query)}". Try AI Mode for a live response!</span>`;
-            }
+    if (bestQA) {
+        const isExact = bestQA.Q.toLowerCase() === query.toLowerCase();
+        overviewBadge.style.display = 'inline-block';
+        overviewBadge.textContent = isExact
+            ? 'Exact match'
+            : `Closest match: "${bestQA.Q}" (${Math.round(bestQA.score * 100)}%)`;
 
-            // 2. Render Videos (Name of video + URL to video)
-            const videosContainer = document.getElementById('videos-content');
-            videosContainer.innerHTML = '<span class="empty-state">Searching videos...</span>';
-            const videos = await fetchVideos(query);
+        overviewBox.innerHTML = `<strong>Q: ${escapeHTML(bestQA.Q)}</strong><br><br>${escapeHTML(bestQA.A)}`;
 
-            if (videos.length > 0) {
-                videosContainer.innerHTML = videos.map(vid => `
-                    <a class="video-link-card" href="${escapeHTML(vid.url)}">
-                        <div class="video-info">
-                            <div class="video-name">▶ ${escapeHTML(vid.name)}</div>
-                            <div class="video-url-text">${escapeHTML(vid.url)}</div>
-                        </div>
-                        <span class="video-play-pill">Open Video (${Math.round(vid.score * 100)}%)</span>
-                    </a>
-                `).join('');
-            } else {
-                videosContainer.innerHTML = `<span class="empty-state">No matching videos found for "${escapeHTML(query)}".</span>`;
-            }
-
-            // 3. Render Images (URL iframe to image)
-            const imagesContainer = document.getElementById('images-content');
-            imagesContainer.innerHTML = '<span class="empty-state">Searching images...</span>';
-            const images = await fetchImages(query);
-
-            if (images.length > 0) {
-                imagesContainer.innerHTML = images.map(img => `
-                    <div class="image-iframe-card">
-                        <iframe class="image-iframe-frame" src="${escapeHTML(img.url)}" title="${escapeHTML(img.name)}" loading="lazy"></iframe>
-                        <div class="image-iframe-footer">
-                            <div class="image-iframe-title">${escapeHTML(img.name)} (${Math.round(img.score * 100)}%)</div>
-                            <a class="image-iframe-link" href="${escapeHTML(img.url)}">${escapeHTML(img.url)}</a>
-                        </div>
-                    </div>
-                `).join('');
-            } else {
-                imagesContainer.innerHTML = `<span class="empty-state">No matching images found for "${escapeHTML(query)}".</span>`;
-            }
-
-            // 4. Render Indexed Sites (Same-page redirect on click)
-            const sitesContainer = document.getElementById('sites-content');
-            sitesContainer.innerHTML = '<span class="empty-state">Searching indexed sites...</span>';
-            const sites = await fetchIndexedSites(query);
-
-            if (sites.length > 0) {
-                if (fuzzyBanner.style.display === 'none' && sites[0]._score < 0.98) {
-                    fuzzyBanner.style.display = 'block';
-                    fuzzyBanner.innerHTML = `Showing closest fuzzy results for <strong>"${escapeHTML(query)}"</strong>.`;
-                }
-
-                sitesContainer.innerHTML = sites.map(site => {
-                    const targetUrl = site.url || '#';
-                    const lang = site.launguage || site.language || 'en';
-                    const metaTags = Array.isArray(site["meta tags"]) ? site["meta tags"] : [];
-                    const keywords = Array.isArray(site.keywords) ? site.keywords : [];
-                    const isPopular = site.popular === true || Number(site.popular) > 0;
-                    const matchPct = Math.round(site._score * 100);
-
-                    return `
-                        <div class="site-item" onclick="window.location.href='${escapeHTML(targetUrl)}'">
-                            <div class="site-url">
-                                <span>${escapeHTML(targetUrl)}</span>
-                                <span class="meta-pill">Lang: ${escapeHTML(lang)}</span>
-                                <span class="meta-pill">Match: ${matchPct}%</span>
-                                ${isPopular ? `<span class="popular-badge">★ Popular (${escapeHTML(String(site.popular))})</span>` : ''}
-                            </div>
-                            <div class="site-title">${escapeHTML(site.title || 'Untitled Site')}</div>
-                            <div class="site-desc">${escapeHTML(site.description || 'No description provided.')}</div>
-                            <div class="site-meta">
-                                ${keywords.map(k => `<span class="meta-pill">#${escapeHTML(k)}</span>`).join('')}
-                                ${metaTags.map(m => `<span class="meta-pill">meta: ${escapeHTML(m)}</span>`).join('')}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            } else {
-                sitesContainer.innerHTML = `<span class="empty-state">No close indexed sites found for "${escapeHTML(query)}".</span>`;
-            }
+        if (!isExact) {
+            fuzzyBanner.style.display = 'block';
+            fuzzyBanner.innerHTML = `Showing closest fuzzy results for <strong>"${escapeHTML(query)}"</strong> (nearest topic: <strong>${escapeHTML(bestQA.Q)}</strong>)`;
         }
+    } else {
+        overviewBadge.style.display = 'none';
+        overviewBox.innerHTML = `<span class="empty-state">No close AI Overview found for "${escapeHTML(query)}". Try AI Mode for a live response!</span>`;
+    }
+
+    // 2. Render Videos (Name of video + URL to video)
+    const videosContainer = document.getElementById('videos-content');
+    videosContainer.innerHTML = '<span class="empty-state">Searching videos...</span>';
+    const videos = await fetchVideos(query);
+
+    if (videos.length > 0) {
+        videosContainer.innerHTML = videos.map(vid => `
+            <a class="video-link-card" href="${escapeHTML(vid.url)}">
+                <div class="video-info">
+                    <div class="video-name">▶ ${escapeHTML(vid.name)}</div>
+                    <div class="video-url-text">${escapeHTML(vid.url)}</div>
+                </div>
+                <span class="video-play-pill">Open Video (${Math.round(vid.score * 100)}%)</span>
+            </a>
+        `).join('');
+    } else {
+        videosContainer.innerHTML = `<span class="empty-state">No matching videos found for "${escapeHTML(query)}".</span>`;
+    }
+
+    // 3. Render Images (URL iframe to image)
+    const imagesContainer = document.getElementById('images-content');
+    imagesContainer.innerHTML = '<span class="empty-state">Searching images...</span>';
+    const images = await fetchImages(query);
+
+    if (images.length > 0) {
+        imagesContainer.innerHTML = images.map(img => `
+            <div class="image-iframe-card">
+                <iframe class="image-iframe-frame" src="${escapeHTML(img.url)}" title="${escapeHTML(img.name)}" loading="lazy"></iframe>
+                <div class="image-iframe-footer">
+                    <div class="image-iframe-title">${escapeHTML(img.name)} (${Math.round(img.score * 100)}%)</div>
+                    <a class="image-iframe-link" href="${escapeHTML(img.url)}">${escapeHTML(img.url)}</a>
+                </div>
+            </div>
+        `).join('');
+    } else {
+        imagesContainer.innerHTML = `<span class="empty-state">No matching images found for "${escapeHTML(query)}".</span>`;
+    }
+
+    // 4. Render Indexed Sites (Same-page redirect on click)
+    const sitesContainer = document.getElementById('sites-content');
+    sitesContainer.innerHTML = '<span class="empty-state">Searching indexed sites...</span>';
+    const sites = await fetchIndexedSites(query);
+
+    if (sites.length > 0) {
+        if (fuzzyBanner.style.display === 'none' && sites[0]._score < 0.98) {
+            fuzzyBanner.style.display = 'block';
+            fuzzyBanner.innerHTML = `Showing closest fuzzy results for <strong>"${escapeHTML(query)}"</strong>.`;
+        }
+
+        sitesContainer.innerHTML = sites.map(site => {
+            const targetUrl = site.url || '#';
+            const lang = site.launguage || site.language || 'en';
+            const metaTags = Array.isArray(site["meta tags"]) ? site["meta tags"] : [];
+            const keywords = Array.isArray(site.keywords) ? site.keywords : [];
+            const isPopular = site.popular === true || Number(site.popular) > 0;
+            const matchPct = Math.round(site._score * 100);
+
+            return `
+                <div class="site-item" onclick="window.location.href='${escapeHTML(targetUrl)}'">
+                    <div class="site-url">
+                        <span>${escapeHTML(targetUrl)}</span>
+                        <span class="meta-pill">Lang: ${escapeHTML(lang)}</span>
+                        <span class="meta-pill">Match: ${matchPct}%</span>
+                        ${isPopular ? `<span class="popular-badge">★ Popular (${escapeHTML(String(site.popular))})</span>` : ''}
+                    </div>
+                    <div class="site-title">${escapeHTML(site.title || 'Untitled Site')}</div>
+                    <div class="site-desc">${escapeHTML(site.description || 'No description provided.')}</div>
+                    <div class="site-meta">
+                        ${keywords.map(k => `<span class="meta-pill">#${escapeHTML(k)}</span>`).join('')}
+                        ${metaTags.map(m => `<span class="meta-pill">meta: ${escapeHTML(m)}</span>`).join('')}
+                    </div>
+                </div>
+            `;
+        }).join('');
+    } else {
+        sitesContainer.innerHTML = `<span class="empty-state">No close indexed sites found for "${escapeHTML(query)}".</span>`;
+    }
+}
 
         function filterSection(type, btnElement) {
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
