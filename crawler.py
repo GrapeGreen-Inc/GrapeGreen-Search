@@ -3,16 +3,14 @@ import re
 import json
 import random
 from collections import deque
-from urllib.parse import urlparse, urljoin
-import requests
-from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+from playwright.sync_api import sync_playwright
 
-# Settings
 TARGET_SITES = 300
 OUTPUT_DIR = "indexed"
-TIMEOUT = 8
+NAV_TIMEOUT_MS = 12000
+SAVE_EVERY = 10
 
-# Starting seed pages (rich in external links so it branches out to 300+ unique sites)
 SEED_URLS = [
     "https://wikipedia.org",
     "https://ycombinator.com",
@@ -21,16 +19,16 @@ SEED_URLS = [
     "https://github.com"
 ]
 
-# Skip social login walls, trackers, or file downloads
 BLOCKED_DOMAINS = {
     "t.co", "bit.ly", "goo.gl", "amzn.to", "doubleclick.net",
     "google-analytics.com", "facebook.com", "twitter.com", "x.com",
     "instagram.com", "linkedin.com", "://google.com"
 }
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (compatible; GrapeGreenSpider/1.0)"
-}
+GUEST_BUTTON_PATTERNS = re.compile(
+    r"^(continue as guest|guest|browse as guest|enter as guest|skip|accept all|accept|got it)$",
+    re.I
+)
 
 
 def get_domain(url):
@@ -40,39 +38,114 @@ def get_domain(url):
 
 def get_clean_slug(url):
     domain = get_domain(url)
-    name = domain.split(".")[0]
+    name = domain.split(".")[0] if "." in domain else domain
     return re.sub(r"[^a-z0-9_-]", "_", name) or "site"
 
 
-def extract_logo(soup, base_url):
-    og_img = soup.find("meta", property="og:image")
-    if og_img and og_img.get("content"):
-        return urljoin(base_url, og_img["content"].strip())
-
-    for rel_type in ["apple-touch-icon", "icon", "shortcut icon"]:
-        icon_link = soup.find("link", rel=lambda r: r and rel_type in " ".join(r).lower())
-        if icon_link and icon_link.get("href"):
-            return urljoin(base_url, icon_link["href"].strip())
-
-    parsed = urlparse(base_url)
-    return f"{parsed.scheme}://{parsed.netloc}/favicon.ico"
+def save_manifest(manifest_files):
+    with open(os.path.join(OUTPUT_DIR, "manifest.json"), "w", encoding="utf-8") as mf:
+        json.dump(sorted(manifest_files), mf, indent=2)
 
 
-def extract_external_links(soup, base_url):
-    """Finds all outgoing http/https links on the page to keep crawling."""
-    links = set()
-    for a in soup.find_all("a", href=True):
-        href = urljoin(base_url, a["href"].strip())
-        parsed = urlparse(href)
-        if parsed.scheme in ("http", "https") and parsed.netloc:
-            # Strip query strings/fragments to keep clean root/page URLs
-            clean_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
-            if not clean_url.lower().endswith((".pdf", ".jpg", ".png", ".zip", ".mp4", ".svg")):
-                links.add(clean_url)
-    return list(links)
+def click_guest_or_dismiss_buttons(page):
+    try:
+        candidates = page.locator("button, a[role='button'], input[type='button'], input[type='submit']")
+        count = min(candidates.count(), 40)
+        for i in range(count):
+            btn = candidates.nth(i)
+            if not btn.is_visible():
+                continue
+            label = (btn.inner_text() or btn.get_attribute("value") or "").strip()
+            if label and GUEST_BUTTON_PATTERNS.match(label):
+                btn.click(timeout=2000)
+                page.wait_for_timeout(1200)
+                break
+    except Exception:
+        pass
 
 
-def main():
+def inspect_rendered_dom(page, base_url):
+    return page.evaluate("""(baseUrl) => {
+        function isElementVisible(el) {
+            if (!el) return false;
+            const style = window.getComputedStyle(el);
+            if (
+                style.display === 'none' ||
+                style.visibility === 'hidden' ||
+                parseFloat(style.opacity) === 0
+            ) {
+                return false;
+            }
+            const rect = el.getBoundingClientRect();
+            return rect.width > 0 && rect.height > 0;
+        }
+
+        const visibleHrefs = [];
+        document.querySelectorAll('a[href]').forEach(a => {
+            if (!isElementVisible(a)) return;
+            const rawHref = a.getAttribute('href');
+            if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('javascript:') || rawHref.startsWith('mailto:')) {
+                return;
+            }
+            try {
+                visibleHrefs.push(new URL(rawHref, baseUrl).href);
+            } catch (e) {}
+        });
+
+        const visibleTextParts = [];
+        document.querySelectorAll('h1, h2, p').forEach(el => {
+            if (isElementVisible(el)) {
+                const txt = el.innerText.trim().replace(/\\s+/g, ' ');
+                if (txt.length > 20 && txt.length < 300) {
+                    visibleTextParts.push(txt);
+                }
+            }
+        });
+
+        const title = document.title ? document.title.trim() : '';
+        const metaDescEl = document.querySelector('meta[name="description" i], meta[property="og:description" i]');
+        const metaDesc = metaDescEl ? (metaDescEl.getAttribute('content') || '').trim() : '';
+
+        const metaKwEl = document.querySelector('meta[name="keywords" i]');
+        const metaKw = metaKwEl ? (metaKwEl.getAttribute('content') || '').trim() : '';
+
+        const metaTags = [];
+        document.querySelectorAll('meta').forEach(m => {
+            const name = m.getAttribute('name') || m.getAttribute('property');
+            if (name && !['viewport', 'charset'].includes(name.toLowerCase())) {
+                const clean = name.toLowerCase().trim();
+                if (!metaTags.includes(clean)) metaTags.push(clean);
+            }
+        });
+
+        let logo = '';
+        const ogImg = document.querySelector('meta[property="og:image" i]');
+        const touchIcon = document.querySelector('link[rel*="apple-touch-icon" i]');
+        const favIcon = document.querySelector('link[rel*="icon" i]');
+
+        const rawLogo = (ogImg && ogImg.getAttribute('content')) ||
+                        (touchIcon && touchIcon.getAttribute('href')) ||
+                        (favIcon && favIcon.getAttribute('href')) || '';
+        if (rawLogo) {
+            try {
+                logo = new URL(rawLogo.trim(), baseUrl).href;
+            } catch (e) {}
+        }
+
+        const htmlLang = document.documentElement.getAttribute('lang') || 'en';
+
+        return {
+            title,
+            metaDesc,
+            metaKw,
+            metaTags: metaTags.slice(0, 10),
+            visibleText: visibleTextParts.slice(0, 5),
+            visibleHrefs: Array.from(new Set(visibleHrefs)),
+            logo,
+            lang: htmlLang
+        };
+    }""", base_url)
+    def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     queue = deque(SEED_URLS)
@@ -84,113 +157,123 @@ def main():
         if fn.endswith(".json") and fn != "manifest.json"
     )
 
-    print(f"Starting spider to index {TARGET_SITES} unique sites...\n")
+    print(f"Starting Codespaces crawler to index {TARGET_SITES} sites...\n")
 
-    while queue and saved_count < TARGET_SITES:
-        url = queue.popleft()
-        domain = get_domain(url)
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True,
+            args=["--no-sandbox", "--disable-dev-shm-usage", "--disable-gpu"]
+        )
+        context = browser.new_context(
+            viewport={"width": 1280, "height": 800},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+        )
+        page = context.new_page()
 
-        if not domain or domain in visited_domains or domain in BLOCKED_DOMAINS:
-            continue
-
-        visited_domains.add(domain)
+        page.route("**/*", lambda route: route.abort()
+                   if route.request.resource_type in ("media", "font")
+                   else route.continue_())
 
         try:
-            res = requests.get(url, headers=HEADERS, timeout=TIMEOUT, allow_redirects=True)
-            if "text/html" not in res.headers.get("Content-Type", ""):
-                continue
-            res.raise_for_status()
+            while queue and saved_count < TARGET_SITES:
+                url = queue.popleft()
+                domain = get_domain(url)
 
-            final_domain = get_domain(res.url)
-            visited_domains.add(final_domain)
+                if not domain or domain in visited_domains or domain in BLOCKED_DOMAINS:
+                    continue
 
-            soup = BeautifulSoup(res.text, "html.parser")
+                visited_domains.add(domain)
 
-            # Discover new links and shuffle them so the crawl stays random
-            discovered = extract_external_links(soup, res.url)
-            random.shuffle(discovered)
-            for next_url in discovered[:25]:  # Grab up to 25 random links per page
-                if get_domain(next_url) not in visited_domains:
-                    queue.append(next_url)
-
-            # Extract Title
-            title = soup.title.string.strip() if (soup.title and soup.title.string) else ""
-            if not title:
-                og_title = soup.find("meta", property="og:title")
-                title = og_title["content"].strip() if (og_title and og_title.get("content")) else final_domain
-
-            # Extract Description
-            desc_tag = soup.find("meta", attrs={"name": re.compile(r"^description$", re.I)}) or \
-                       soup.find("meta", property="og:description")
-            description = desc_tag["content"].strip() if (desc_tag and desc_tag.get("content")) else ""
-
-            # Extract Keywords + Slug
-            slug = get_clean_slug(res.url)
-            keywords = [slug]
-            kw_tag = soup.find("meta", attrs={"name": re.compile(r"^keywords$", re.I)})
-            if kw_tag and kw_tag.get("content"):
-                for k in kw_tag["content"].split(","):
-                    clean_k = k.strip().lower()
-                    if clean_k and clean_k not in keywords:
-                        keywords.append(clean_k)
-
-            # Extract Meta Tags
-            meta_tags = []
-            for m in soup.find_all("meta"):
-                tag_name = m.get("name") or m.get("property")
-                if tag_name and tag_name.lower() not in ("viewport", "charset"):
-                    clean_tag = tag_name.lower().strip()
-                    if clean_tag not in meta_tags:
-                        meta_tags.append(clean_tag)
-
-            # Extract Language & Logo
-            html_tag = soup.find("html")
-            lang = html_tag["lang"].split("-")[0].lower().strip() if (html_tag and html_tag.get("lang")) else "en"
-            logo_url = extract_logo(soup, res.url)
-
-            site_data = {
-                "title": title[:120],
-                "url": res.url,
-                "description": description[:300] if description else f"Explore {title} on {final_domain}.",
-                "keywords": keywords[:12],
-                "meta tags": meta_tags[:10],
-                "popular": random.randint(20, 85),
-                "launguage": lang,
-                "image": logo_url
-            }
-
-            filename = f"{slug}.json"
-            filepath = os.path.join(OUTPUT_DIR, filename)
-
-            existing = []
-            if os.path.exists(filepath):
                 try:
-                    with open(filepath, "r", encoding="utf-8") as ef:
-                        loaded = json.load(ef)
-                        existing = loaded if isinstance(loaded, list) else [loaded]
-                except Exception:
+                    page.goto(url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
+                    page.wait_for_timeout(1500)
+
+                    click_guest_or_dismiss_buttons(page)
+
+                    final_url = page.url
+                    final_domain = get_domain(final_url)
+                    visited_domains.add(final_domain)
+
+                    dom_info = inspect_rendered_dom(page, final_url)
+
+                    discovered = []
+                    for href in dom_info["visibleHrefs"]:
+                        parsed = urlparse(href)
+                        if parsed.scheme in ("http", "https") and parsed.netloc:
+                            clean_href = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+                            if not clean_href.lower().endswith((".pdf", ".jpg", ".png", ".zip", ".mp4", ".svg")):
+                                if get_domain(clean_href) not in visited_domains:
+                                    discovered.append(clean_href)
+
+                    random.shuffle(discovered)
+                    for next_url in discovered[:25]:
+                        queue.append(next_url)
+
+                    slug = get_clean_slug(final_url)
+                    title = dom_info["title"] or final_domain
+
+                    description = dom_info["metaDesc"]
+                    if not description and dom_info["visibleText"]:
+                        description = dom_info["visibleText"][0]
+                    if not description:
+                        description = f"Explore {title} on {final_domain}."
+
+                    keywords = [slug]
+                    if dom_info["metaKw"]:
+                        for k in dom_info["metaKw"].split(","):
+                            clean_k = k.strip().lower()
+                            if clean_k and clean_k not in keywords:
+                                keywords.append(clean_k)
+
+                    lang = dom_info["lang"].split("-")[0].lower().strip() or "en"
+                    parsed_final = urlparse(final_url)
+                    logo_url = dom_info["logo"] or f"{parsed_final.scheme}://{parsed_final.netloc}/favicon.ico"
+
+                    site_data = {
+                        "title": title[:120],
+                        "url": final_url,
+                        "description": description[:300],
+                        "keywords": keywords[:12],
+                        "meta tags": dom_info["metaTags"],
+                        "popular": random.randint(20, 85),
+                        "launguage": lang,
+                        "image": logo_url
+                    }
+
+                    filename = f"{slug}.json"
+                    filepath = os.path.join(OUTPUT_DIR, filename)
+
                     existing = []
+                    if os.path.exists(filepath):
+                        try:
+                            with open(filepath, "r", encoding="utf-8") as ef:
+                                loaded = json.load(ef)
+                                existing = loaded if isinstance(loaded, list) else [loaded]
+                        except Exception:
+                            existing = []
 
-            existing = [e for e in existing if e.get("url") != res.url]
-            existing.append(site_data)
+                    existing = [e for e in existing if e.get("url") != final_url]
+                    existing.append(site_data)
 
-            with open(filepath, "w", encoding="utf-8") as out_f:
-                json.dump(existing, out_f, indent=2, ensure_ascii=False)
+                    with open(filepath, "w", encoding="utf-8") as out_f:
+                        json.dump(existing, out_f, indent=2, ensure_ascii=False)
 
-            manifest_files.add(filename)
-            saved_count += 1
-            print(f"[{saved_count}/{TARGET_SITES}] Indexed: {final_domain} -> {filepath}")
+                    manifest_files.add(filename)
+                    saved_count += 1
+                    print(f"[{saved_count}/{TARGET_SITES}] Indexed: {final_domain} -> {filepath}")
 
-        except Exception:
-            # Silently skip sites that block bots or time out and keep crawling
-            continue
+                    if saved_count % SAVE_EVERY == 0:
+                        save_manifest(manifest_files)
 
-    # Save updated manifest.json
-    with open(os.path.join(OUTPUT_DIR, "manifest.json"), "w", encoding="utf-8") as mf:
-        json.dump(sorted(manifest_files), mf, indent=2)
+                except Exception:
+                    continue
+        finally:
+            save_manifest(manifest_files)
+            browser.close()
 
-    print(f"\nFinished! Indexed {saved_count} random sites into '{OUTPUT_DIR}/'.")
+    print(f"\nDone! Saved {saved_count} sites and updated '{OUTPUT_DIR}/manifest.json'.")
 
 
 if __name__ == "__main__":
     main()
+
