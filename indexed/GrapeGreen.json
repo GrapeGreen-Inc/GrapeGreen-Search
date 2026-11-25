@@ -6,6 +6,7 @@
     "keywords": ["grapegreen", "dashboard", "memes", "chat", "web app", "community"],
     "meta tags": ["social", "dashboard", "memes", "chat", "v1.11"],
     "popular": 100,
-    "launguage": "en"
+    "launguage": "en",
+    "image": "https://grapegreen-inc.github.io/GrapeGreen/dashboard/site/assets/images/logo.png"
   }
 ]
