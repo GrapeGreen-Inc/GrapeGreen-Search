@@ -10,12 +10,12 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 
 TARGET_SITES = 300
 OUTPUT_DIR = "indexed"
-NAV_TIMEOUT_MS = 10000      # 10s page load timeout
+NAV_TIMEOUT_MS = 10000
 SAVE_EVERY = 10
 BOT_NAME = "GrapeGreenBot"
-DEFAULT_CRAWL_DELAY = 0.8   # 800ms default delay
-MAX_CRAWL_DELAY = 10.0      # Skip site if robots.txt or Retry-After asks for > 10s
-SLOW_SERVER_THRESHOLD = 4.0 # If page takes > 4s to load, double the delay
+DEFAULT_CRAWL_DELAY = 0.8
+MAX_CRAWL_DELAY = 10.0
+SLOW_SERVER_THRESHOLD = 4.0
 
 SEED_URLS = [
     "https://wikipedia.org",
@@ -37,7 +37,7 @@ GUEST_BUTTON_PATTERNS = re.compile(
 )
 
 robots_cache = {}
-domain_backoff = {}  # Tracks extra delay per domain if a server returns 429/503 or responds slowly
+domain_backoff = {}
 
 
 def check_robots(url, user_agent=BOT_NAME):
@@ -76,13 +76,15 @@ def check_robots(url, user_agent=BOT_NAME):
 
 def get_domain(url):
     domain = urlparse(url).netloc.lower()
+    domain = domain.split(":")[0]  # Strip port if present
     return re.sub(r"^www\.", "", domain)
 
 
 def get_clean_slug(url):
+    """Turns 'https://hulu.shop' into 'hulu-shop' and 'https://hulu.com' into 'hulu-com'."""
     domain = get_domain(url)
-    name = domain.split(".")[0] if "." in domain else domain
-    return re.sub(r"[^a-z0-9_-]", "_", name) or "site"
+    slug = re.sub(r"[^a-z0-9]+", "-", domain).strip("-")
+    return slug or "site"
 
 
 def save_manifest(manifest_files):
@@ -189,7 +191,6 @@ def inspect_rendered_dom(page, base_url):
         };
     }""", base_url)
 def handle_http_status(response, domain, current_delay):
-    """Checks 404, 429, 503, and other HTTP errors. Returns (ok_to_index, updated_delay)."""
     if response is None:
         print(f"[SKIPPED - No response] {domain}")
         return False, current_delay
@@ -235,7 +236,7 @@ def main():
         if fn.endswith(".json") and fn != "manifest.json"
     )
 
-    print(f"Starting crawler (800ms delay + 404/429/503 + timeout handling) for {TARGET_SITES} sites...\n")
+    print(f"Starting crawler for {TARGET_SITES} sites...\n")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -279,7 +280,6 @@ def main():
                     if not ok:
                         continue
 
-                    # Adaptive slowdown if server responded slowly
                     if load_time > SLOW_SERVER_THRESHOLD:
                         delay = min(MAX_CRAWL_DELAY, delay * 2)
                         domain_backoff[domain] = delay
@@ -314,6 +314,7 @@ def main():
                         queue.append(next_url)
 
                     slug = get_clean_slug(final_url)
+                    root_name = final_domain.split(".")[0] if "." in final_domain else final_domain
                     title = dom_info["title"] or final_domain
 
                     description = dom_info["metaDesc"]
@@ -322,7 +323,11 @@ def main():
                     if not description:
                         description = f"Explore {title} on {final_domain}."
 
-                    keywords = [slug]
+                    keywords = []
+                    for kw in [root_name, slug, final_domain]:
+                        if kw and kw not in keywords:
+                            keywords.append(kw)
+
                     if dom_info["metaKw"]:
                         for k in dom_info["metaKw"].split(","):
                             clean_k = k.strip().lower()
