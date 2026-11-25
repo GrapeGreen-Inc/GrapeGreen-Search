@@ -1,7 +1,13 @@
 [
+  "grapegreen.json",
   "wikipedia.json",
   "google.json",
   "youtube.json",
   "gmail.json",
-  "icann.json"
+  "icann.json",
+  "chatgpt.json",
+  "reddit.json",
+  "facebook.json",
+  "claude.json",
+  "bing.json"
 ]
