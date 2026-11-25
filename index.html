@@ -180,28 +180,28 @@
 
         .filter-tabs {
             display: flex;
-            gap: 10px;
+            gap: 18px;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
+            padding-bottom: 10px;
             overflow-x: auto;
         }
 
         .tab-btn {
             background: transparent;
-            border: 1px solid transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
             color: var(--text-secondary);
-            padding: 8px 18px;
-            border-radius: 20px;
+            padding: 6px 4px;
             cursor: pointer;
             font-weight: 600;
             font-size: 0.95rem;
             white-space: nowrap;
+            transition: color 0.2s, border-color 0.2s;
         }
 
         .tab-btn.active {
-            background: var(--bg-surface);
             color: var(--accent-green);
-            border-color: var(--accent-green);
+            border-bottom-color: var(--accent-green);
         }
 
         .section-block {
@@ -233,62 +233,64 @@
             color: var(--text-primary);
         }
 
-        /* Videos */
-        .video-list {
+        /* Scrollable Videos (Invisible/Hidden Pills) */
+        .video-scroll-row {
             display: flex;
-            flex-direction: column;
-            gap: 12px;
+            flex-direction: row;
+            gap: 14px;
+            overflow-x: auto;
+            padding-bottom: 6px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--bg-surface) transparent;
+        }
+
+        .video-scroll-row::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .video-scroll-row::-webkit-scrollbar-thumb {
+            background: var(--bg-surface);
+            border-radius: 6px;
         }
 
         .video-link-card {
+            flex: 0 0 260px;
+            scroll-snap-align: start;
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: space-between;
-            gap: 14px;
-            background: var(--bg-primary);
-            border: 1px solid var(--border-color);
+            gap: 8px;
+            background: transparent;
+            border: 1px solid transparent;
             border-radius: 12px;
-            padding: 14px 18px;
+            padding: 12px 14px;
             text-decoration: none;
             color: var(--text-primary);
-            transition: all 0.2s ease;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
         }
 
         .video-link-card:hover {
-            border-color: var(--accent-green);
-            background: #432070;
-            transform: translateX(4px);
-        }
-
-        .video-info {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            overflow: hidden;
+            border-color: var(--border-color);
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .video-name {
-            font-size: 1.08rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: #ffffff;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .video-url-text {
-            font-size: 0.85rem;
+            font-size: 0.82rem;
             color: var(--accent-green);
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
-
-        .video-play-pill {
-            background: var(--accent-green);
-            color: #1c0c31;
-            font-weight: 800;
-            font-size: 0.82rem;
-            padding: 6px 14px;
-            border-radius: 20px;
-            white-space: nowrap;
         }
 
         /* Images (URL Iframes) */
@@ -348,7 +350,7 @@
             text-decoration: underline;
         }
 
-        /* Sites */
+        /* Sites with Logo or Globe Fallback */
         .site-list {
             display: flex;
             flex-direction: column;
@@ -370,10 +372,45 @@
             transform: translateX(4px);
         }
 
+        .site-header-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .site-logo-box {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .site-logo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .site-globe-icon {
+            width: 18px;
+            height: 18px;
+            stroke: var(--accent-green);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
         .site-url {
             font-size: 0.85rem;
             color: var(--accent-green);
-            margin-bottom: 4px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -579,7 +616,7 @@
 
             <div id="sec-videos" class="section-block">
                 <div class="section-heading">Videos</div>
-                <div id="videos-content" class="video-list"></div>
+                <div id="videos-content" class="video-scroll-row"></div>
             </div>
 
             <div id="sec-images" class="section-block">
@@ -628,6 +665,20 @@
                 A: "YouTube is an online video sharing and social media platform where users can upload, view, rate, share, and comment on videos."
             }
         ];
+
+        const GLOBE_SVG = `
+            <svg class="site-globe-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+        `;
+
+        function handleLogoError(imgEl) {
+            if (imgEl && imgEl.parentElement) {
+                imgEl.parentElement.innerHTML = GLOBE_SVG;
+            }
+        }
 
         function levenshteinDistance(a, b) {
             const m = a.length;
@@ -932,9 +983,17 @@
             if (sites.length > 0) {
                 sitesContainer.innerHTML = sites.map(site => {
                     const targetUrl = site.url || '#';
+                    const logoUrl = typeof site.image === 'string' ? site.image.trim() : '';
+                    const logoHtml = logoUrl
+                        ? `<img src="${escapeHTML(logoUrl)}" alt="" onerror="handleLogoError(this)">`
+                        : GLOBE_SVG;
+
                     return `
                         <div class="site-item" onclick="window.location.href='${escapeHTML(targetUrl)}'">
-                            <div class="site-url">${escapeHTML(targetUrl)}</div>
+                            <div class="site-header-row">
+                                <div class="site-logo-box">${logoHtml}</div>
+                                <div class="site-url">${escapeHTML(targetUrl)}</div>
+                            </div>
                             <div class="site-title">${escapeHTML(site.title || 'Untitled')}</div>
                             <div class="site-desc">${escapeHTML(site.description || '')}</div>
                         </div>
@@ -944,7 +1003,7 @@
                 sitesContainer.innerHTML = `<span class="empty-state">No results found for "${escapeHTML(query)}".</span>`;
             }
 
-            // 3. Videos
+            // 3. Videos (Horizontal Scrollable Row, No Pills)
             const videosContainer = document.getElementById('videos-content');
             videosContainer.innerHTML = '<span class="empty-state">Searching...</span>';
             const videos = await fetchVideos(query);
@@ -952,11 +1011,8 @@
             if (videos.length > 0) {
                 videosContainer.innerHTML = videos.map(vid => `
                     <a class="video-link-card" href="${escapeHTML(vid.url)}">
-                        <div class="video-info">
-                            <div class="video-name">▶ ${escapeHTML(vid.name)}</div>
-                            <div class="video-url-text">${escapeHTML(vid.url)}</div>
-                        </div>
-                        <span class="video-play-pill">Watch</span>
+                        <div class="video-name">▶ ${escapeHTML(vid.name)}</div>
+                        <div class="video-url-text">${escapeHTML(vid.url)}</div>
                     </a>
                 `).join('');
             } else {
