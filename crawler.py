@@ -1,6 +1,7 @@
 import os
 import re
 import json
+import time
 import random
 from collections import deque
 from urllib.parse import urlparse
@@ -12,6 +13,8 @@ OUTPUT_DIR = "indexed"
 NAV_TIMEOUT_MS = 12000
 SAVE_EVERY = 10
 BOT_NAME = "GrapeGreenBot"
+DEFAULT_CRAWL_DELAY = 0.8   # 800ms default delay
+MAX_CRAWL_DELAY = 10.0      # Skip site if robots.txt asks for more than 10 seconds
 
 SEED_URLS = [
     "https://wikipedia.org",
@@ -35,7 +38,8 @@ GUEST_BUTTON_PATTERNS = re.compile(
 robots_cache = {}
 
 
-def can_crawl(url, user_agent=BOT_NAME):
+def check_robots(url, user_agent=BOT_NAME):
+    """Returns (allowed: bool, delay_seconds: float)."""
     parsed = urlparse(url)
     base = f"{parsed.scheme}://{parsed.netloc}"
     if base not in robots_cache:
@@ -46,8 +50,27 @@ def can_crawl(url, user_agent=BOT_NAME):
         except Exception:
             rp = None
         robots_cache[base] = rp
+
     rp = robots_cache[base]
-    return True if rp is None else rp.can_fetch(user_agent, url)
+    if rp is None:
+        return True, DEFAULT_CRAWL_DELAY
+
+    if not rp.can_fetch(user_agent, url):
+        return False, DEFAULT_CRAWL_DELAY
+
+    try:
+        delay = rp.crawl_delay(user_agent)
+    except Exception:
+        delay = None
+
+    if delay is None:
+        return True, DEFAULT_CRAWL_DELAY
+
+    delay = float(delay)
+    if delay > MAX_CRAWL_DELAY:
+        return False, delay
+
+    return True, max(DEFAULT_CRAWL_DELAY, delay)
 
 
 def get_domain(url):
@@ -176,7 +199,7 @@ def main():
         if fn.endswith(".json") and fn != "manifest.json"
     )
 
-    print(f"Starting Codespaces crawler (with robots.txt check) to index {TARGET_SITES} sites...\n")
+    print(f"Starting Codespaces crawler (800ms default delay + robots.txt check) to index {TARGET_SITES} sites...\n")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -203,8 +226,10 @@ def main():
 
                 visited_domains.add(domain)
 
-                if not can_crawl(url):
-                    print(f"[SKIPPED - robots.txt] {url}")
+                allowed, delay = check_robots(url)
+                if not allowed:
+                    reason = f"delay {delay}s > {MAX_CRAWL_DELAY}s" if delay > MAX_CRAWL_DELAY else "disallowed"
+                    print(f"[SKIPPED - robots.txt ({reason})] {url}")
                     continue
 
                 try:
@@ -217,9 +242,12 @@ def main():
                     final_domain = get_domain(final_url)
                     visited_domains.add(final_domain)
 
-                    if final_url != url and not can_crawl(final_url):
-                        print(f"[SKIPPED - robots.txt] {final_url}")
-                        continue
+                    if final_url != url:
+                        final_allowed, final_delay = check_robots(final_url)
+                        if not final_allowed:
+                            print(f"[SKIPPED - robots.txt] {final_url}")
+                            continue
+                        delay = max(delay, final_delay)
 
                     dom_info = inspect_rendered_dom(page, final_url)
 
@@ -287,10 +315,12 @@ def main():
 
                     manifest_files.add(filename)
                     saved_count += 1
-                    print(f"[{saved_count}/{TARGET_SITES}] Indexed: {final_domain} -> {filepath}")
+                    print(f"[{saved_count}/{TARGET_SITES}] Indexed: {final_domain} -> {filepath} (wait: {delay}s)")
 
                     if saved_count % SAVE_EVERY == 0:
                         save_manifest(manifest_files)
+
+                    time.sleep(delay)
 
                 except Exception:
                     continue
