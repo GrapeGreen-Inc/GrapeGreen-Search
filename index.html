@@ -76,7 +76,7 @@
             justify-content: center;
             padding: 20px;
             width: 100%;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
             transition: all 0.3s ease;
         }
@@ -103,7 +103,7 @@
         /* Huge Search Bar Area */
         .search-wrapper {
             width: 100%;
-            max-width: 720px;
+            max-width: 740px;
             margin: 28px 0 20px 0;
             position: relative;
         }
@@ -181,6 +181,23 @@
             background: linear-gradient(135deg, #7e49db, #5b29b0);
         }
 
+        /* Fuzzy Match Banner */
+        #fuzzy-banner {
+            display: none;
+            width: 100%;
+            background: rgba(140, 224, 63, 0.12);
+            border: 1px solid rgba(140, 224, 63, 0.35);
+            color: var(--text-secondary);
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-size: 0.92rem;
+            margin-bottom: 4px;
+        }
+
+        #fuzzy-banner strong {
+            color: var(--accent-green);
+        }
+
         /* Results Section */
         #results-area {
             width: 100%;
@@ -234,7 +251,18 @@
             margin-bottom: 14px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 8px;
+        }
+
+        .match-tag {
+            font-size: 0.72rem;
+            background: rgba(157, 113, 232, 0.25);
+            color: var(--text-secondary);
+            padding: 2px 8px;
+            border-radius: 8px;
+            text-transform: none;
+            letter-spacing: 0;
         }
 
         /* AI Overview Box */
@@ -249,39 +277,119 @@
             color: var(--text-primary);
         }
 
-        /* Media Grids (Videos & Images) */
-        .media-grid {
+        /* Videos List (Name + URL to video) */
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .video-link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 14px 18px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .video-link-card:hover {
+            border-color: var(--accent-green);
+            background: #432070;
+            transform: translateX(4px);
+        }
+
+        .video-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            overflow: hidden;
+        }
+
+        .video-name {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .video-url-text {
+            font-size: 0.85rem;
+            color: var(--accent-green);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .video-play-pill {
+            background: var(--accent-green);
+            color: #1c0c31;
+            font-weight: 800;
+            font-size: 0.82rem;
+            padding: 6px 14px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+
+        /* Images Grid (URL iframe to image) */
+        .image-iframe-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 16px;
         }
 
-        .media-card {
+        .image-iframe-card {
             background: var(--bg-primary);
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border-color);
-            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
-        .media-card:hover {
+        .image-iframe-card:hover {
             transform: translateY(-3px);
             border-color: var(--accent-green);
         }
 
-        .media-card img, .media-card video {
+        .image-iframe-frame {
             width: 100%;
-            height: 140px;
-            object-fit: cover;
-            display: block;
+            height: 200px;
+            border: none;
             background: #1a0b2e;
+            display: block;
         }
 
-        .media-caption {
+        .image-iframe-footer {
             padding: 10px 12px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            word-break: break-word;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .image-iframe-title {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .image-iframe-link {
+            font-size: 0.78rem;
+            color: var(--accent-green);
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .image-iframe-link:hover {
+            text-decoration: underline;
         }
 
         /* Indexed Sites List */
@@ -311,6 +419,7 @@
             color: var(--accent-green);
             margin-bottom: 4px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             gap: 8px;
         }
@@ -522,7 +631,7 @@
         <!-- Huge Search Bar & AI Mode Button -->
         <div class="search-wrapper">
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Search indexed sites, videos, images..." autocomplete="off">
+                <input type="text" id="search-input" placeholder="Search indexed sites, videos, images (fuzzy match enabled)..." autocomplete="off">
                 <div class="search-actions">
                     <button class="btn btn-search" id="search-btn">Search</button>
                     <button class="btn btn-ai" id="open-ai-btn">✨ AI Mode</button>
@@ -532,6 +641,8 @@
 
         <!-- Search Results Container -->
         <div id="results-area">
+            <div id="fuzzy-banner"></div>
+
             <div class="filter-tabs">
                 <button class="tab-btn active" onclick="filterSection('all', this)">All Results</button>
                 <button class="tab-btn" onclick="filterSection('overview', this)">AI Overview</button>
@@ -542,25 +653,28 @@
 
             <!-- 1. AI Overview Section -->
             <div id="sec-overview" class="section-block ai-overview-card">
-                <div class="section-heading">✨ AI Overview</div>
+                <div class="section-heading">
+                    <span>✨ AI Overview</span>
+                    <span id="overview-match-badge" class="match-tag" style="display:none;"></span>
+                </div>
                 <div id="ai-overview-content" class="ai-overview-text"></div>
             </div>
 
-            <!-- 2. Videos Section (reads from videos/) -->
+            <!-- 2. Videos Section (Name of video + URL to video) -->
             <div id="sec-videos" class="section-block">
-                <div class="section-heading">🎬 Videos (videos/)</div>
-                <div id="videos-content" class="media-grid"></div>
+                <div class="section-heading"><span>🎬 Videos</span></div>
+                <div id="videos-content" class="video-list"></div>
             </div>
 
-            <!-- 3. Images Section (reads from images/) -->
+            <!-- 3. Images Section (URL iframe to image) -->
             <div id="sec-images" class="section-block">
-                <div class="section-heading">🖼️ Images (images/)</div>
-                <div id="images-content" class="media-grid"></div>
+                <div class="section-heading"><span>🖼️ Images</span></div>
+                <div id="images-content" class="image-iframe-grid"></div>
             </div>
 
-            <!-- 4. Sites Section (reads from indexed/{query}.json) -->
+            <!-- 4. Sites Section (reads from indexed/) -->
             <div id="sec-sites" class="section-block">
-                <div class="section-heading">🌐 Indexed Sites (indexed/)</div>
+                <div class="section-heading"><span>🌐 Indexed Sites</span></div>
                 <div id="sites-content" class="site-list"></div>
             </div>
         </div>
@@ -587,340 +701,6 @@
         </div>
     </div>
 
-    <script>
-        /* =====================================================================
-           1. AI OVERVIEW CONST (Q: "" A: "" pairs for specific search topics)
-           ===================================================================== */
-        const AI_OVERVIEWS = [
-            {
-                Q: "grapegreen",
-                A: "GrapeGreen Search is a custom local-first search engine that scans your local indexed/ JSON files, videos/ folder, and images/ folder with built-in AI Overviews."
-            },
-            {
-                Q: "poop",
-                A: "Poop (feces) is the solid or semisolid remains of food that was not digested in the small intestine, broken down by bacteria in the large intestine."
-            },
-            {
-                Q: "memes",
-                A: "Memes are humorous images, videos, or pieces of text that are copied and spread rapidly by internet users, often with slight variations."
-            }
-        ];
-
-        /* =====================================================================
-           2. LOCAL DIRECTORY SCANNER HELPERS
-           Note: Browsers require either a local dev server with directory listing 
-           enabled OR a manifest file (e.g., videos/manifest.json) to list folder files.
-           This code automatically checks BOTH directory listings and manifest.json!
-           ===================================================================== */
-        async function fetchMediaFromFolder(folderName, query, extensions) {
-            const matchedFiles = [];
-            const lowerQuery = query.toLowerCase().trim();
-
-            try {
-                // Attempt 1: Check if a manifest.json exists in the folder (e.g., videos/manifest.json)
-                const manifestRes = await fetch(`${folderName}/manifest.json`);
-                if (manifestRes.ok) {
-                    const fileList = await manifestRes.json(); // Expects ["funny_poop.mp4", ...]
-                    fileList.forEach(file => {
-                        if (file.toLowerCase().includes(lowerQuery)) {
-                            matchedFiles.push(`${folderName}/${file}`);
-                        }
-                    });
-                    return matchedFiles;
-                }
-            } catch (e) { /* Fallback to directory index parsing */ }
-
-            try {
-                // Attempt 2: Parse local HTTP server directory listing (Apache/Nginx/Python http.server/Live Server)
-                const dirRes = await fetch(`${folderName}/`);
-                if (dirRes.ok) {
-                    const htmlText = await dirRes.text();
-                    const parser = new DOMParser();
-                    const doc = parser.parseFromString(htmlText, 'text/html');
-                    const links = Array.from(doc.querySelectorAll('a'));
-
-                    links.forEach(a => {
-                        const href = decodeURIComponent(a.getAttribute('href') || '');
-                        const fileName = href.split('/').pop();
-                        const hasValidExt = extensions.some(ext => fileName.toLowerCase().endsWith(ext));
-
-                        if (hasValidExt && fileName.toLowerCase().includes(lowerQuery)) {
-                            matchedFiles.push(`${folderName}/${fileName}`);
-                        }
-                    });
-                }
-            } catch (err) {
-                console.warn(`Could not read directory ${folderName}/:`, err);
-            }
-
-            return matchedFiles;
-        }
-
-        /* =====================================================================
-           3. INDEXED JSON READER (Reads indexed/{query}.json)
-           ===================================================================== */
-        async function fetchIndexedSites(query) {
-            // Sanitize query for filename (e.g., "poop" -> "indexed/poop.json")
-            const safeName = query.toLowerCase().trim().replace(/[^a-z0-9_-]/g, '_');
-            if (!safeName) return [];
-
-            try {
-                const response = await fetch(`indexed/${safeName}.json`);
-                if (!response.ok) return [];
-
-                const data = await response.json();
-                // Support either a single JSON object or an array of site objects inside {query}.json
-                const entries = Array.isArray(data) ? data : [data];
-
-                // Filter to confirm the query matches title, keywords, description, or meta tags
-                return entries.filter(site => {
-                    const q = query.toLowerCase().trim();
-                    const titleMatch = (site.title || '').toLowerCase().includes(q);
-                    const descMatch = (site.description || '').toLowerCase().includes(q);
-                    const kwMatch = Array.isArray(site.keywords)
-                        ? site.keywords.some(k => k.toLowerCase().includes(q))
-                        : (site.keywords || '').toLowerCase().includes(q);
-                    const metaMatch = Array.isArray(site["meta tags"])
-                        ? site["meta tags"].some(m => m.toLowerCase().includes(q))
-                        : (site["meta tags"] || '').toLowerCase().includes(q);
-
-                    return titleMatch || descMatch || kwMatch || metaMatch;
-                });
-            } catch (err) {
-                console.warn(`No JSON found at indexed/${safeName}.json`, err);
-                return [];
-            }
-        }
-
-        /* =====================================================================
-           4. CORE SEARCH EXECUTION
-           ===================================================================== */
-        const searchInput = document.getElementById('search-input');
-        const searchBtn = document.getElementById('search-btn');
-        const mainContainer = document.getElementById('main-container');
-        const resultsArea = document.getElementById('results-area');
-
-        async function performSearch() {
-            const query = searchInput.value.trim();
-            if (!query) return;
-
-            // Switch UI from centered hero to top results layout
-            mainContainer.classList.add('has-results');
-            resultsArea.style.display = 'flex';
-
-            // 1. Render AI Overview
-            const overviewBox = document.getElementById('ai-overview-content');
-            const matchedQA = AI_OVERVIEWS.find(item =>
-                item.Q.toLowerCase() === query.toLowerCase() ||
-                query.toLowerCase().includes(item.Q.toLowerCase())
-            );
-
-            if (matchedQA) {
-                overviewBox.innerHTML = `<strong>Q: ${escapeHTML(query)}</strong><br><br>${escapeHTML(matchedQA.A)}`;
-            } else {
-                overviewBox.innerHTML = `<span class="empty-state">No pre-configured AI Overview found for "${escapeHTML(query)}". Try AI Mode for a live response!</span>`;
-            }
-
-            // 2. Render Videos from videos/
-            const videosContainer = document.getElementById('videos-content');
-            videosContainer.innerHTML = '<span class="empty-state">Scanning videos/...</span>';
-            const videos = await fetchMediaFromFolder('videos', query, ['.mp4', '.webm', '.ogg', '.mov']);
-
-            if (videos.length > 0) {
-                videosContainer.innerHTML = videos.map(src => `
-                    <div class="media-card">
-                        <video src="${encodeURI(src)}" controls preload="metadata"></video>
-                        <div class="media-caption">${escapeHTML(src.split('/').pop())}</div>
-                    </div>
-                `).join('');
-            } else {
-                videosContainer.innerHTML = `<span class="empty-state">No matching videos found in <code>videos/</code> for "${escapeHTML(query)}".</span>`;
-            }
-
-            // 3. Render Images from images/
-            const imagesContainer = document.getElementById('images-content');
-            imagesContainer.innerHTML = '<span class="empty-state">Scanning images/...</span>';
-            const images = await fetchMediaFromFolder('images', query, ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']);
-
-            if (images.length > 0) {
-                imagesContainer.innerHTML = images.map(src => `
-                    <div class="media-card">
-                        <a href="${encodeURI(src)}">
-                            <img src="${encodeURI(src)}" alt="${escapeHTML(query)}" loading="lazy">
-                        </a>
-                        <div class="media-caption">${escapeHTML(src.split('/').pop())}</div>
-                    </div>
-                `).join('');
-            } else {
-                imagesContainer.innerHTML = `<span class="empty-state">No matching images found in <code>images/</code> for "${escapeHTML(query)}".</span>`;
-            }
-
-            // 4. Render Indexed Sites from indexed/{query}.json
-            const sitesContainer = document.getElementById('sites-content');
-            sitesContainer.innerHTML = '<span class="empty-state">Reading indexed/ directory...</span>';
-            const sites = await fetchIndexedSites(query);
-
-            // Sort by "popular" (higher popularity number or true boolean first)
-            sites.sort((a, b) => (Number(b.popular) || 0) - (Number(a.popular) || 0));
-
-            if (sites.length > 0) {
-                sitesContainer.innerHTML = sites.map(site => {
-                    const targetUrl = site.url || '#';
-                    const lang = site.launguage || site.language || 'en';
-                    const metaTags = Array.isArray(site["meta tags"]) ? site["meta tags"] : [];
-                    const keywords = Array.isArray(site.keywords) ? site.keywords : [];
-                    const isPopular = site.popular === true || Number(site.popular) > 0;
-
-                    return `
-                        <div class="site-item" onclick="window.location.href='${escapeHTML(targetUrl)}'">
-                            <div class="site-url">
-                                <span>${escapeHTML(targetUrl)}</span>
-                                <span class="meta-pill">Lang: ${escapeHTML(lang)}</span>
-                                ${isPopular ? `<span class="popular-badge">★ Popular (${escapeHTML(String(site.popular))})</span>` : ''}
-                            </div>
-                            <div class="site-title">${escapeHTML(site.title || 'Untitled Site')}</div>
-                            <div class="site-desc">${escapeHTML(site.description || 'No description provided.')}</div>
-                            <div class="site-meta">
-                                ${keywords.map(k => `<span class="meta-pill">#${escapeHTML(k)}</span>`).join('')}
-                                ${metaTags.map(m => `<span class="meta-pill">meta: ${escapeHTML(m)}</span>`).join('')}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-            } else {
-                sitesContainer.innerHTML = `<span class="empty-state">No indexed sites found in <code>indexed/${escapeHTML(query.toLowerCase())}.json</code>.</span>`;
-            }
-        }
-
-        function filterSection(type, btnElement) {
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-            btnElement.classList.add('active');
-
-            const sections = {
-                overview: document.getElementById('sec-overview'),
-                videos: document.getElementById('sec-videos'),
-                images: document.getElementById('sec-images'),
-                sites: document.getElementById('sec-sites')
-            };
-
-            Object.entries(sections).forEach(([key, el]) => {
-                el.style.display = (type === 'all' || type === key) ? 'block' : 'none';
-            });
-        }
-
-        function resetHome() {
-            mainContainer.classList.remove('has-results');
-            resultsArea.style.display = 'none';
-            searchInput.value = '';
-        }
-
-        searchBtn.addEventListener('click', performSearch);
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') performSearch();
-        });
-
-        /* =====================================================================
-           5. FULLSCREEN AI MODE & ai/API.js INTEGRATION
-           ===================================================================== */
-        const aiModeScreen = document.getElementById('ai-mode-screen');
-        const openAiBtn = document.getElementById('open-ai-btn');
-        const closeAiBtn = document.getElementById('close-ai-btn');
-        const aiTextbox = document.getElementById('ai-textbox');
-        const aiSendBtn = document.getElementById('ai-send-btn');
-        const chatHistory = document.getElementById('chat-history');
-
-        let conversationHistory = [];
-
-        openAiBtn.addEventListener('click', () => {
-            aiModeScreen.classList.add('active');
-            // Pre-fill AI textbox if user already typed something in search bar
-            if (searchInput.value.trim() && !aiTextbox.value.trim()) {
-                aiTextbox.value = searchInput.value.trim();
-            }
-            aiTextbox.focus();
-        });
-
-        closeAiBtn.addEventListener('click', () => {
-            aiModeScreen.classList.remove('active');
-        });
-
-        function appendChatMessage(role, text) {
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `chat-msg ${role}`;
-            msgDiv.textContent = text;
-            chatHistory.appendChild(msgDiv);
-            chatHistory.scrollTop = chatHistory.scrollHeight;
-            return msgDiv;
-        }
-
-        async function sendToAI() {
-            const userText = aiTextbox.value.trim();
-            if (!userText) return;
-
-            aiTextbox.value = '';
-            appendChatMessage('user', userText);
-            conversationHistory.push({ role: 'user', content: userText });
-
-            const loadingBubble = appendChatMessage('ai', 'Thinking...');
-
-            try {
-                // Sends POST request to ai/API.js (or dynamically imports if ES module)
-                const response = await fetch('ai/API.js', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        prompt: userText,
-                        history: conversationHistory
-                    })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}`);
-                }
-
-                const contentType = response.headers.get('content-type') || '';
-                let replyText = '';
-
-                if (contentType.includes('application/json')) {
-                    const data = await response.json();
-                    replyText = data.reply || data.response || data.answer || JSON.stringify(data);
-                } else {
-                    replyText = await response.text();
-                }
-
-                loadingBubble.textContent = replyText;
-                conversationHistory.push({ role: 'assistant', content: replyText });
-
-            } catch (err) {
-                // Fallback: If ai/API.js is a client-side ES module exporting askAI(prompt, history)
-                try {
-                    const apiModule = await import('./ai/API.js');
-                    if (typeof apiModule.askAI === 'function') {
-                        const modReply = await apiModule.askAI(userText, conversationHistory);
-                        loadingBubble.textContent = modReply;
-                        conversationHistory.push({ role: 'assistant', content: modReply });
-                        return;
-                    }
-                } catch (moduleErr) {
-                    loadingBubble.textContent = `Error reaching ai/API.js: ${err.message}. Ensure your backend endpoint or ES module export askAI() is running.`;
-                }
-            }
-        }
-
-        aiSendBtn.addEventListener('click', sendToAI);
-        aiTextbox.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter') sendToAI();
-        });
-
-function escapeHTML(str) {
-    return String(str)
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;')
-        .replace(/`/g, '&#96;');
-}
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
