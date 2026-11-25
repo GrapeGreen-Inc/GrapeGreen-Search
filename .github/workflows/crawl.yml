@@ -2,13 +2,12 @@ name: Run GrapeGreen Crawler
 
 on:
   schedule:
-    # Runs at 12:00 AM (00:00) and 12:00 PM (12:00) UTC every day
-    - cron: '0 0,12 * * *'
+    # Runs at 12:00 AM and 12:00 PM Central Time (06:00 and 18:00 UTC)
+    - cron: '0 6,18 * * *'
 
   issues:
     types: [opened]
 
-  # Optional: keeps a manual "Run workflow" button in the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -18,7 +17,6 @@ permissions:
 jobs:
   crawl:
     runs-on: ubuntu-latest
-    # Runs on schedule/manual dispatch, OR when the opened issue matches title "crawl_300" and body contains "command"
     if: >
       github.event_name != 'issues' ||
       (github.event.issue.title == 'crawl_300' && contains(github.event.issue.body, 'command'))
@@ -38,7 +36,7 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run crawler.py
-        run: python crawler.py
+        run: python -u crawler.py
 
       - name: Commit and push indexed sites
         run: |
