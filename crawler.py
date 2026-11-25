@@ -4,7 +4,7 @@ import json
 import time
 import random
 from collections import deque
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 from urllib.robotparser import RobotFileParser
 from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeoutError
 
@@ -30,6 +30,13 @@ BLOCKED_DOMAINS = {
     "google-analytics.com", "facebook.com", "twitter.com", "x.com",
     "instagram.com", "linkedin.com", "://google.com"
 }
+
+CAPTCHA_DOMAINS = (
+    "hcaptcha.com",
+    "://google.com",
+    "recaptcha.net",
+    "://cloudflare.com"
+)
 
 GUEST_BUTTON_PATTERNS = re.compile(
     r"^(continue as guest|guest|browse as guest|enter as guest|skip|accept all|accept|got it)$",
@@ -76,12 +83,11 @@ def check_robots(url, user_agent=BOT_NAME):
 
 def get_domain(url):
     domain = urlparse(url).netloc.lower()
-    domain = domain.split(":")[0]  # Strip port if present
+    domain = domain.split(":")[0]
     return re.sub(r"^www\.", "", domain)
 
 
 def get_clean_slug(url):
-    """Turns 'https://hulu.shop' into 'hulu-shop' and 'https://hulu.com' into 'hulu-com'."""
     domain = get_domain(url)
     slug = re.sub(r"[^a-z0-9]+", "-", domain).strip("-")
     return slug or "site"
@@ -90,8 +96,6 @@ def get_clean_slug(url):
 def save_manifest(manifest_files):
     with open(os.path.join(OUTPUT_DIR, "manifest.json"), "w", encoding="utf-8") as mf:
         json.dump(sorted(manifest_files), mf, indent=2)
-
-
 def click_guest_or_dismiss_buttons(page):
     try:
         candidates = page.locator("button, a[role='button'], input[type='button'], input[type='submit']")
@@ -125,6 +129,14 @@ def inspect_rendered_dom(page, base_url):
             return rect.width > 0 && rect.height > 0;
         }
 
+        const hasCaptcha = Boolean(
+            document.querySelector('.h-captcha, [data-hcaptcha-widget-id], .g-recaptcha, [data-sitekey]') ||
+            Array.from(document.querySelectorAll('iframe[src], script[src]')).some(el => {
+                const s = (el.getAttribute('src') || '').toLowerCase();
+                return s.includes('hcaptcha.com') || s.includes('recaptcha') || s.includes('://cloudflare.com');
+            })
+        );
+
         const visibleHrefs = [];
         document.querySelectorAll('a[href]').forEach(a => {
             if (!isElementVisible(a)) return;
@@ -134,6 +146,17 @@ def inspect_rendered_dom(page, base_url):
             }
             try {
                 visibleHrefs.push(new URL(rawHref, baseUrl).href);
+            } catch (e) {}
+        });
+
+        const iframeSrcs = [];
+        document.querySelectorAll('iframe[src]').forEach(ifr => {
+            const rawSrc = ifr.getAttribute('src');
+            if (!rawSrc || rawSrc.startsWith('about:') || rawSrc.startsWith('javascript:') || rawSrc.startsWith('data:')) {
+                return;
+            }
+            try {
+                iframeSrcs.push(new URL(rawSrc.trim(), baseUrl).href);
             } catch (e) {}
         });
 
@@ -186,10 +209,14 @@ def inspect_rendered_dom(page, base_url):
             metaTags: metaTags.slice(0, 10),
             visibleText: visibleTextParts.slice(0, 5),
             visibleHrefs: Array.from(new Set(visibleHrefs)),
+            iframeSrcs: Array.from(new Set(iframeSrcs)),
+            hasCaptcha,
             logo,
             lang: htmlLang
         };
     }""", base_url)
+
+
 def handle_http_status(response, domain, current_delay):
     if response is None:
         print(f"[SKIPPED - No response] {domain}")
@@ -224,6 +251,23 @@ def handle_http_status(response, domain, current_delay):
     return True, current_delay
 
 
+def inspect_internal_iframe_files(page, iframe_urls, base_domain):
+    extra_texts = []
+    for ifr_url in iframe_urls[:5]:
+        if get_domain(ifr_url) != base_domain:
+            continue
+        try:
+            res = page.context.request.get(ifr_url, timeout=4000)
+            if res.ok and "text/html" in res.headers.get("content-type", ""):
+                html = res.text()
+                clean = re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>", " ", html, flags=re.I)
+                clean = re.sub(r"<[^>]+>", " ", clean)
+                clean = re.sub(r"\s+", " ", clean).strip()
+                if len(clean) > 25:
+                    extra_texts.append(clean[:220])
+        except Exception:
+            continue
+    return extra_texts
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -236,7 +280,7 @@ def main():
         if fn.endswith(".json") and fn != "manifest.json"
     )
 
-    print(f"Starting crawler for {TARGET_SITES} sites...\n")
+    print(f"Starting crawler (root / check + captcha + iframe discovery) for {TARGET_SITES} sites...\n")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -255,25 +299,30 @@ def main():
 
         try:
             while queue and saved_count < TARGET_SITES:
-                url = queue.popleft()
-                domain = get_domain(url)
+                raw_url = queue.popleft()
+                parsed_raw = urlparse(raw_url)
+                if not parsed_raw.scheme or not parsed_raw.netloc:
+                    continue
+
+                root_url = f"{parsed_raw.scheme}://{parsed_raw.netloc}/"
+                domain = get_domain(root_url)
 
                 if not domain or domain in visited_domains or domain in BLOCKED_DOMAINS:
                     continue
 
                 visited_domains.add(domain)
 
-                allowed, delay = check_robots(url)
+                allowed, delay = check_robots(root_url)
                 delay = max(delay, domain_backoff.get(domain, 0))
 
                 if not allowed or delay > MAX_CRAWL_DELAY:
                     reason = f"delay {delay}s > {MAX_CRAWL_DELAY}s" if delay > MAX_CRAWL_DELAY else "disallowed"
-                    print(f"[SKIPPED - robots.txt ({reason})] {url}")
+                    print(f"[SKIPPED - robots.txt ({reason})] {root_url}")
                     continue
 
                 try:
                     start_time = time.monotonic()
-                    response = page.goto(url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
+                    response = page.goto(root_url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
                     load_time = time.monotonic() - start_time
 
                     ok, delay = handle_http_status(response, domain, delay)
@@ -288,38 +337,52 @@ def main():
                     click_guest_or_dismiss_buttons(page)
 
                     final_url = page.url
-                    final_domain = get_domain(final_url)
+                    final_parsed = urlparse(final_url)
+                    final_root_url = f"{final_parsed.scheme}://{final_parsed.netloc}/"
+                    final_domain = get_domain(final_root_url)
                     visited_domains.add(final_domain)
 
-                    if final_url != url:
-                        final_allowed, final_delay = check_robots(final_url)
+                    if final_root_url != root_url:
+                        final_allowed, final_delay = check_robots(final_root_url)
                         if not final_allowed or final_delay > MAX_CRAWL_DELAY:
-                            print(f"[SKIPPED - robots.txt] {final_url}")
+                            print(f"[SKIPPED - robots.txt] {final_root_url}")
                             continue
                         delay = max(delay, final_delay)
 
                     dom_info = inspect_rendered_dom(page, final_url)
 
-                    discovered = []
-                    for href in dom_info["visibleHrefs"]:
-                        parsed = urlparse(href)
-                        if parsed.scheme in ("http", "https") and parsed.netloc:
-                            clean_href = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
-                            if not clean_href.lower().endswith((".pdf", ".jpg", ".png", ".zip", ".mp4", ".svg")):
-                                if get_domain(clean_href) not in visited_domains:
-                                    discovered.append(clean_href)
+                    if dom_info["hasCaptcha"]:
+                        print(f"[SKIPPED - Captcha detected] {final_domain}")
+                        continue
 
+                    iframe_texts = inspect_internal_iframe_files(page, dom_info["iframeSrcs"], final_domain)
+
+                    discovered = []
+                    all_found_urls = dom_info["visibleHrefs"] + dom_info["iframeSrcs"]
+                    for found_url in all_found_urls:
+                        if any(c in found_url.lower() for c in CAPTCHA_DOMAINS):
+                            continue
+                        p_url = urlparse(found_url)
+                        if p_url.scheme in ("http", "https") and p_url.netloc:
+                            candidate_root = f"{p_url.scheme}://{p_url.netloc}/"
+                            cand_domain = get_domain(candidate_root)
+                            if cand_domain and cand_domain not in visited_domains and cand_domain not in BLOCKED_DOMAINS:
+                                discovered.append(candidate_root)
+
+                    discovered = list(set(discovered))
                     random.shuffle(discovered)
                     for next_url in discovered[:25]:
                         queue.append(next_url)
 
-                    slug = get_clean_slug(final_url)
+                    slug = get_clean_slug(final_root_url)
                     root_name = final_domain.split(".")[0] if "." in final_domain else final_domain
                     title = dom_info["title"] or final_domain
 
                     description = dom_info["metaDesc"]
                     if not description and dom_info["visibleText"]:
                         description = dom_info["visibleText"][0]
+                    if not description and iframe_texts:
+                        description = iframe_texts[0]
                     if not description:
                         description = f"Explore {title} on {final_domain}."
 
@@ -334,13 +397,18 @@ def main():
                             if clean_k and clean_k not in keywords:
                                 keywords.append(clean_k)
 
+                    if iframe_texts:
+                        extra_words = re.findall(r"\b[a-z]{4,14}\b", " ".join(iframe_texts).lower())
+                        for w in extra_words:
+                            if w not in keywords and len(keywords) < 12:
+                                keywords.append(w)
+
                     lang = dom_info["lang"].split("-")[0].lower().strip() or "en"
-                    parsed_final = urlparse(final_url)
-                    logo_url = dom_info["logo"] or f"{parsed_final.scheme}://{parsed_final.netloc}/favicon.ico"
+                    logo_url = dom_info["logo"] or f"{final_parsed.scheme}://{final_parsed.netloc}/favicon.ico"
 
                     site_data = {
                         "title": title[:120],
-                        "url": final_url,
+                        "url": final_root_url,
                         "description": description[:300],
                         "keywords": keywords[:12],
                         "meta tags": dom_info["metaTags"],
@@ -361,7 +429,7 @@ def main():
                         except Exception:
                             existing = []
 
-                    existing = [e for e in existing if e.get("url") != final_url]
+                    existing = [e for e in existing if e.get("url") != final_root_url]
                     existing.append(site_data)
 
                     with open(filepath, "w", encoding="utf-8") as out_f:
@@ -377,7 +445,7 @@ def main():
                     time.sleep(delay)
 
                 except PlaywrightTimeoutError:
-                    print(f"[SKIPPED - Timeout > {NAV_TIMEOUT_MS // 1000}s] {url}")
+                    print(f"[SKIPPED - Timeout > {NAV_TIMEOUT_MS // 1000}s] {root_url}")
                     continue
                 except Exception:
                     continue
