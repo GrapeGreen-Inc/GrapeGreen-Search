@@ -4,12 +4,14 @@ import json
 import random
 from collections import deque
 from urllib.parse import urlparse
+from urllib.robotparser import RobotFileParser
 from playwright.sync_api import sync_playwright
 
 TARGET_SITES = 300
 OUTPUT_DIR = "indexed"
 NAV_TIMEOUT_MS = 12000
 SAVE_EVERY = 10
+BOT_NAME = "GrapeGreenBot"
 
 SEED_URLS = [
     "https://wikipedia.org",
@@ -29,6 +31,23 @@ GUEST_BUTTON_PATTERNS = re.compile(
     r"^(continue as guest|guest|browse as guest|enter as guest|skip|accept all|accept|got it)$",
     re.I
 )
+
+robots_cache = {}
+
+
+def can_crawl(url, user_agent=BOT_NAME):
+    parsed = urlparse(url)
+    base = f"{parsed.scheme}://{parsed.netloc}"
+    if base not in robots_cache:
+        rp = RobotFileParser()
+        rp.set_url(f"{base}/robots.txt")
+        try:
+            rp.read()
+        except Exception:
+            rp = None
+        robots_cache[base] = rp
+    rp = robots_cache[base]
+    return True if rp is None else rp.can_fetch(user_agent, url)
 
 
 def get_domain(url):
@@ -145,7 +164,7 @@ def inspect_rendered_dom(page, base_url):
             lang: htmlLang
         };
     }""", base_url)
-    def main():
+def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     queue = deque(SEED_URLS)
@@ -157,7 +176,7 @@ def inspect_rendered_dom(page, base_url):
         if fn.endswith(".json") and fn != "manifest.json"
     )
 
-    print(f"Starting Codespaces crawler to index {TARGET_SITES} sites...\n")
+    print(f"Starting Codespaces crawler (with robots.txt check) to index {TARGET_SITES} sites...\n")
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
@@ -166,7 +185,7 @@ def inspect_rendered_dom(page, base_url):
         )
         context = browser.new_context(
             viewport={"width": 1280, "height": 800},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36"
+            user_agent=f"Mozilla/5.0 (compatible; {BOT_NAME}/1.0)"
         )
         page = context.new_page()
 
@@ -184,6 +203,10 @@ def inspect_rendered_dom(page, base_url):
 
                 visited_domains.add(domain)
 
+                if not can_crawl(url):
+                    print(f"[SKIPPED - robots.txt] {url}")
+                    continue
+
                 try:
                     page.goto(url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS)
                     page.wait_for_timeout(1500)
@@ -193,6 +216,10 @@ def inspect_rendered_dom(page, base_url):
                     final_url = page.url
                     final_domain = get_domain(final_url)
                     visited_domains.add(final_domain)
+
+                    if final_url != url and not can_crawl(final_url):
+                        print(f"[SKIPPED - robots.txt] {final_url}")
+                        continue
 
                     dom_info = inspect_rendered_dom(page, final_url)
 
@@ -276,4 +303,3 @@ def inspect_rendered_dom(page, base_url):
 
 if __name__ == "__main__":
     main()
-
