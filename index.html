@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrapeGreen Search</title>
+    <style>
+        :root {
+            --bg-primary: #3b1c63;      /* Deep Grape Purple from branding */
+            --bg-secondary: #2a1249;    /* Darker purple for cards/containers */
+            --bg-surface: #4a247a;      /* Elevated surface */
+            --accent-green: #8ce03f;    /* Lime/Leaf Green from branding */
+            --accent-green-hover: #76c72e;
+            --accent-purple: #9d71e8;   /* Soft grape highlight */
+            --text-primary: #ffffff;
+            --text-secondary: #d4c5e8;
+            --border-color: rgba(157, 113, 232, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Custom Grape SVG Logo */
+        .brand-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .grape-svg {
+            width: 80px;
+            height: 95px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 8px 16px rgba(0,0,0,0.3));
+        }
+
+        .brand-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .brand-title span {
+            color: var(--accent-green);
+        }
+
+        .brand-tagline {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-top: 8px;
+            opacity: 0.9;
+        }
+
+        /* Home / Search Hero Layout */
+        #main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        #main-container.has-results {
+            justify-content: flex-start;
+            padding-top: 30px;
+        }
+
+        #main-container.has-results .grape-svg {
+            width: 42px;
+            height: 50px;
+            margin-bottom: 4px;
+        }
+
+        #main-container.has-results .brand-title {
+            font-size: 2rem;
+        }
+
+        #main-container.has-results .brand-tagline {
+            display: none;
+        }
+
+        /* Huge Search Bar Area */
+        .search-wrapper {
+            width: 100%;
+            max-width: 720px;
+            margin: 28px 0 20px 0;
+            position: relative;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 8px 14px 8px 26px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            transition: border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .search-box:focus-within {
+            border-color: var(--accent-green);
+            box-shadow: 0 12px 35px rgba(140, 224, 63, 0.18);
+        }
+
+        #search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-size: 1.25rem;
+            padding: 12px 10px;
+            width: 100%;
+        }
+
+        #search-input::placeholder {
+            color: rgba(212, 197, 232, 0.5);
+        }
+
+        .search-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 30px;
+            padding: 12px 22px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.15s, background-color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn:active {
+            transform: scale(0.97);
+        }
+
+        .btn-search {
+            background-color: var(--accent-green);
+            color: #1c0c31;
+        }
+
+        .btn-search:hover {
+            background-color: var(--accent-green-hover);
+        }
+
+        .btn-ai {
+            background: linear-gradient(135deg, #6d3cc4, #4c2294);
+            color: var(--text-primary);
+            border: 1px solid var(--accent-purple);
+        }
+
+        .btn-ai:hover {
+            background: linear-gradient(135deg, #7e49db, #5b29b0);
+        }
+
+        /* Results Section */
+        #results-area {
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            gap: 24px;
+            padding-bottom: 60px;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        .tab-btn.active {
+            background: var(--bg-surface);
+            color: var(--accent-green);
+            border-color: var(--accent-green);
+        }
+
+        /* Section Cards */
+        .section-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+
+        .section-heading {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-green);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* AI Overview Box */
+        .ai-overview-card {
+            background: linear-gradient(145deg, #2d144d, #3a1a63);
+            border: 1px solid var(--accent-green);
+        }
+
+        .ai-overview-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        /* Media Grids (Videos & Images) */
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .media-card {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+
+        .media-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-green);
+        }
+
+        .media-card img, .media-card video {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            background: #1a0b2e;
+        }
+
+        .media-caption {
+            padding: 10px 12px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            word-break: break-word;
+        }
+
+        /* Indexed Sites List */
+        .site-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .site-item {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .site-item:hover {
+            border-color: var(--accent-green);
+            background: #432070;
+            transform: translateX(4px);
+        }
+
+        .site-url {
+            font-size: 0.85rem;
+            color: var(--accent-green);
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .popular-badge {
+            background: rgba(140, 224, 63, 0.2);
+            color: var(--accent-green);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .site-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .site-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.45;
+            margin-bottom: 10px;
+        }
+
+        .site-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+        }
+
+        .meta-pill {
+            background: var(--bg-secondary);
+            padding: 3px 9px;
+            border-radius: 8px;
+        }
+
+        .empty-state {
+            color: var(--text-secondary);
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        /* =========================================
+           FULLSCREEN AI MODE OVERLAY
+           ========================================= */
+        #ai-mode-screen {
+            position: fixed;
+            inset: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: var(--bg-secondary);
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+        }
+
+        #ai-mode-screen.active {
+            display: flex;
+        }
+
+        .ai-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            background: var(--bg-primary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .ai-topbar-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ai-topbar-title span {
+            color: var(--accent-green);
+        }
+
+        .btn-close-ai {
+            background: var(--bg-surface);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn-close-ai:hover {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        #chat-history {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 900px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .chat-msg {
+            max-width: 80%;
+            padding: 14px 18px;
+            border-radius: 18px;
+            line-height: 1.5;
+            font-size: 1rem;
+            word-wrap: break-word;
+        }
+
+        .chat-msg.user {
+            align-self: flex-end;
+            background-color: var(--accent-green);
+            color: #1b0b30;
+            font-weight: 600;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-msg.ai {
+            align-self: flex-start;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-bottom-left-radius: 4px;
+        }
+
+        .ai-input-bar {
+            background: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            padding: 16px 24px;
+        }
+
+        .ai-input-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+        }
+
+        #ai-textbox {
+            flex: 1;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 25px;
+            padding: 14px 20px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        #ai-textbox:focus {
+            border-color: var(--accent-green);
+        }
+
+        @media (max-width: 600px) {
+            .brand-title { font-size: 2.4rem; }
+            .search-box { flex-direction: column; border-radius: 24px; padding: 14px; }
+            .search-actions { width: 100%; justify-content: stretch; margin-top: 8px; }
+            .search-actions .btn { flex: 1; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MAIN SEARCH ENGINE VIEW -->
+    <div id="main-container">
+        <div class="brand-header" onclick="resetHome()" style="cursor: pointer;" title="Back to Home">
+            <!-- Custom SVG matching GrapeGreen logo -->
+            <svg class="grape-svg" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <radialGradient id="grapeGrad" cx="35%" cy="35%" r="65%">
+                        <stop offset="0%" stop-color="#b794f4"/>
+                        <stop offset="60%" stop-color="#7f52d1"/>
+                        <stop offset="100%" stop-color="#4e2a8e"/>
+                    </radialGradient>
+                </defs>
+                <!-- Green Leaf -->
+                <path d="M58 2 C72 2, 82 14, 84 26 C70 24, 60 14, 58 2 Z" fill="#8ce03f"/>
+                <!-- Row 1 (3 grapes) -->
+                <circle cx="34" cy="36" r="15" fill="url(#grapeGrad)"/>
+                <circle cx="60" cy="36" r="15" fill="url(#grapeGrad)"/>
+                <circle cx="86" cy="36" r="15" fill="url(#grapeGrad)"/>
+                <!-- Row 2 (3 grapes) -->
+                <circle cx="46" cy="60" r="15" fill="url(#grapeGrad)"/>
+                <circle cx="72" cy="60" r="15" fill="url(#grapeGrad)"/>
+                <circle cx="96" cy="60" r="15" fill="url(#grapeGrad)"/>
+                <!-- Row 3 (2 grapes) -->
+                <circle cx="58" cy="84" r="15" fill="url(#grapeGrad)"/>
+                <circle cx="84" cy="84" r="15" fill="url(#grapeGrad)"/>
+                <!-- Row 4 (1 grape) -->
+                <circle cx="71" cy="108" r="15" fill="url(#grapeGrad)"/>
+            </svg>
+            <h1 class="brand-title">Grape<span>Green</span> Search</h1>
+            <p class="brand-tagline">Your dashboard, your tabs, your memes.</p>
+        </div>
+
+        <!-- Huge Search Bar & AI Mode Button -->
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search indexed sites, videos, images..." autocomplete="off">
+                <div class="search-actions">
+                    <button class="btn btn-search" id="search-btn">Search</button>
+                    <button class="btn btn-ai" id="open-ai-btn">✨ AI Mode</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Results Container -->
+        <div id="results-area">
+            <div class="filter-tabs">
+                <button class="tab-btn active" onclick="filterSection('all', this)">All Results</button>
+                <button class="tab-btn" onclick="filterSection('overview', this)">AI Overview</button>
+                <button class="tab-btn" onclick="filterSection('sites', this)">Sites</button>
+                <button class="tab-btn" onclick="filterSection('videos', this)">Videos</button>
+                <button class="tab-btn" onclick="filterSection('images', this)">Images</button>
+            </div>
+
+            <!-- 1. AI Overview Section -->
+            <div id="sec-overview" class="section-block ai-overview-card">
+                <div class="section-heading">✨ AI Overview</div>
+                <div id="ai-overview-content" class="ai-overview-text"></div>
+            </div>
+
+            <!-- 2. Videos Section (reads from videos/) -->
+            <div id="sec-videos" class="section-block">
+                <div class="section-heading">🎬 Videos (videos/)</div>
+                <div id="videos-content" class="media-grid"></div>
+            </div>
+
+            <!-- 3. Images Section (reads from images/) -->
+            <div id="sec-images" class="section-block">
+                <div class="section-heading">🖼️ Images (images/)</div>
+                <div id="images-content" class="media-grid"></div>
+            </div>
+
+            <!-- 4. Sites Section (reads from indexed/{query}.json) -->
+            <div id="sec-sites" class="section-block">
+                <div class="section-heading">🌐 Indexed Sites (indexed/)</div>
+                <div id="sites-content" class="site-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FULLSCREEN AI MODE DIV -->
+    <div id="ai-mode-screen">
+        <div class="ai-topbar">
+            <div class="ai-topbar-title">🍇 Grape<span>Green</span> AI Mode</div>
+            <button class="btn-close-ai" id="close-ai-btn">✕ Back to Search</button>
+        </div>
+
+        <div id="chat-history">
+            <div class="chat-msg ai">
+                Welcome to <strong>GrapeGreen AI Mode</strong>! Ask me anything—your messages are sent directly to <code>ai/API.js</code>.
+            </div>
+        </div>
+
+        <div class="ai-input-bar">
+            <div class="ai-input-container">
+                <input type="text" id="ai-textbox" placeholder="Ask GrapeGreen AI anything..." autocomplete="off">
+                <button class="btn btn-search" id="ai-send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        /* =====================================================================
+           1. AI OVERVIEW CONST (Q: "" A: "" pairs for specific search topics)
+           ===================================================================== */
+        const AI_OVERVIEWS = [
+            {
+                Q: "grapegreen",
+                A: "GrapeGreen Search is a custom local-first search engine that scans your local indexed/ JSON files, videos/ folder, and images/ folder with built-in AI Overviews."
+            },
+            {
+                Q: "poop",
+                A: "Poop (feces) is the solid or semisolid remains of food that was not digested in the small intestine, broken down by bacteria in the large intestine."
+            },
+            {
+                Q: "memes",
+                A: "Memes are humorous images, videos, or pieces of text that are copied and spread rapidly by internet users, often with slight variations."
+            }
+        ];
+
+        /* =====================================================================
+           2. LOCAL DIRECTORY SCANNER HELPERS
+           Note: Browsers require either a local dev server with directory listing 
+           enabled OR a manifest file (e.g., videos/manifest.json) to list folder files.
+           This code automatically checks BOTH directory listings and manifest.json!
+           ===================================================================== */
+        async function fetchMediaFromFolder(folderName, query, extensions) {
+            const matchedFiles = [];
+            const lowerQuery = query.toLowerCase().trim();
+
+            try {
+                // Attempt 1: Check if a manifest.json exists in the folder (e.g., videos/manifest.json)
+                const manifestRes = await fetch(`${folderName}/manifest.json`);
+                if (manifestRes.ok) {
+                    const fileList = await manifestRes.json(); // Expects ["funny_poop.mp4", ...]
+                    fileList.forEach(file => {
+                        if (file.toLowerCase().includes(lowerQuery)) {
+                            matchedFiles.push(`${folderName}/${file}`);
+                        }
+                    });
+                    return matchedFiles;
+                }
+            } catch (e) { /* Fallback to directory index parsing */ }
+
+            try {
+                // Attempt 2: Parse local HTTP server directory listing (Apache/Nginx/Python http.server/Live Server)
+                const dirRes = await fetch(`${folderName}/`);
+                if (dirRes.ok) {
+                    const htmlText = await dirRes.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(htmlText, 'text/html');
+                    const links = Array.from(doc.querySelectorAll('a'));
+
+                    links.forEach(a => {
+                        const href = decodeURIComponent(a.getAttribute('href') || '');
+                        const fileName = href.split('/').pop();
+                        const hasValidExt = extensions.some(ext => fileName.toLowerCase().endsWith(ext));
+
+                        if (hasValidExt && fileName.toLowerCase().includes(lowerQuery)) {
+                            matchedFiles.push(`${folderName}/${fileName}`);
+                        }
+                    });
+                }
+            } catch (err) {
+                console.warn(`Could not read directory ${folderName}/:`, err);
+            }
+
+            return matchedFiles;
+        }
+
+        /* =====================================================================
+           3. INDEXED JSON READER (Reads indexed/{query}.json)
+           ===================================================================== */
+        async function fetchIndexedSites(query) {
+            // Sanitize query for filename (e.g., "poop" -> "indexed/poop.json")
+            const safeName = query.toLowerCase().trim().replace(/[^a-z0-9_-]/g, '_');
+            if (!safeName) return [];
+
+            try {
+                const response = await fetch(`indexed/${safeName}.json`);
+                if (!response.ok) return [];
+
+                const data = await response.json();
+                // Support either a single JSON object or an array of site objects inside {query}.json
+                const entries = Array.isArray(data) ? data : [data];
+
+                // Filter to confirm the query matches title, keywords, description, or meta tags
+                return entries.filter(site => {
+                    const q = query.toLowerCase().trim();
+                    const titleMatch = (site.title || '').toLowerCase().includes(q);
+                    const descMatch = (site.description || '').toLowerCase().includes(q);
+                    const kwMatch = Array.isArray(site.keywords)
+                        ? site.keywords.some(k => k.toLowerCase().includes(q))
+                        : (site.keywords || '').toLowerCase().includes(q);
+                    const metaMatch = Array.isArray(site["meta tags"])
+                        ? site["meta tags"].some(m => m.toLowerCase().includes(q))
+                        : (site["meta tags"] || '').toLowerCase().includes(q);
+
+                    return titleMatch || descMatch || kwMatch || metaMatch;
+                });
+            } catch (err) {
+                console.warn(`No JSON found at indexed/${safeName}.json`, err);
+                return [];
+            }
+        }
+
+        /* =====================================================================
+           4. CORE SEARCH EXECUTION
+           ===================================================================== */
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const mainContainer = document.getElementById('main-container');
+        const resultsArea = document.getElementById('results-area');
+
+        async function performSearch() {
+            const query = searchInput.value.trim();
+            if (!query) return;
+
+            // Switch UI from centered hero to top results layout
+            mainContainer.classList.add('has-results');
+            resultsArea.style.display = 'flex';
+
+            // 1. Render AI Overview
+            const overviewBox = document.getElementById('ai-overview-content');
+            const matchedQA = AI_OVERVIEWS.find(item =>
+                item.Q.toLowerCase() === query.toLowerCase() ||
+                query.toLowerCase().includes(item.Q.toLowerCase())
+            );
+
+            if (matchedQA) {
+                overviewBox.innerHTML = `<strong>Q: ${escapeHTML(query)}</strong><br><br>${escapeHTML(matchedQA.A)}`;
+            } else {
+                overviewBox.innerHTML = `<span class="empty-state">No pre-configured AI Overview found for "${escapeHTML(query)}". Try AI Mode for a live response!</span>`;
+            }
+
+            // 2. Render Videos from videos/
+            const videosContainer = document.getElementById('videos-content');
+            videosContainer.innerHTML = '<span class="empty-state">Scanning videos/...</span>';
+            const videos = await fetchMediaFromFolder('videos', query, ['.mp4', '.webm', '.ogg', '.mov']);
+
+            if (videos.length > 0) {
+                videosContainer.innerHTML = videos.map(src => `
+                    <div class="media-card">
+                        <video src="${encodeURI(src)}" controls preload="metadata"></video>
+                        <div class="media-caption">${escapeHTML(src.split('/').pop())}</div>
+                    </div>
+                `).join('');
+            } else {
+                videosContainer.innerHTML = `<span class="empty-state">No matching videos found in <code>videos/</code> for "${escapeHTML(query)}".</span>`;
+            }
+
+            // 3. Render Images from images/
+            const imagesContainer = document.getElementById('images-content');
+            imagesContainer.innerHTML = '<span class="empty-state">Scanning images/...</span>';
+            const images = await fetchMediaFromFolder('images', query, ['.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']);
+
+            if (images.length > 0) {
+                imagesContainer.innerHTML = images.map(src => `
+                    <div class="media-card">
+                        <a href="${encodeURI(src)}">
+                            <img src="${encodeURI(src)}" alt="${escapeHTML(query)}" loading="lazy">
+                        </a>
+                        <div class="media-caption">${escapeHTML(src.split('/').pop())}</div>
+                    </div>
+                `).join('');
+            } else {
+                imagesContainer.innerHTML = `<span class="empty-state">No matching images found in <code>images/</code> for "${escapeHTML(query)}".</span>`;
+            }
+
+            // 4. Render Indexed Sites from indexed/{query}.json
+            const sitesContainer = document.getElementById('sites-content');
+            sitesContainer.innerHTML = '<span class="empty-state">Reading indexed/ directory...</span>';
+            const sites = await fetchIndexedSites(query);
+
+            // Sort by "popular" (higher popularity number or true boolean first)
+            sites.sort((a, b) => (Number(b.popular) || 0) - (Number(a.popular) || 0));
+
+            if (sites.length > 0) {
+                sitesContainer.innerHTML = sites.map(site => {
+                    const targetUrl = site.url || '#';
+                    const lang = site.launguage || site.language || 'en';
+                    const metaTags = Array.isArray(site["meta tags"]) ? site["meta tags"] : [];
+                    const keywords = Array.isArray(site.keywords) ? site.keywords : [];
+                    const isPopular = site.popular === true || Number(site.popular) > 0;
+
+                    return `
+                        <div class="site-item" onclick="window.location.href='${escapeHTML(targetUrl)}'">
+                            <div class="site-url">
+                                <span>${escapeHTML(targetUrl)}</span>
+                                <span class="meta-pill">Lang: ${escapeHTML(lang)}</span>
+                                ${isPopular ? `<span class="popular-badge">★ Popular (${escapeHTML(String(site.popular))})</span>` : ''}
+                            </div>
+                            <div class="site-title">${escapeHTML(site.title || 'Untitled Site')}</div>
+                            <div class="site-desc">${escapeHTML(site.description || 'No description provided.')}</div>
+                            <div class="site-meta">
+                                ${keywords.map(k => `<span class="meta-pill">#${escapeHTML(k)}</span>`).join('')}
+                                ${metaTags.map(m => `<span class="meta-pill">meta: ${escapeHTML(m)}</span>`).join('')}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            } else {
+                sitesContainer.innerHTML = `<span class="empty-state">No indexed sites found in <code>indexed/${escapeHTML(query.toLowerCase())}.json</code>.</span>`;
+            }
+        }
+
+        function filterSection(type, btnElement) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            const sections = {
+                overview: document.getElementById('sec-overview'),
+                videos: document.getElementById('sec-videos'),
+                images: document.getElementById('sec-images'),
+                sites: document.getElementById('sec-sites')
+            };
+
+            Object.entries(sections).forEach(([key, el]) => {
+                el.style.display = (type === 'all' || type === key) ? 'block' : 'none';
+            });
+        }
+
+        function resetHome() {
+            mainContainer.classList.remove('has-results');
+            resultsArea.style.display = 'none';
+            searchInput.value = '';
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') performSearch();
+        });
+
+        /* =====================================================================
+           5. FULLSCREEN AI MODE & ai/API.js INTEGRATION
+           ===================================================================== */
+        const aiModeScreen = document.getElementById('ai-mode-screen');
+        const openAiBtn = document.getElementById('open-ai-btn');
+        const closeAiBtn = document.getElementById('close-ai-btn');
+        const aiTextbox = document.getElementById('ai-textbox');
+        const aiSendBtn = document.getElementById('ai-send-btn');
+        const chatHistory = document.getElementById('chat-history');
+
+        let conversationHistory = [];
+
+        openAiBtn.addEventListener('click', () => {
+            aiModeScreen.classList.add('active');
+            // Pre-fill AI textbox if user already typed something in search bar
+            if (searchInput.value.trim() && !aiTextbox.value.trim()) {
+                aiTextbox.value = searchInput.value.trim();
+            }
+            aiTextbox.focus();
+        });
+
+        closeAiBtn.addEventListener('click', () => {
+            aiModeScreen.classList.remove('active');
+        });
+
+        function appendChatMessage(role, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = `chat-msg ${role}`;
+            msgDiv.textContent = text;
+            chatHistory.appendChild(msgDiv);
+            chatHistory.scrollTop = chatHistory.scrollHeight;
+            return msgDiv;
+        }
+
+        async function sendToAI() {
+            const userText = aiTextbox.value.trim();
+            if (!userText) return;
+
+            aiTextbox.value = '';
+            appendChatMessage('user', userText);
+            conversationHistory.push({ role: 'user', content: userText });
+
+            const loadingBubble = appendChatMessage('ai', 'Thinking...');
+
+            try {
+                // Sends POST request to ai/API.js (or dynamically imports if ES module)
+                const response = await fetch('ai/API.js', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        prompt: userText,
+                        history: conversationHistory
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}`);
+                }
+
+                const contentType = response.headers.get('content-type') || '';
+                let replyText = '';
+
+                if (contentType.includes('application/json')) {
+                    const data = await response.json();
+                    replyText = data.reply || data.response || data.answer || JSON.stringify(data);
+                } else {
+                    replyText = await response.text();
+                }
+
+                loadingBubble.textContent = replyText;
+                conversationHistory.push({ role: 'assistant', content: replyText });
+
+            } catch (err) {
+                // Fallback: If ai/API.js is a client-side ES module exporting askAI(prompt, history)
+                try {
+                    const apiModule = await import('./ai/API.js');
+                    if (typeof apiModule.askAI === 'function') {
+                        const modReply = await apiModule.askAI(userText, conversationHistory);
+                        loadingBubble.textContent = modReply;
+                        conversationHistory.push({ role: 'assistant', content: modReply });
+                        return;
+                    }
+                } catch (moduleErr) {
+                    loadingBubble.textContent = `Error reaching ai/API.js: ${err.message}. Ensure your backend endpoint or ES module export askAI() is running.`;
+                }
+            }
+        }
+
+        aiSendBtn.addEventListener('click', sendToAI);
+        aiTextbox.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') sendToAI();
+        });
+
+function escapeHTML(str) {
+    return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;')
+        .replace(/`/g, '&#96;');
+}
+    </script>
+</body>
+</html>
