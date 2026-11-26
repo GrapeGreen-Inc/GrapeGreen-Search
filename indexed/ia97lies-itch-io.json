@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Artificials - itch.io",
+    "url": "https://ia97lies.itch.io/",
+    "description": "Follow us for updates as we bring Situation Normal to life.",
+    "keywords": [
+      "ia97lies",
+      "ia97lies-itch-io",
+      "ia97lies.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 74,
+    "launguage": "en",
+    "image": "https://ia97lies.itch.io/favicon.ico"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "VS Code Insiders Podcast",
+    "url": "https://www.vscodepodcast.com/",
+    "description": "Stay up to date with the latest in VS Code, the open source AI code editor.",
+    "keywords": [
+      "vscodepodcast",
+      "vscodepodcast-com",
+      "vscodepodcast.com"
+    ],
+    "meta tags": [
+      "generator",
+      "title",
+      "description",
+      "author",
+      "apple-itunes-app",
+      "csrf-param",
+      "csrf-token",
+      "og:title",
+      "og:description",
+      "og:url"
+    ],
+    "popular": 61,
+    "launguage": "en",
+    "image": "https://cdn.fireside.fm/file/fireside-images-2024/podcasts/images/f/fc261209-0765-4b49-be13-c610671ae141/cover_medium.jpg"
+  }
+]

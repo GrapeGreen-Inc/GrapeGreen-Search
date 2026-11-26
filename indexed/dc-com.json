@@ -1,0 +1,27 @@
+[
+  {
+    "title": "DC.com - The Official Home of DC",
+    "url": "https://www.dc.com/",
+    "description": "DC.com - Welcome to the Official Site for DC. DC is home to the world's Greatest Super Heroes, including SUPERMAN, BATMAN, WONDER WOMAN, GREEN LANTERN, THE FLASH, AQUAMAN and more",
+    "keywords": [
+      "dc",
+      "dc-com",
+      "dc.com"
+    ],
+    "meta tags": [
+      "og:title",
+      "twitter:title",
+      "og:type",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
+      "og:image:alt",
+      "twitter:image",
+      "twitter:image:alt",
+      "description"
+    ],
+    "popular": 62,
+    "launguage": "en",
+    "image": "https://static.dc.com/2024-07/dc_logo_4x3_2024.png"
+  }
+]

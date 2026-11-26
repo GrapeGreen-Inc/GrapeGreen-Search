@@ -12,15 +12,15 @@
       "generator",
       "twitter:card",
       "og:url",
-      "docs-sha",
       "og:locale",
       "og:locale:alternate",
       "docusaurus_locale",
       "docusaurus_tag",
       "docsearch:language",
-      "docsearch:docusaurus_tag"
+      "docsearch:docusaurus_tag",
+      "docs-sha"
     ],
-    "popular": 50,
+    "popular": 71,
     "launguage": "en",
     "image": "https://www.electronjs.org/assets/img/favicon.ico"
   }

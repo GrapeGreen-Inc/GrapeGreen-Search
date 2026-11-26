@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Google Families | Empowering kids to safely connect, play, and learn online",
+    "url": "https://families.google/",
+    "description": "Tips and resources to help protect children on the Internet, empower safe online exploration and give parents tools and settings as their families use technology.",
+    "keywords": [
+      "families",
+      "families-google",
+      "families.google"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:url",
+      "og:description",
+      "og:locale",
+      "og:site_name",
+      "og:type",
+      "twitter:card",
+      "twitter:description",
+      "twitter:site",
+      "twitter:url"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/marketing-cms/assets/images/f7/f4/e99eb9764786997cf65b997e2373/favicon.png=s180"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Amazon Pharmacy | Online Prescription",
+    "url": "https://pharmacy.amazon.com/",
+    "description": "Transfer or refill an online prescription or connect with a pharmacist 24/7. Amazon makes your pharmacy experience easier.",
+    "keywords": [
+      "pharmacy",
+      "pharmacy-amazon-com",
+      "pharmacy.amazon.com"
+    ],
+    "meta tags": [
+      "title",
+      "description",
+      "anti-csrftoken-a2z",
+      "encrypted-slate-token",
+      "bidi-endpoint",
+      "flow-closure-id"
+    ],
+    "popular": 59,
+    "launguage": "en",
+    "image": "https://pharmacy.amazon.com/favicon.ico"
+  }
+]

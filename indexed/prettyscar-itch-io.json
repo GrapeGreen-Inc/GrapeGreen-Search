@@ -1,0 +1,26 @@
+[
+  {
+    "title": "PrettyScar - itch.io",
+    "url": "https://prettyscar.itch.io/",
+    "description": "Explore PrettyScar - itch.io on prettyscar.itch.io.",
+    "keywords": [
+      "prettyscar",
+      "prettyscar-itch-io",
+      "prettyscar.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 60,
+    "launguage": "en",
+    "image": "https://prettyscar.itch.io/favicon.ico"
+  }
+]

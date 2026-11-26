@@ -1,0 +1,27 @@
+[
+  {
+    "title": "HBO Max Shop",
+    "url": "https://shop.hbomax.com/",
+    "description": "Rep your favorite shows like Game of Thrones, Curb Your Enthusiasm, Euphoria and more with official merch! Shop official merchandise from all of your favorite HBO shows! Apparel, drinkware & more!",
+    "keywords": [
+      "shop",
+      "shop-hbomax-com",
+      "shop.hbomax.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width"
+    ],
+    "popular": 84,
+    "launguage": "en",
+    "image": "http://shop.hbomax.com/cdn/shop/files/HBOMaxShop_SocialSharing.jpg?v=1795125001"
+  }
+]

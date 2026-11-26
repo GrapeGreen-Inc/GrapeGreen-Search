@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Android Open Source Project",
+    "url": "https://source.android.com/",
+    "description": "Android unites the world! Use the open source Android operating system to power your device.",
+    "keywords": [
+      "source",
+      "source-android-com",
+      "source.android.com"
+    ],
+    "meta tags": [
+      "google-signin-client-id",
+      "google-signin-scope",
+      "og:site_name",
+      "og:type",
+      "theme-color",
+      "og:title",
+      "description",
+      "og:description",
+      "og:url",
+      "og:locale"
+    ],
+    "popular": 27,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/devrel-devsite/prod/vc11e4c9d4c060345ba98585d538d4546e842f4a6ee5c5f9e85be4bd345767217/androidsource/images/touchicon-180.png"
+  }
+]

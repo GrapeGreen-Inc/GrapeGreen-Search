@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Xtonomous - itch.io",
+    "url": "https://xtonomous.itch.io/",
+    "description": "I live-stream game development on Twitch: https://twitch.tv/AdamLearnsLive",
+    "keywords": [
+      "xtonomous",
+      "xtonomous-itch-io",
+      "xtonomous.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 31,
+    "launguage": "en",
+    "image": "https://xtonomous.itch.io/favicon.ico"
+  }
+]

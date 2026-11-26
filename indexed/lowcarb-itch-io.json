@@ -1,0 +1,27 @@
+[
+  {
+    "title": "LC-Games - itch.io",
+    "url": "https://lowcarb.itch.io/",
+    "description": "Explore LC-Games - itch.io on lowcarb.itch.io.",
+    "keywords": [
+      "lowcarb",
+      "lowcarb-itch-io",
+      "lowcarb.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 42,
+    "launguage": "en",
+    "image": "https://lowcarb.itch.io/favicon.ico"
+  }
+]

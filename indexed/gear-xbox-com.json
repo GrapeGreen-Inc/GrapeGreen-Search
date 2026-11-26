@@ -1,0 +1,30 @@
+[
+  {
+    "title": "XBOX Gear",
+    "url": "https://gear.xbox.com/",
+    "description": "XBOX Gear",
+    "keywords": [
+      "gear",
+      "gear-xbox-com",
+      "gear.xbox.com",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:title"
+    ],
+    "popular": 84,
+    "launguage": "en",
+    "image": "https://gear.xbox.com/cdn/shop/files/XBOX_WAX_Favicon_01.png?crop=center&height=32&v=1780884845&width=32"
+  }
+]

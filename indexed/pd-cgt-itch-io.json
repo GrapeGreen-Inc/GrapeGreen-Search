@@ -1,0 +1,27 @@
+[
+  {
+    "title": "PD CGT - itch.io",
+    "url": "https://pd-cgt.itch.io/",
+    "description": "I make arcade games for PC. ! ! Past And Future Collision Course ! !",
+    "keywords": [
+      "pd-cgt",
+      "pd-cgt-itch-io",
+      "pd-cgt.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 30,
+    "launguage": "en",
+    "image": "https://pd-cgt.itch.io/favicon.ico"
+  }
+]

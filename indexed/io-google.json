@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Google I/O 2026",
+    "url": "https://io.google/",
+    "description": "Don't miss Google I/O, featuring product launches, innovations, and insights. Tune in for the live keynotes and sessions.",
+    "keywords": [
+      "io",
+      "io-google",
+      "io.google"
+    ],
+    "meta tags": [
+      "description",
+      "og:image",
+      "og:image:type",
+      "og:image:width",
+      "og:image:height",
+      "twitter:card",
+      "twitter:url",
+      "twitter:title",
+      "twitter:image",
+      "google-site-verification"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://io.google/2026/assets/images/io26-og-image.jpg"
+  }
+]

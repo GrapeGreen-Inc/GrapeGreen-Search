@@ -1,0 +1,27 @@
+[
+  {
+    "title": "lexaloffle - itch.io",
+    "url": "https://lexaloffle.itch.io/",
+    "description": "Hey, I'm zep! I make fantasy consoles and games. You can find my smaller projects at: https://zep.itch.io",
+    "keywords": [
+      "lexaloffle",
+      "lexaloffle-itch-io",
+      "lexaloffle.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 79,
+    "launguage": "en",
+    "image": "https://lexaloffle.itch.io/favicon.ico"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Chrome for Developers",
+    "url": "https://developer.chrome.com/",
+    "description": "Helping you build, grow and innovate on the web.",
+    "keywords": [
+      "developer",
+      "developer-chrome-com",
+      "developer.chrome.com"
+    ],
+    "meta tags": [
+      "google-signin-client-id",
+      "google-signin-scope",
+      "og:site_name",
+      "og:type",
+      "theme-color",
+      "og:title",
+      "description",
+      "og:description",
+      "og:url",
+      "og:locale"
+    ],
+    "popular": 48,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/devrel-devsite/prod/vc11e4c9d4c060345ba98585d538d4546e842f4a6ee5c5f9e85be4bd345767217/chrome/images/touchicon-180.png"
+  }
+]

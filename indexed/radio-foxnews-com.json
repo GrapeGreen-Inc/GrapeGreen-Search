@@ -1,0 +1,27 @@
+[
+  {
+    "title": "FOX News Radio",
+    "url": "https://radio.foxnews.com/",
+    "description": "Tune in to FOX News Radio for the latest breaking news, live talk shows, true crime, and sports podcasts from your favorite FOX News personalities",
+    "keywords": [
+      "radio",
+      "radio-foxnews-com",
+      "radio.foxnews.com"
+    ],
+    "meta tags": [
+      "robots",
+      "generator",
+      "description",
+      "og:locale",
+      "og:type",
+      "og:url",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "twitter:card"
+    ],
+    "popular": 27,
+    "launguage": "en",
+    "image": "https://radio.foxnews.com/wp-content/uploads/2021/02/Alexa-FOX-News-With-Play-Text.jpg"
+  }
+]

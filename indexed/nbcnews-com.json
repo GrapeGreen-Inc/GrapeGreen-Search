@@ -1,0 +1,27 @@
+[
+  {
+    "title": "NBC News - Breaking Headlines and Video Reports on World, U.S. and Local Angles | NBC News",
+    "url": "https://www.nbcnews.com/",
+    "description": "Go to NBCNews.com for breaking news, videos, and the latest top stories in world news, business, politics, health and pop culture.",
+    "keywords": [
+      "nbcnews",
+      "nbcnews-com",
+      "nbcnews.com"
+    ],
+    "meta tags": [
+      "msapplication-config",
+      "robots",
+      "fb:app_id",
+      "fb:pages",
+      "og:site_name",
+      "og:locale",
+      "twitter:creator",
+      "description",
+      "thumbnail",
+      "pocket-site-verification"
+    ],
+    "popular": 81,
+    "launguage": "en",
+    "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/v1696280772/newsgroup-logos/nbcnews/social/primary-color-1680x840.png"
+  }
+]

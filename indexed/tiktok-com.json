@@ -2,17 +2,35 @@
   {
     "title": "TikTok - Make Your Day",
     "url": "https://www.tiktok.com/",
-    "description": "House featuring John Cale - Charli xcx & John Cale",
+    "description": "TikTok - trends start here. On a device or on the web, viewers can watch and discover millions of personalized short videos. Download the app to get started.",
     "keywords": [
       "tiktok",
       "tiktok-com",
-      "tiktok.com"
+      "tiktok.com",
+      "tik tok",
+      "musically",
+      "mobile video",
+      "short-form video",
+      "tick tock",
+      "tic tok",
+      "tic toc",
+      "tictok",
+      "тик ток"
     ],
     "meta tags": [
-      "pumbaa-ctx"
+      "pumbaa-ctx",
+      "google",
+      "format-detection",
+      "keywords",
+      "description",
+      "robots",
+      "applicable-device",
+      "og:image",
+      "twitter:image",
+      "og:url"
     ],
-    "popular": 42,
+    "popular": 82,
     "launguage": "en",
-    "image": "https://www.tiktok.com/favicon.ico"
+    "image": "https://sf-static.tiktokcdn.com/obj/eden-sg/uhtyvueh7nulogpoguhm/tiktok-icon2.png"
   }
 ]

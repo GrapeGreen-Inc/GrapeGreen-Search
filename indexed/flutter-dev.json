@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Flutter - Build apps for any screen",
+    "url": "https://flutter.dev/",
+    "description": "Flutter transforms the entire app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase.",
+    "keywords": [
+      "flutter",
+      "flutter-dev",
+      "flutter.dev"
+    ],
+    "meta tags": [
+      "description",
+      "twitter:card",
+      "twitter:site",
+      "twitter:title",
+      "twitter:description",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:image",
+      "google-site-verification"
+    ],
+    "popular": 50,
+    "launguage": "en",
+    "image": "https://flutter.dev/assets/flutter-logo-sharing.d744440971931f937269e060e720f5a7.png"
+  }
+]

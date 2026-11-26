@@ -1,0 +1,36 @@
+[
+  {
+    "title": "web.dev",
+    "url": "https://web.dev/",
+    "description": "Guidance to build modern web experiences that work on any browser.",
+    "keywords": [
+      "web",
+      "web-dev",
+      "web.dev",
+      "first",
+      "name",
+      "last",
+      "your",
+      "email",
+      "country",
+      "afghanistan",
+      "islands",
+      "albania"
+    ],
+    "meta tags": [
+      "google-signin-client-id",
+      "google-signin-scope",
+      "og:site_name",
+      "og:type",
+      "theme-color",
+      "og:title",
+      "description",
+      "og:description",
+      "og:url",
+      "og:image"
+    ],
+    "popular": 55,
+    "launguage": "en",
+    "image": "https://web.dev/images/social-wide.jpg"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "MIKDOG - itch.io",
+    "url": "https://mikdog.itch.io/",
+    "description": "Hi! Thanks for checking me out. I’m a guy from South Africa who makes stuff like games, music and animation. You may know me from my animated Goldfish music videos, my obscure Nickelodeon show 'Moosebox' or my even more obscure DisneyXD pilot 'Dogshow with Cat'.",
+    "keywords": [
+      "mikdog",
+      "mikdog-itch-io",
+      "mikdog.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 34,
+    "launguage": "en",
+    "image": "https://mikdog.itch.io/favicon.ico"
+  }
+]

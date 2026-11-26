@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Peanuts",
+    "url": "https://www.peanuts.com/",
+    "description": "Welcome to Peanuts.com! Discover videos, activities, coloring sheets, fun facts and more about Charlie Brown, Snoopy and the rest of the Peanuts gang.",
+    "keywords": [
+      "peanuts",
+      "peanuts-com",
+      "peanuts.com"
+    ],
+    "meta tags": [
+      "generator",
+      "format-detection",
+      "skype_toolbar",
+      "p:domain_verify",
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 50,
+    "launguage": "en",
+    "image": "https://static.wixstatic.com/media/5fdc83_37f627cf076a4440be8c4b140653a0c2%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/5fdc83_37f627cf076a4440be8c4b140653a0c2%7Emv2.jpg"
+  }
+]

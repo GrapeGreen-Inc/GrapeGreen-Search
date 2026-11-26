@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Universal Studios Hollywood - Los Angeles, California - Official Site",
+    "url": "https://www.universalstudioshollywood.com/",
+    "description": "Welcome to Universal Studios Hollywood! Learn more about our incredible theme park attractions in California such as The Wizarding World of Harry Potter™ and much more!",
+    "keywords": [
+      "universalstudioshollywood",
+      "universalstudioshollywood-com",
+      "universalstudioshollywood.com"
+    ],
+    "meta tags": [
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style",
+      "apple-mobile-web-app-title",
+      "description",
+      "keywords",
+      "robots",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:image"
+    ],
+    "popular": 74,
+    "launguage": "en",
+    "image": "https://www.universalstudioshollywood.com/contentdata/ush/en/us/files/images/ush-header-logo-b.png"
+  }
+]

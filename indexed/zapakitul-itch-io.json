@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Bacioiu Ciprian - itch.io",
+    "url": "https://zapakitul.itch.io/",
+    "description": "Explore Bacioiu Ciprian - itch.io on zapakitul.itch.io.",
+    "keywords": [
+      "zapakitul",
+      "zapakitul-itch-io",
+      "zapakitul.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://zapakitul.itch.io/favicon.ico"
+  }
+]

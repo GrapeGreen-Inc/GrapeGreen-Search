@@ -1,0 +1,27 @@
+[
+  {
+    "title": "mors - itch.io",
+    "url": "https://mors-games.itch.io/",
+    "description": "Heyo! I'm Mors, an indie game developer from Turkey!",
+    "keywords": [
+      "mors-games",
+      "mors-games-itch-io",
+      "mors-games.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 66,
+    "launguage": "en",
+    "image": "https://mors-games.itch.io/favicon.ico"
+  }
+]

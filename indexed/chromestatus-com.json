@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Chrome Platform Status",
+    "url": "https://chromestatus.com/",
+    "description": "Explore Chrome Platform Status on chromestatus.com.",
+    "keywords": [
+      "chromestatus",
+      "chromestatus-com",
+      "chromestatus.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "apple-mobile-web-app-capable",
+      "mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style"
+    ],
+    "popular": 22,
+    "launguage": "en",
+    "image": "https://chromestatus.com/static/img/crstatus_128.png"
+  }
+]

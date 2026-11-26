@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos & News Videos",
+    "url": "https://www.foxnews.com/",
+    "description": "Breaking News, Latest News and Current News from FOXNews.com. Breaking news and video. Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.",
+    "keywords": [
+      "foxnews",
+      "foxnews-com",
+      "foxnews.com",
+      "news",
+      "breaking news",
+      "latest news",
+      "current news",
+      "world news",
+      "national news"
+    ],
+    "meta tags": [
+      "pagetype",
+      "robots",
+      "description",
+      "keywords",
+      "msapplication-square70x70logo",
+      "msapplication-square150x150logo",
+      "msapplication-square310x310logo",
+      "msapplication-wide310x150logo",
+      "msapplication-tilecolor",
+      "theme-color"
+    ],
+    "popular": 74,
+    "launguage": "en",
+    "image": "https://static.foxnews.com/static/orion/styles/img/fox-news/og/og-fox-news.png"
+  }
+]

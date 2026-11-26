@@ -1,0 +1,26 @@
+[
+  {
+    "title": "temmie - itch.io",
+    "url": "https://tuyoki.itch.io/",
+    "description": "*please note that anything outside of these links are not me. I do not share information I consider personal such as a discord or a steam account, so if you see someone named temmie on there, it likely isn't me. Please be careful out there!",
+    "keywords": [
+      "tuyoki",
+      "tuyoki-itch-io",
+      "tuyoki.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 72,
+    "launguage": "en",
+    "image": "https://tuyoki.itch.io/favicon.ico"
+  }
+]

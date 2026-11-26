@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Sign in - FOX Square Store",
+    "url": "https://account.foxsquare.com/",
+    "description": "Sign in or create an account",
+    "keywords": [
+      "account",
+      "account-foxsquare-com",
+      "account.foxsquare.com"
+    ],
+    "meta tags": [
+      "shopify-y",
+      "shopify-s",
+      "robots",
+      "referrer",
+      "csrf-param",
+      "csrf-token"
+    ],
+    "popular": 76,
+    "launguage": "en",
+    "image": "https://cdn.shopify.com/s/files/1/0068/5447/5874/files/Fox_Favicon_-_Simple.png?v=1789749104&crop=center&width=32&height=32"
+  }
+]

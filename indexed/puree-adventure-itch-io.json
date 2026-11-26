@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Ema - itch.io",
+    "url": "https://puree-adventure.itch.io/",
+    "description": "Explore Ema - itch.io on puree-adventure.itch.io.",
+    "keywords": [
+      "puree-adventure",
+      "puree-adventure-itch-io",
+      "puree-adventure.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 23,
+    "launguage": "en",
+    "image": "https://puree-adventure.itch.io/favicon.ico"
+  }
+]

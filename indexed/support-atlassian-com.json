@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Atlassian Support",
+    "url": "https://support.atlassian.com/",
+    "description": "Find answers via Atlassian support resources",
+    "keywords": [
+      "support",
+      "support-atlassian-com",
+      "support.atlassian.com"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-tileimage",
+      "og:title",
+      "og:url",
+      "og:locale",
+      "og:site_name",
+      "google-site-verification",
+      "botify-site-verification"
+    ],
+    "popular": 38,
+    "launguage": "en",
+    "image": "https://wac-cdn.atlassian.com/assets/img/favicons/atlassian/apple-touch-icon-57x57.png"
+  }
+]

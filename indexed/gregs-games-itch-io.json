@@ -1,0 +1,26 @@
+[
+  {
+    "title": "gregs-games - itch.io",
+    "url": "https://gregs-games.itch.io/",
+    "description": "Explore gregs-games - itch.io on gregs-games.itch.io.",
+    "keywords": [
+      "gregs-games",
+      "gregs-games-itch-io",
+      "gregs-games.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 59,
+    "launguage": "en",
+    "image": "https://gregs-games.itch.io/favicon.ico"
+  }
+]

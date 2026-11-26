@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Atelier Sentô - itch.io",
+    "url": "https://ateliersento.itch.io/",
+    "description": "We sometimes run workshops in schools and make games with children or students. W'd like to share these free short interactive stories here. They're the proof anyone can create a videogame only with paper and pencils.",
+    "keywords": [
+      "ateliersento",
+      "ateliersento-itch-io",
+      "ateliersento.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 65,
+    "launguage": "en",
+    "image": "https://ateliersento.itch.io/favicon.ico"
+  }
+]

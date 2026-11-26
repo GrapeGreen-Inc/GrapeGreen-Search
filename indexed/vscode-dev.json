@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Welcome - Workspace - Visual Studio Code",
+    "url": "https://vscode.dev/",
+    "description": "Build with Visual Studio Code, anywhere, anytime, entirely in your browser.",
+    "keywords": [
+      "vscode",
+      "vscode-dev",
+      "vscode.dev"
+    ],
+    "meta tags": [
+      "mobile-web-app-capable",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-title",
+      "twitter:card",
+      "twitter:site",
+      "og:title",
+      "og:description",
+      "og:image",
+      "vscode:versioninfo",
+      "vscode:baseurl"
+    ],
+    "popular": 21,
+    "launguage": "en",
+    "image": "https://vscode.dev/static/stable/social.png"
+  }
+]

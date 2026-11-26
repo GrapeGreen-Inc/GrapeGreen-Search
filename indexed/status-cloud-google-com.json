@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Google Cloud Service Health",
+    "url": "https://status.cloud.google.com/",
+    "description": "For incidents related to Google Security Products, visit https://status.cloud.google.com/security. For incidents related to Looker (original), visit https://status.cloud.google.com/looker.",
+    "keywords": [
+      "status",
+      "status-cloud-google-com",
+      "status.cloud.google.com"
+    ],
+    "meta tags": [],
+    "popular": 64,
+    "launguage": "en",
+    "image": "https://status.cloud.google.com/images/google-cloud-favicon.png"
+  }
+]

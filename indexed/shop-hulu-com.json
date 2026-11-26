@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Official Shop Hulu Store",
+    "url": "https://shop.hulu.com/",
+    "description": "Shop officially licensed merchandise from your favorite Hulu shows like Only Murders in the Building, The Orville, the Golden Girls and more!",
+    "keywords": [
+      "shop",
+      "shop-hulu-com",
+      "shop.hulu.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "format-detection",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "twitter:card",
+      "twitter:title"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://cdn.shopify.com/s/files/1/0567/0567/9555/files/shop-hulu-GM.jpg?v=1637071693"
+  }
+]

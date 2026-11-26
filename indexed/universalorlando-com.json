@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Universal Orlando",
+    "url": "https://www.universalorlando.com/",
+    "description": "Universal Orlando Resort",
+    "keywords": [
+      "universalorlando",
+      "universalorlando-com",
+      "universalorlando.com"
+    ],
+    "meta tags": [
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style",
+      "apple-mobile-web-app-title",
+      "description",
+      "keywords",
+      "robots",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:image"
+    ],
+    "popular": 30,
+    "launguage": "en",
+    "image": "https://www.universalorlando.com/contentdata/uor/en/us/files/Images/universal-orlando-resort-color-logo-b.png"
+  }
+]

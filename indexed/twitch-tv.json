@@ -9,18 +9,18 @@
       "twitch.tv"
     ],
     "meta tags": [
-      "fb:app_id",
-      "title",
       "og:site_name",
-      "twitter:card",
       "al:android:package",
-      "twitter:app:name:googleplay",
-      "twitter:image",
-      "twitter:app:name:iphone",
       "twitter:app:name:ipad",
-      "twitter:app:url:googleplay"
+      "twitter:title",
+      "al:ios:app_name",
+      "twitter:app:name:googleplay",
+      "twitter:app:id:googleplay",
+      "og:title",
+      "og:image",
+      "fb:app_id"
     ],
-    "popular": 21,
+    "popular": 42,
     "launguage": "en",
     "image": "https://static-cdn.jtvnw.net/ttv-static-metadata/twitch_logo3.jpg"
   }

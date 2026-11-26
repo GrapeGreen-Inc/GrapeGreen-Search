@@ -1,28 +1,26 @@
 [
   {
-    "title": "Dropbox Sign - Dropbox Help",
+    "title": "Dropbox Help Center - How to use Dropbox - Dropbox Help",
     "url": "https://help.dropbox.com/",
-    "description": "Send, sign, and track eSignatures with Dropbox Sign. Find articles about signing documents, creating templates, sending signature requests, and more.",
+    "description": "Explore the Dropbox Help Center to learn how to use Dropbox on your computer, phone, and tablet, and find answers to common questions.",
     "keywords": [
       "help",
       "help-dropbox-com",
-      "help.dropbox.com",
-      "sign",
-      "products"
+      "help.dropbox.com"
     ],
     "meta tags": [
       "coveopagetitle",
       "description",
-      "data-tags",
-      "data-tagtaxonomy",
       "page-id",
       "content-page-ref",
       "uxanalyticsenabled",
       "og:url",
       "og:type",
-      "og:title"
+      "og:title",
+      "og:description",
+      "twitter:card"
     ],
-    "popular": 59,
+    "popular": 39,
     "launguage": "en",
     "image": "https://aem.dropbox.com/cms/content/dam/dropbox/aem/favicon32.ico"
   }

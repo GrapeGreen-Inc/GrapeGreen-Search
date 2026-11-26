@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cartomancy Anthology - itch.io",
+    "url": "https://cartomancyanthology.itch.io/",
+    "description": "A collection of introspective digital experiences based on the Major Arcana of tarot.",
+    "keywords": [
+      "cartomancyanthology",
+      "cartomancyanthology-itch-io",
+      "cartomancyanthology.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 71,
+    "launguage": "en",
+    "image": "https://cartomancyanthology.itch.io/favicon.ico"
+  }
+]

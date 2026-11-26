@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Psytronik Software - itch.io",
+    "url": "https://psytronik.itch.io/",
+    "description": "Psytronik Software - The software label devoted to releasing new games for classic computer systems! Established in 1990 we pride ourselves on publishing quality releases for retro computer systems presented in high quality packaging.",
+    "keywords": [
+      "psytronik",
+      "psytronik-itch-io",
+      "psytronik.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 61,
+    "launguage": "en",
+    "image": "https://psytronik.itch.io/favicon.ico"
+  }
+]

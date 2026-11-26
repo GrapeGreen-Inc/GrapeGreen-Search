@@ -1,0 +1,28 @@
+[
+  {
+    "title": "iCloud",
+    "url": "https://www.icloud.com/",
+    "description": "Log in to iCloud to access your photos, mail, notes, documents and more. Sign in with your Apple Account or create a new account to start using Apple services.",
+    "keywords": [
+      "icloud",
+      "icloud-com",
+      "icloud.com",
+      "free",
+      "apple"
+    ],
+    "meta tags": [
+      "google",
+      "description",
+      "keywords",
+      "og:title",
+      "og:description",
+      "og:image",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style",
+      "theme-color"
+    ],
+    "popular": 46,
+    "launguage": "en",
+    "image": "https://www.icloud.com/favicons/default-favicon-light-180x180.png"
+  }
+]

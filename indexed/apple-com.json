@@ -1,27 +1,27 @@
 [
   {
-    "title": "Apple",
+    "title": "Apple Fitness+ - Apple",
     "url": "https://www.apple.com/",
-    "description": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.",
+    "description": "Apple Fitness+ has something for everyone, from Strength to Meditation. With new workouts every week and personalized recommendations. Try it free.",
     "keywords": [
       "apple",
       "apple-com",
       "apple.com"
     ],
     "meta tags": [
+      "media-api-locale",
+      "media-api-lang",
+      "apple-fitness-token",
       "description",
       "og:image",
       "og:title",
       "og:description",
       "og:url",
       "og:locale",
-      "og:site_name",
-      "og:type",
-      "analytics-track",
-      "analytics-s-channel"
+      "og:site_name"
     ],
-    "popular": 67,
+    "popular": 81,
     "launguage": "en",
-    "image": "https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202610011401"
+    "image": "https://www.apple.com/v/apple-fitness-plus/ac/images/meta/apple-fitness-plus__cidrqiun6tle_og.png?202609161915"
   }
 ]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Google Cloud Documentation",
+    "url": "https://docs.cloud.google.com/",
+    "description": "Comprehensive documentation, guides, and resources for {% dynamic print site_values.cloud_name %} products and services.",
+    "keywords": [
+      "docs",
+      "docs-cloud-google-com",
+      "docs.cloud.google.com"
+    ],
+    "meta tags": [
+      "google-signin-client-id",
+      "google-signin-scope",
+      "og:site_name",
+      "og:type",
+      "theme-color",
+      "og:title",
+      "description",
+      "og:description",
+      "og:url",
+      "og:image"
+    ],
+    "popular": 22,
+    "launguage": "en",
+    "image": "https://docs.cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png"
+  }
+]

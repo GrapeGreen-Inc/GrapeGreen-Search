@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Eduardo Scarpato - itch.io",
+    "url": "https://eduardscarpato.itch.io/",
+    "description": "Hi! I'm Eduardo Scarpato and I make horror games 🇧🇷 Want to reach out? Email me at: contact@eduardoscarpato.com",
+    "keywords": [
+      "eduardscarpato",
+      "eduardscarpato-itch-io",
+      "eduardscarpato.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 42,
+    "launguage": "en",
+    "image": "https://eduardscarpato.itch.io/favicon.ico"
+  }
+]

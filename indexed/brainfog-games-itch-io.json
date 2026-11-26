@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Brainfog Games - itch.io",
+    "url": "https://brainfog-games.itch.io/",
+    "description": "Just 2 dudes making games. Developer of Whack-A-Monster and Logo Idle Check out our Latest Demo: https://store.steampowered.com/app/5041860/Logo_Idle_Demo/ You can also check it out on Steam: https://store.steampowered.com/app/3364150/WhackAMonster/ Join our discord https://discord.gg/wBFFJcmecs",
+    "keywords": [
+      "brainfog-games",
+      "brainfog-games-itch-io",
+      "brainfog-games.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 53,
+    "launguage": "en",
+    "image": "https://brainfog-games.itch.io/favicon.ico"
+  }
+]

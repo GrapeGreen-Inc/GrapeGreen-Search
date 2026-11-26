@@ -1,0 +1,27 @@
+[
+  {
+    "title": "HBO: Home to Groundbreaking Series, Movies, Comedies & Documentaries",
+    "url": "https://www.hbo.com/",
+    "description": "The official site for HBO, discover full episodes of original series, movies, schedule information, exclusive video content, episode guides and more.",
+    "keywords": [
+      "hbo",
+      "hbo-com",
+      "hbo.com"
+    ],
+    "meta tags": [
+      "og:title",
+      "twitter:title",
+      "og:type",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
+      "og:image:alt",
+      "twitter:image",
+      "twitter:image:alt",
+      "description"
+    ],
+    "popular": 76,
+    "launguage": "en",
+    "image": "https://static.cinemax.com/2021-07/hbo-logo-blk.png?w=400"
+  }
+]

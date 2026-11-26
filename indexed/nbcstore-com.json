@@ -1,0 +1,30 @@
+[
+  {
+    "title": "NBCUniversal Shop | The Official Destination for NBCUniversal Merch!",
+    "url": "https://www.nbcstore.com/",
+    "description": "Get your favorite current and classic NBCUniversal show and movie merchandise from the Official NBCUniversal Shop.",
+    "keywords": [
+      "nbcstore",
+      "nbcstore-com",
+      "nbcstore.com",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "twitter:site"
+    ],
+    "popular": 45,
+    "launguage": "en",
+    "image": "http://www.nbcstore.com/cdn/shop/files/NBCUniversal_Shop_Preferences_image.png?v=1769118770"
+  }
+]

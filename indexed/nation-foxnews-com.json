@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Fox Nation: Start Your Free Trial | Shows, Documentaries, & Specials",
+    "url": "https://nation.foxnews.com/",
+    "description": "Fox Nation is an entertainment streaming service brought to you by FOX News. Stream exclusive shows, documentaries, and news stories that celebrate America.",
+    "keywords": [
+      "nation",
+      "nation-foxnews-com",
+      "nation.foxnews.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "twitter:title",
+      "twitter:description",
+      "og:type",
+      "twitter:card",
+      "robots",
+      "og:site_name",
+      "og:image"
+    ],
+    "popular": 38,
+    "launguage": "en",
+    "image": "https://nation.foxnews.com/fox-wch-images/social-updated.jpg"
+  }
+]

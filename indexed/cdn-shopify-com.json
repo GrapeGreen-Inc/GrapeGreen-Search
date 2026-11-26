@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Shopify CDN",
+    "url": "https://cdn.shopify.com/",
+    "description": "Shopify's content delivery network",
+    "keywords": [
+      "cdn",
+      "cdn-shopify-com",
+      "cdn.shopify.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:url",
+      "twitter:card",
+      "twitter:site",
+      "twitter:title"
+    ],
+    "popular": 60,
+    "launguage": "en",
+    "image": "https://cdn.shopify.com/static/imagery-landing/social_header.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GalaxyTrail - itch.io",
+    "url": "https://galaxytrail.itch.io/",
+    "description": "Explore GalaxyTrail - itch.io on galaxytrail.itch.io.",
+    "keywords": [
+      "galaxytrail",
+      "galaxytrail-itch-io",
+      "galaxytrail.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://galaxytrail.itch.io/favicon.ico"
+  }
+]

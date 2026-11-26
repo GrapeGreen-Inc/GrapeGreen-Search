@@ -1,0 +1,27 @@
+[
+  {
+    "title": "ABC Shop | The Official ABC TV Store T-Shirts, Gifts, Mugs and More!",
+    "url": "https://shopabctv.com/",
+    "description": "Get your favorite current and classic ABC show merchandise from our Official ABC store. Plus find clips and exclusive online gifts from shopabctv.com",
+    "keywords": [
+      "shopabctv",
+      "shopabctv-com",
+      "shopabctv.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "format-detection",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "twitter:site",
+      "twitter:card"
+    ],
+    "popular": 57,
+    "launguage": "en",
+    "image": "https://cdn.shopify.com/s/files/1/0253/8910/5237/files/abc_logo_black.png?height=628&pad_color=fff&v=1646668243&width=1200"
+  }
+]

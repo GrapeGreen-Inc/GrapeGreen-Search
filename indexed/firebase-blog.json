@@ -1,0 +1,27 @@
+[
+  {
+    "title": "The Firebase Blog",
+    "url": "https://firebase.blog/",
+    "description": "News, tutorials, and updates from the Firebase team.",
+    "keywords": [
+      "firebase",
+      "firebase-blog",
+      "firebase.blog"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:locale",
+      "og:url",
+      "og:type",
+      "title",
+      "og:image:width",
+      "og:image:height",
+      "image",
+      "twitter:card"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://firebase.blog/img/og.png"
+  }
+]

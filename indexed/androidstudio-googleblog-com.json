@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Android Studio Release Updates",
+    "url": "https://androidstudio.googleblog.com/",
+    "description": "Provides official announcements for new versions of Android Studio and other Android developer tools.",
+    "keywords": [
+      "androidstudio",
+      "androidstudio-googleblog-com",
+      "androidstudio.googleblog.com"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:locale",
+      "og:url",
+      "og:site_name",
+      "twitter:card",
+      "twitter:domain",
+      "twitter:url",
+      "twitter:title",
+      "twitter:image",
+      "generator"
+    ],
+    "popular": 44,
+    "launguage": "en",
+    "image": "https://androidstudio.googleblog.com/favicon.ico"
+  }
+]

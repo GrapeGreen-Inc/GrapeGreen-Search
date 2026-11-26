@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Placeholders - itch.io",
+    "url": "https://placeholders.itch.io/",
+    "description": "We are a placeholder dev team created by two brothers",
+    "keywords": [
+      "placeholders",
+      "placeholders-itch-io",
+      "placeholders.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 77,
+    "launguage": "en",
+    "image": "https://placeholders.itch.io/favicon.ico"
+  }
+]

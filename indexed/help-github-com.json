@@ -1,8 +1,8 @@
 [
   {
-    "title": "GitHub Help: GitHub Documentation, AI Search & Support",
+    "title": "Sign in for Software Support and Product Help - GitHub Support",
     "url": "https://help.github.com/",
-    "description": "Welcome to the GitHub Help. Search documentation, ask AI-powered questions, troubleshoot issues, explore learning resources, or contact GitHub Support when you need additional assistance.",
+    "description": "Access your support options and sign in to your account for GitHub software support and product assistance. Get the help you need from our dedicated support team.",
     "keywords": [
       "help",
       "help-github-com",
@@ -10,13 +10,17 @@
     ],
     "meta tags": [
       "description",
+      "csrf-param",
+      "csrf-token",
+      "csp-nonce",
       "user-login",
       "expected-hostname",
       "websocket-host",
       "google-site-verification",
-      "analytics-v2"
+      "analytics-v2",
+      "unmask-data"
     ],
-    "popular": 22,
+    "popular": 85,
     "launguage": "en",
     "image": "https://support-assets.githubassets.com/assets/favicon-ae8bf9f35cb1154c4ec648bff9dca997c6a465404d26d05a825d2aafc1131bd7.ico"
   }

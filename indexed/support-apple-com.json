@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Official Apple Support",
+    "url": "https://support.apple.com/",
+    "description": "Learn more about popular features and topics, and find resources that will help you with all of your Apple products.",
+    "keywords": [
+      "support",
+      "support-apple-com",
+      "support.apple.com"
+    ],
+    "meta tags": [
+      "globalnav-store-key",
+      "globalnav-search-field[name]",
+      "globalnav-search-field[action]",
+      "globalnav-search-field[src]",
+      "globalnav-search-field[type]",
+      "globalnav-search-field[page]",
+      "globalnav-search-field[locale]",
+      "globalnav-search-field[placeholder]",
+      "description",
+      "analytics:s-pagename"
+    ],
+    "popular": 68,
+    "launguage": "en",
+    "image": "https://support.apple.com/favicon.ico"
+  }
+]

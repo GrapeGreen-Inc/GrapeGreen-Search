@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Bravo Official Site: Shows, Videos, News & Schedule",
+    "url": "https://www.bravotv.com/",
+    "description": "Watch full episodes and exclusive videos for Bravo shows including Top Chef, The Real Housewives of Beverly Hills and Vanderpump Rules.",
+    "keywords": [
+      "bravotv",
+      "bravotv-com",
+      "bravotv.com",
+      "shorts",
+      "where",
+      "bronwyn",
+      "newport",
+      "todd",
+      "bradley",
+      "stand",
+      "after",
+      "their"
+    ],
+    "meta tags": [
+      "branch:deeplink:showjourneys",
+      "parsely-section",
+      "description",
+      "og:site_name",
+      "og:type",
+      "og:url",
+      "og:title",
+      "og:description",
+      "og:image",
+      "fb:app_id"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://www.bravotv.com/sites/bravo/themes/custom/reality/logo.png"
+  }
+]

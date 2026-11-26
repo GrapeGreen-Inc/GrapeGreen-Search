@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Paramount Plus: Stream Movies, Shows & Live TV",
+    "url": "https://www.paramountplus.com/",
+    "description": "Watch thousands of hit movies and episodes of your favorite shows, all in one place. Stream it all on Paramount+.",
+    "keywords": [
+      "paramountplus",
+      "paramountplus-com",
+      "paramountplus.com"
+    ],
+    "meta tags": [
+      "tn:mfe-remote",
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 25,
+    "launguage": "en",
+    "image": "https://wwwimage-us.pplusstatic.com/thumbnails/photos/w1280-q80/seo/paramount-plus.png?format=webp"
+  }
+]

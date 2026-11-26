@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Your home for Microsoft Ignite",
+    "url": "https://ignite.microsoft.com/",
+    "description": "Microsoft Ignite delivers major announcements, deep technical learning, and direct access to the people shaping what’s coming next. Register, explore sessions and labs, and see who’s speaking.",
+    "keywords": [
+      "ignite",
+      "ignite-microsoft-com",
+      "ignite.microsoft.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "referrer",
+      "description",
+      "og:image",
+      "og:title",
+      "og:description",
+      "og:image:alt",
+      "og:type",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 34,
+    "launguage": "en",
+    "image": "https://eventtools.event.microsoft.com/cdn/Ignite2026/Phase_3_Tools/Open_Graph/FY27_Ignite_NewVisID_Event_OpenGraph_2_EventNameDate.jpg"
+  }
+]

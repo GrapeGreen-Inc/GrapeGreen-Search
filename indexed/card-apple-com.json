@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Apple Card",
+    "url": "https://card.apple.com/",
+    "description": "Sign in to view your Apple Card balances, Apple Card Monthly Installments, make payments, and download your monthly statements.",
+    "keywords": [
+      "card",
+      "card-apple-com",
+      "card.apple.com",
+      "apple card",
+      "apple",
+      "pay apple card",
+      "payment",
+      "installment",
+      "billing",
+      "apple card monthly installments"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "twitter:site",
+      "twitter:card",
+      "mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style",
+      "og:image",
+      "og:image:type",
+      "og:image:alt",
+      "og:description"
+    ],
+    "popular": 32,
+    "launguage": "en",
+    "image": "https://www.apple.com/v/apple-card/l/images/overview/hero_iphone__errwhundjmky_small_2x.png"
+  }
+]

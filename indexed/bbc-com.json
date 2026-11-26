@@ -1,0 +1,27 @@
+[
+  {
+    "title": "BBC Home | Breaking News, World News, US News, Sports, Business, Innovation, Climate, Culture, Travel, Video & Audio",
+    "url": "https://www.bbc.com/",
+    "description": "Visit BBC for trusted reporting on the latest world and US news, sports, business, climate, innovation, culture and much more",
+    "keywords": [
+      "bbc",
+      "bbc-com",
+      "bbc.com"
+    ],
+    "meta tags": [
+      "description",
+      "pagetype",
+      "page.section",
+      "og:title",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "og:description",
+      "twitter:description",
+      "og:image"
+    ],
+    "popular": 52,
+    "launguage": "en",
+    "image": "https://ichef.bbci.co.uk/images/ic/raw/p0pk35zn.jpg"
+  }
+]

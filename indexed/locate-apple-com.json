@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Find Locations",
+    "url": "https://locate.apple.com/",
+    "description": "Place to find locations for apple products",
+    "keywords": [
+      "locate",
+      "locate-apple-com",
+      "locate.apple.com"
+    ],
+    "meta tags": [
+      "referrer",
+      "description",
+      "globalnav-store-key",
+      "globalnav-search-field[name]",
+      "globalnav-search-field[action]",
+      "globalnav-search-field[src]",
+      "globalnav-search-field[type]",
+      "globalnav-search-field[page]",
+      "globalnav-search-field[locale]",
+      "globalnav-search-field[placeholder]"
+    ],
+    "popular": 48,
+    "launguage": "en",
+    "image": "https://www.apple.com/favicon.ico"
+  }
+]

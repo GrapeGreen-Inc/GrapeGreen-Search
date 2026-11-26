@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Forward Instinct - itch.io",
+    "url": "https://forwardinstinct.itch.io/",
+    "description": "Forward Instinct is a team of creators spread out throughout the USA, who make games together.",
+    "keywords": [
+      "forwardinstinct",
+      "forwardinstinct-itch-io",
+      "forwardinstinct.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://forwardinstinct.itch.io/favicon.ico"
+  }
+]

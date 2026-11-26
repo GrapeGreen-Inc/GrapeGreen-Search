@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Peacock: Stream TV and Movies Online, Watch Live News and Sports",
+    "url": "https://www.peacocktv.com/",
+    "description": "Watch TV shows and movies online with Peacock. Stream iconic shows and movies, exclusive Peacock Originals, live news and sports and more.",
+    "keywords": [
+      "peacocktv",
+      "peacocktv-com",
+      "peacocktv.com"
+    ],
+    "meta tags": [
+      "description",
+      "application",
+      "commit:short",
+      "deploymenttype",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:image",
+      "twitter:image:alt"
+    ],
+    "popular": 43,
+    "launguage": "en",
+    "image": "https://www.peacocktv.com/dam/growth/assets/Logos/peacock-social-image-26.jpg"
+  }
+]

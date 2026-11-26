@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Android Mobile App Developer Tools - Android Developers",
+    "url": "https://developer.android.com/",
+    "description": "Discover the latest app development tools, platform updates, training, and documentation for developers across every Android device.",
+    "keywords": [
+      "developer",
+      "developer-android-com",
+      "developer.android.com"
+    ],
+    "meta tags": [
+      "google-signin-client-id",
+      "google-signin-scope",
+      "og:site_name",
+      "og:type",
+      "theme-color",
+      "og:title",
+      "description",
+      "og:description",
+      "og:url",
+      "og:image"
+    ],
+    "popular": 47,
+    "launguage": "en",
+    "image": "https://developer.android.com/static/images/social/android-developers.png"
+  }
+]
