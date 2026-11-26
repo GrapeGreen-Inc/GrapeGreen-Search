@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cursor",
+    "url": "https://anysphere.inc/",
+    "description": "Cursor is an applied research lab working on the future of programming.",
+    "keywords": [
+      "anysphere",
+      "anysphere-inc",
+      "anysphere.inc"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:image:type",
+      "og:image:width",
+      "og:image:height",
+      "og:image",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 79,
+    "launguage": "en",
+    "image": "https://anysphere.inc/opengraph-image.png?e4b0b531ec547394"
+  }
+]

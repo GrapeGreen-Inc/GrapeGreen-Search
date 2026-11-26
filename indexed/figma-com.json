@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Figma: The collaborative canvas for design, code, and AI",
+    "url": "https://www.figma.com/",
+    "description": "Figma is the canvas where design, code, and AI come together. From first idea to shipped product — go from concept to production with your whole team, in one place.",
+    "keywords": [
+      "figma",
+      "figma-com",
+      "figma.com"
+    ],
+    "meta tags": [
+      "next-size-adjust",
+      "theme-color",
+      "description",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 74,
+    "launguage": "en",
+    "image": "https://cdn.sanity.io/images/599r6htc/regionalized/b08d37520f7d5ad8d6562975b5932dd2d9a862bb-1200x630.gif?w=1200&q=70&fit=max&auto=format"
+  }
+]

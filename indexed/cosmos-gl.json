@@ -1,0 +1,27 @@
+[
+  {
+    "title": "cosmos.gl — GPU-powered graph visualization",
+    "url": "https://cosmos.gl/",
+    "description": "Explore large networks and point clouds with cosmos.gl, an open-source WebGL engine for GPU rendering and force simulation.",
+    "keywords": [
+      "cosmos",
+      "cosmos-gl",
+      "cosmos.gl"
+    ],
+    "meta tags": [
+      "theme-color",
+      "cosmos-root",
+      "description",
+      "og:type",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:image:type"
+    ],
+    "popular": 67,
+    "launguage": "en",
+    "image": "https://cosmos.gl/cosmos-galaxy-preview.png"
+  }
+]

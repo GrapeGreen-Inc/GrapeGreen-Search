@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Perspective — WebAssembly data grid, pivot table and charts for streaming data",
+    "url": "https://perspective-dev.github.io/",
+    "description": "Perspective is an open-source, WebAssembly-powered data grid, pivot table and charting component for large, real-time and streaming datasets — in the browser, Python, Jupyter, Node.js and Rust.",
+    "keywords": [
+      "perspective-dev",
+      "perspective-dev-github-io",
+      "perspective-dev.github.io"
+    ],
+    "meta tags": [
+      "description",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:image",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 32,
+    "launguage": "en",
+    "image": "https://perspective-dev.github.io/projects/light/collage.png"
+  }
+]

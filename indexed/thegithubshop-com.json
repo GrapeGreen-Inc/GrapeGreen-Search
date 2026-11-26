@@ -1,0 +1,30 @@
+[
+  {
+    "title": "GitHub Shop",
+    "url": "https://thegithubshop.com/",
+    "description": "GitHub's collection of high-quality, sustainable gifts for developers and those who love to build.",
+    "keywords": [
+      "thegithubshop",
+      "thegithubshop-com",
+      "thegithubshop.com",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 80,
+    "launguage": "en",
+    "image": "http://thegithubshop.com/cdn/shop/files/gh-esc-og-img_31f452f2-5c1a-4039-a721-f4240d58d291.png?v=1779987255"
+  }
+]

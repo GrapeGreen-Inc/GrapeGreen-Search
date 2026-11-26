@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GitHub Docs",
+    "url": "https://docs.github.com/",
+    "description": "Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub's products.",
+    "keywords": [
+      "docs",
+      "docs-github-com",
+      "docs.github.com"
+    ],
+    "meta tags": [
+      "google-site-verification",
+      "description",
+      "path-language",
+      "path-version",
+      "path-article",
+      "page-document-type",
+      "status",
+      "og:site_name",
+      "og:title",
+      "og:type"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://docs.github.com/assets/cb-345/images/social-cards/default.png"
+  }
+]

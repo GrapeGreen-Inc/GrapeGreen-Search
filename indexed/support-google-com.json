@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Google Help",
+    "url": "https://support.google.com/",
+    "description": "Choose a Google product",
+    "keywords": [
+      "support",
+      "support-google-com",
+      "support.google.com"
+    ],
+    "meta tags": [
+      "format-detection",
+      "robots",
+      "description",
+      "google-site-verification"
+    ],
+    "popular": 57,
+    "launguage": "en",
+    "image": "https://support.google.com/favicon.png"
+  }
+]

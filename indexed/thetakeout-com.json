@@ -1,0 +1,27 @@
+[
+  {
+    "title": "The Takeout | Food is delicious.",
+    "url": "https://www.thetakeout.com/",
+    "description": "The Takeout is about making your life better through food. We celebrate high and low foods and drinks with equal reverence—with recipes, tips, features, advice, and taste tests in an authoritative and accessible way.",
+    "keywords": [
+      "thetakeout",
+      "thetakeout-com",
+      "thetakeout.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 45,
+    "launguage": "en",
+    "image": "https://www.thetakeout.com/img/thetakeout-share-image-1280x720.png"
+  }
+]

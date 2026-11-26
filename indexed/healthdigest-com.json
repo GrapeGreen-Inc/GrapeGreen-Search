@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Health Digest | Health News, Wellness, Expert Insights",
+    "url": "https://www.healthdigest.com/",
+    "description": "The latest health news, wellness advice, and exclusives backed by trusted medical authorities.",
+    "keywords": [
+      "healthdigest",
+      "healthdigest-com",
+      "healthdigest.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 39,
+    "launguage": "en",
+    "image": "https://www.healthdigest.com/img/health-digest-meta-image-1280x720.png"
+  }
+]

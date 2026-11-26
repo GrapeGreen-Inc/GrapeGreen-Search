@@ -1,0 +1,27 @@
+[
+  {
+    "title": "CNCF Landscape",
+    "url": "https://landscape.cncf.io/",
+    "description": "The CNCF Cloud Native Landscape is intended as a map through the previously uncharted terrain of Cloud Native technologies. It attempts to categorize projects and products in the Cloud Native space.",
+    "keywords": [
+      "landscape",
+      "landscape-cncf-io",
+      "landscape.cncf.io"
+    ],
+    "meta tags": [
+      "robots",
+      "og:type",
+      "og:url",
+      "og:site_name",
+      "og:title",
+      "twitter:card",
+      "twitter:title",
+      "description",
+      "og:description",
+      "twitter:description"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://cncf.github.io/landscape2-sites/cncf/open_graph.jpg"
+  }
+]

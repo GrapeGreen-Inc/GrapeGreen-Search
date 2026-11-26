@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Apple",
+    "url": "https://www.apple.com/",
+    "description": "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device support.",
+    "keywords": [
+      "apple",
+      "apple-com",
+      "apple.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:image",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:locale",
+      "og:site_name",
+      "og:type",
+      "analytics-track",
+      "analytics-s-channel"
+    ],
+    "popular": 67,
+    "launguage": "en",
+    "image": "https://www.apple.com/ac/structured-data/images/open_graph_logo.png?202610011401"
+  }
+]

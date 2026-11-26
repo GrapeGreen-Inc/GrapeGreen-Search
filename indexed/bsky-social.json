@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Bluesky",
+    "url": "https://bsky.social/",
+    "description": "Social media as it should be. Find your community among millions of users, unleash your creativity, and have some fun again.",
+    "keywords": [
+      "bsky",
+      "bsky-social",
+      "bsky.social"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "theme-color",
+      "og:site_name",
+      "og:title",
+      "og:url",
+      "twitter:url",
+      "og:image",
+      "twitter:title",
+      "description",
+      "og:description"
+    ],
+    "popular": 85,
+    "launguage": "en",
+    "image": "https://bsky.social/about/images/social-card-default-gradient.png"
+  }
+]

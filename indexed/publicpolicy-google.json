@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Google Public Policy | Home",
+    "url": "https://publicpolicy.google/",
+    "description": "Our policy priorities for advancing innovation. Explore Google’s policy priorities, key initiatives, and commitments in the AI era.",
+    "keywords": [
+      "publicpolicy",
+      "publicpolicy-google",
+      "publicpolicy.google"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:url",
+      "og:image",
+      "og:image:url",
+      "og:image:width",
+      "og:image:height",
+      "og:image:type",
+      "og:image:alt",
+      "og:description",
+      "og:locale"
+    ],
+    "popular": 65,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/marketing-cms/assets/images/e4/5f/3858f78441faa450bc6c64deebb1/publicpolicy-google-metadata-wordmark-2x.webp"
+  }
+]

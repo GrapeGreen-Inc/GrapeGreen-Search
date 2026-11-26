@@ -1,0 +1,27 @@
+[
+  {
+    "title": "LFX Mentorship",
+    "url": "https://mentorship.linuxfoundation.org/",
+    "description": "Learn open source by building it. LFX Mentorship pairs contributors with mentors for 12-week terms with a stipend.",
+    "keywords": [
+      "mentorship",
+      "mentorship-linuxfoundation-org",
+      "mentorship.linuxfoundation.org"
+    ],
+    "meta tags": [
+      "description",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:image:width",
+      "og:image:height",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://mentorship.linuxfoundation.org/og-image.png"
+  }
+]

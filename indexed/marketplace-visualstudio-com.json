@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Extensions for Visual Studio family of products | Visual Studio Marketplace",
+    "url": "https://marketplace.visualstudio.com/",
+    "description": "One place for all extensions for Visual Studio, Azure DevOps Services, Azure DevOps Server and Visual Studio Code. Discover and install extensions and subscriptions to create the dev environment you need.",
+    "keywords": [
+      "marketplace",
+      "marketplace-visualstudio-com",
+      "marketplace.visualstudio.com",
+      "extension",
+      "visual studio marketplace",
+      "visual studio",
+      "visual studio code",
+      "subscriptions",
+      "azure devops services",
+      "team services",
+      "tfs",
+      "azure devops server extensions"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "og:title",
+      "og:type",
+      "og:url",
+      "og:image",
+      "og:description",
+      "twitter:card",
+      "twitter:site",
+      "twitter:creator"
+    ],
+    "popular": 23,
+    "launguage": "en",
+    "image": "https://cdn.vsassets.io/v/M282_20261117.6/_content/Header/access-marketplace.png"
+  }
+]

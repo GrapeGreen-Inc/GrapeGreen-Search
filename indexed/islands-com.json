@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Islands | Expert Travel Info & Tips: From Islands, to Mountains, & Everything In Between",
+    "url": "https://www.islands.com/",
+    "description": "Islands covers everything you want to do and anywhere you want to travel with expert info, in-depth guides, local tips, and more.",
+    "keywords": [
+      "islands",
+      "islands-com",
+      "islands.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 32,
+    "launguage": "en",
+    "image": "https://www.islands.com/img/islands-share-image-1280x720.png"
+  }
+]

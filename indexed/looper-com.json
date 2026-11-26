@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Looper | TV & Film News, Reviews, Interviews & Trailers",
+    "url": "https://www.looper.com/",
+    "description": "The latest film and TV news, movie trailers, exclusive interviews, reviews, as well as informed opinions on everything Hollywood has to offer.",
+    "keywords": [
+      "looper",
+      "looper-com",
+      "looper.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 37,
+    "launguage": "en",
+    "image": "https://www.looper.com/img/looper-meta-image-1280x720.png"
+  }
+]

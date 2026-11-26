@@ -1,0 +1,30 @@
+[
+  {
+    "title": "CNCF community",
+    "url": "https://ocgroups.dev/",
+    "description": "Open Community Groups, where Open Source communities thrive.",
+    "keywords": [
+      "ocgroups",
+      "ocgroups-dev",
+      "ocgroups.dev",
+      "community",
+      "groups",
+      "events"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "ocg-commit-sha",
+      "og:type",
+      "og:title",
+      "og:url",
+      "og:description",
+      "og:image",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 66,
+    "launguage": "en",
+    "image": "https://ocgroups.dev/images/og/819686db7f8691c4ce7b36dccf218b3db15c26a2ec08dd8617c0e83019fa96ec.webp"
+  }
+]

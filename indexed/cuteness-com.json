@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cuteness: So much more than just pets.",
+    "url": "https://www.cuteness.com/",
+    "description": "Cuteness is here to connect you with the content you need to be the best pet parent.",
+    "keywords": [
+      "cuteness",
+      "cuteness-com",
+      "cuteness.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 44,
+    "launguage": "en",
+    "image": "https://www.cuteness.com/img/cuteness-share-image-1280x720.png"
+  }
+]

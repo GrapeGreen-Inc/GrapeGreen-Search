@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Explore | Travel Made Easy, Vacations, Planning Advice",
+    "url": "https://www.explore.com/",
+    "description": "The one-stop destination for vacation guides, travel tips, and planning advice - all from local experts and tourism specialists.",
+    "keywords": [
+      "explore",
+      "explore-com",
+      "explore.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://www.explore.com/img/explore-meta-image-1280x720.png"
+  }
+]

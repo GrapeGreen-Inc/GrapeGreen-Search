@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Y Combinator",
+    "url": "https://www.ycombinator.com/",
+    "description": "Y Combinator created a new model for funding early stage startups. Four times a year we invest in a large number of startups.",
+    "keywords": [
+      "ycombinator",
+      "ycombinator-com",
+      "ycombinator.com"
+    ],
+    "meta tags": [
+      "csrf-param",
+      "csrf-token",
+      "twitter:card",
+      "twitter:site",
+      "twitter:image",
+      "robots",
+      "description",
+      "og:type",
+      "og:locale",
+      "og:site_name"
+    ],
+    "popular": 85,
+    "launguage": "en",
+    "image": "https://www.ycombinator.com/assets/ycdc/yc-og-image-c440a0ad1dacfb86eeeb343717479cc54d256614449b4ef719977a0a451f8bc8.png"
+  }
+]

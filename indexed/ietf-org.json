@@ -1,0 +1,27 @@
+[
+  {
+    "title": "IETF | Internet Engineering Task Force",
+    "url": "https://www.ietf.org/",
+    "description": "The Internet Engineering Task Force (IETF) is the premier Internet standards body, developing open standards through open processes.",
+    "keywords": [
+      "ietf",
+      "ietf-org",
+      "ietf.org"
+    ],
+    "meta tags": [
+      "description",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image",
+      "fb:app_id",
+      "og:type",
+      "og:url",
+      "og:title",
+      "og:image"
+    ],
+    "popular": 72,
+    "launguage": "en",
+    "image": "https://www.ietf.org/media/images/ietf-logo-500-square-250x250.original.jpg"
+  }
+]

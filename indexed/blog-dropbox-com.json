@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Work in Progress | Dropbox Blog",
+    "url": "https://blog.dropbox.com/",
+    "description": "From storage to action: put AI to work in Dropbox",
+    "keywords": [
+      "blog",
+      "blog-dropbox-com",
+      "blog.dropbox.com"
+    ],
+    "meta tags": [
+      "content-page-ref",
+      "quotasdisabled",
+      "pricingdisabled",
+      "primary_color",
+      "secondary_color",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:image",
+      "twitter:card"
+    ],
+    "popular": 63,
+    "launguage": "en",
+    "image": "https://aem.dropbox.com/cms/content/dam/dropbox/blog/files/2019/02/social_card_wip.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Trending - Infosec Exchange",
+    "url": "https://infosec.exchange/",
+    "description": "A Mastodon instance for info/cyber security-minded people.",
+    "keywords": [
+      "infosec",
+      "infosec-exchange",
+      "infosec.exchange"
+    ],
+    "meta tags": [
+      "theme-color",
+      "mobile-web-app-capable",
+      "style-nonce",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image"
+    ],
+    "popular": 62,
+    "launguage": "en",
+    "image": "https://media.infosec.exchange/infosec.exchange/site_uploads/files/000/000/007/@1x/bbc6a89b54c2498a.png"
+  }
+]

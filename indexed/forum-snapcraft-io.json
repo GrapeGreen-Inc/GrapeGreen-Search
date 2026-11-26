@@ -1,0 +1,27 @@
+[
+  {
+    "title": "snapcraft.io",
+    "url": "https://forum.snapcraft.io/",
+    "description": "The place where snap users, contributors, and developers get together.",
+    "keywords": [
+      "forum",
+      "forum-snapcraft-io",
+      "forum.snapcraft.io"
+    ],
+    "meta tags": [
+      "description",
+      "generator",
+      "theme-color",
+      "color-scheme",
+      "discourse-track-view-session-id",
+      "discourse-engagement-tracking-enabled",
+      "og:site_name",
+      "og:type",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 60,
+    "launguage": "en",
+    "image": "https://forum-snapcraft-io.s3.amazonaws.com/original/2X/3/3d40af21436a8032accb5e76a3683b86c023b543.svg"
+  }
+]

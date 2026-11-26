@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GitHub Learn",
+    "url": "https://learn.github.com/",
+    "description": "GitHub Learn",
+    "keywords": [
+      "learn",
+      "learn-github-com",
+      "learn.github.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:image",
+      "twitter:site",
+      "twitter:site:id",
+      "twitter:creator",
+      "twitter:creator:id",
+      "twitter:card"
+    ],
+    "popular": 27,
+    "launguage": "en",
+    "image": "https://github.githubassets.com/assets/github-mark-57519b92ca4e.png"
+  }
+]

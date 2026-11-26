@@ -1,0 +1,33 @@
+[
+  {
+    "title": "SurveyMonkey Help | SurveyMonkey",
+    "url": "https://help.surveymonkey.com/",
+    "description": "Find your answers in the SurveyMonkey Help Center.",
+    "keywords": [
+      "help",
+      "help-surveymonkey-com",
+      "help.surveymonkey.com",
+      "questionnaire",
+      "questionnaires",
+      "questionaire",
+      "questionaires",
+      "free online survey",
+      "free online surveys"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "robots",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:type",
+      "twitter:card"
+    ],
+    "popular": 70,
+    "launguage": "en",
+    "image": "https://prod.smassets.net/assets/content/sm/featured-social-homepage-og-card.webp"
+  }
+]

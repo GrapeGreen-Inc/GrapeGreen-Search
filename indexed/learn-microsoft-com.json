@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Microsoft Learn: Build with answers in reach",
+    "url": "https://learn.microsoft.com/",
+    "description": "Find official documentation, practical know-how, and expert guidance for builders working and troubleshooting in Microsoft products.",
+    "keywords": [
+      "learn",
+      "learn-microsoft-com",
+      "learn.microsoft.com"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "description",
+      "twitter:card",
+      "twitter:site",
+      "og:type",
+      "og:image:alt",
+      "og:image",
+      "og:title",
+      "og:description",
+      "platform_id"
+    ],
+    "popular": 33,
+    "launguage": "en",
+    "image": "https://learn.microsoft.com/en-us/media/open-graph-image.png"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Science.gov",
+    "url": "https://www.science.gov/",
+    "description": "Science.gov is a gateway to government science information provided by U.S. Government science agencies, including research and development results.",
+    "keywords": [
+      "science",
+      "science-gov",
+      "science.gov"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:url",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
+      "twitter:card"
+    ],
+    "popular": 42,
+    "launguage": "en",
+    "image": "https://www.science.gov/images/og-image.png"
+  }
+]

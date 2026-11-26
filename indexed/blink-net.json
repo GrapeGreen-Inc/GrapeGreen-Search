@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Blink",
+    "url": "https://blink.net/",
+    "description": "Blink is a set of tools built to help publishers and creators of digital content. Choose the services you need. Integrate seamlessly. Become part of an amazing network.",
+    "keywords": [
+      "blink",
+      "blink-net",
+      "blink.net"
+    ],
+    "meta tags": [
+      "title",
+      "description",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:url",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 73,
+    "launguage": "en",
+    "image": "https://d3ki0vovb6k3h1.cloudfront.net/images/meta-tags-preview-images/cover.png"
+  }
+]

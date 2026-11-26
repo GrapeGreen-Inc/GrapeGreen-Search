@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Engineering at Slack",
+    "url": "https://slack.engineering/",
+    "description": "A deep dive into the technology behind building Slack. Written by engineers, for engineers passionate about solving complex technical problems.",
+    "keywords": [
+      "slack",
+      "slack-engineering",
+      "slack.engineering"
+    ],
+    "meta tags": [
+      "description",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
+      "twitter:card",
+      "twitter:domain"
+    ],
+    "popular": 50,
+    "launguage": "en",
+    "image": "https://slack.engineering/wp-content/uploads/sites/7/2024/11/social-share.jpg"
+  }
+]

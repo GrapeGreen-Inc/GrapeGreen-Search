@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Twitch",
+    "url": "https://www.twitch.tv/",
+    "description": "Twitch is an interactive livestreaming service for content spanning gaming, entertainment, sports, music, and more.",
+    "keywords": [
+      "twitch",
+      "twitch-tv",
+      "twitch.tv"
+    ],
+    "meta tags": [
+      "fb:app_id",
+      "title",
+      "og:site_name",
+      "twitter:card",
+      "al:android:package",
+      "twitter:app:name:googleplay",
+      "twitter:image",
+      "twitter:app:name:iphone",
+      "twitter:app:name:ipad",
+      "twitter:app:url:googleplay"
+    ],
+    "popular": 21,
+    "launguage": "en",
+    "image": "https://static-cdn.jtvnw.net/ttv-static-metadata/twitch_logo3.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Slack Design",
+    "url": "https://slack.design/",
+    "description": "A collection of articles and resources from the design team at Slack.",
+    "keywords": [
+      "slack",
+      "slack-design",
+      "slack.design"
+    ],
+    "meta tags": [
+      "robots",
+      "description",
+      "og:locale",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:image:secure_url"
+    ],
+    "popular": 65,
+    "launguage": "en",
+    "image": "https://slack.design/wp-content/uploads/sites/8/2023/02/slack_design_teamArtboard-1@2x.png?resize=1024,536"
+  }
+]

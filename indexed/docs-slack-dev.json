@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Build an app with a coding agent | Slack Developer Docs",
+    "url": "https://docs.slack.dev/",
+    "description": "Build Slack agents, apps, and integrations with a coding agent, the Slack CLI, or app settings.",
+    "keywords": [
+      "docs",
+      "docs-slack-dev",
+      "docs.slack.dev"
+    ],
+    "meta tags": [
+      "generator",
+      "twitter:card",
+      "og:url",
+      "og:locale",
+      "docusaurus_locale",
+      "docsearch:language",
+      "google-site-verification",
+      "docusaurus_version",
+      "docusaurus_tag",
+      "docsearch:version"
+    ],
+    "popular": 41,
+    "launguage": "en",
+    "image": "https://docs.slack.dev/img/logos/favicon.ico"
+  }
+]

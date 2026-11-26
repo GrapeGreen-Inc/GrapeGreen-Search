@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Hunker: Inspired Home Design, Gardening Tips, and DIY Improvements",
+    "url": "https://www.hunker.com/",
+    "description": "Hunker is your destination for home improvement – highlighting interior design trends, gardening tips, DIY instructions, and useful hacks for every corner of your home & garden.",
+    "keywords": [
+      "hunker",
+      "hunker-com",
+      "hunker.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 46,
+    "launguage": "en",
+    "image": "https://www.hunker.com/img/hunker-share-image-1280x720.png"
+  }
+]

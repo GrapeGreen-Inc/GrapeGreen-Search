@@ -1,0 +1,27 @@
+[
+  {
+    "title": "IntelliJ IDEA Plugins and Themes | JetBrains Marketplace",
+    "url": "https://plugins.jetbrains.com/",
+    "description": "Welcome to JetBrains Marketplace",
+    "keywords": [
+      "plugins",
+      "plugins-jetbrains-com",
+      "plugins.jetbrains.com"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-tileimage",
+      "msapplication-square70x70logo",
+      "msapplication-square150x150logo",
+      "msapplication-wide310x150logo",
+      "msapplication-square310x310logo",
+      "og:title",
+      "og:type",
+      "og:url",
+      "og:image"
+    ],
+    "popular": 54,
+    "launguage": "en",
+    "image": "https://plugins.jetbrains.com/assets/icons/jetbrains.png"
+  }
+]

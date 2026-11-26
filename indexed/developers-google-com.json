@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Google for Developers | Build with Gemini",
+    "url": "https://developers.google.com/",
+    "description": "From AI and Cloud to Mobile and Web: Explore developer resources and community events to help you build with Gemini.",
+    "keywords": [
+      "developers",
+      "developers-google-com",
+      "developers.google.com",
+      "gemini api",
+      "google gemini",
+      "ai studio",
+      "google ai studio",
+      "gemini api python",
+      "gemini developers"
+    ],
+    "meta tags": [
+      "google-signin-client-id",
+      "google-signin-scope",
+      "og:site_name",
+      "og:type",
+      "theme-color",
+      "og:title",
+      "description",
+      "og:description",
+      "og:url",
+      "og:image"
+    ],
+    "popular": 24,
+    "launguage": "en",
+    "image": "https://developers.google.com/static/site-assets/images/home/developers-landing-social-media.png"
+  }
+]

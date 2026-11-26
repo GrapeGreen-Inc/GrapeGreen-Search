@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Launchpad Answers",
+    "url": "https://answers.launchpad.net/",
+    "description": "Questions and Answers",
+    "keywords": [
+      "answers",
+      "answers-launchpad-net",
+      "answers.launchpad.net"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-config",
+      "theme-color",
+      "og:title",
+      "og:type",
+      "og:image",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 84,
+    "launguage": "en",
+    "image": "https://answers.launchpad.net/@@/launchpad-og-image.png"
+  }
+]

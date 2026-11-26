@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Sciencing: Daily content for curious minds",
+    "url": "https://www.sciencing.com/",
+    "description": "Sciencing offers informative articles, instructional guides, and cutting-edge answers to pressing questions about science, engineering, and mathematics.",
+    "keywords": [
+      "sciencing",
+      "sciencing-com",
+      "sciencing.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 56,
+    "launguage": "en",
+    "image": "https://www.sciencing.com/img/sciencing-meta-image-1280x720.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "PlanetWare | Travel guides by the experts",
+    "url": "https://www.planetware.com/",
+    "description": "Travel insights and practical tips for turning every trip into an unforgettable adventure from the experts at PlanetWare.",
+    "keywords": [
+      "planetware",
+      "planetware-com",
+      "planetware.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 48,
+    "launguage": "en",
+    "image": "https://www.planetware.com/img/planetware-meta-image-1280x720.png"
+  }
+]

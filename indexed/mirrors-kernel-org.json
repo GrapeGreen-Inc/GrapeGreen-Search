@@ -1,0 +1,16 @@
+[
+  {
+    "title": "mirrors.kernel.org",
+    "url": "https://mirrors.kernel.org/",
+    "description": "Welcome to mirrors.kernel.org, a service of the Linux Kernel Archives. This site contains our archives of mirrors of other sites.",
+    "keywords": [
+      "mirrors",
+      "mirrors-kernel-org",
+      "mirrors.kernel.org"
+    ],
+    "meta tags": [],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://mirrors.kernel.org/images/favicon.ico"
+  }
+]

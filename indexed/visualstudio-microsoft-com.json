@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Visual Studio: IDE and Code Editor for Software Development",
+    "url": "https://visualstudio.microsoft.com/",
+    "description": "Visual Studio dev tools & services make app development easy for any developer, on any platform & language. Develop with our code editor or IDE anywhere for free.",
+    "keywords": [
+      "visualstudio",
+      "visualstudio-microsoft-com",
+      "visualstudio.microsoft.com"
+    ],
+    "meta tags": [
+      "description",
+      "robots",
+      "og:locale",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:image:width"
+    ],
+    "popular": 26,
+    "launguage": "en",
+    "image": "https://visualstudio.microsoft.com/wp-content/uploads/2025/03/vscom-share-image.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "AirVPN - The air to breathe the real Internet - AirVPN",
+    "url": "https://airvpn.org/",
+    "description": "Windows, macOS, Linux, Android",
+    "keywords": [
+      "airvpn",
+      "airvpn-org",
+      "airvpn.org"
+    ],
+    "meta tags": [
+      "twitter:card",
+      "twitter:site",
+      "og:site_name",
+      "og:locale",
+      "msapplication-config",
+      "msapplication-starturl",
+      "application-name",
+      "apple-mobile-web-app-title",
+      "theme-color",
+      "twitter:creator"
+    ],
+    "popular": 35,
+    "launguage": "en",
+    "image": "https://airvpn.org/img/icons/apple-touch-icon-180x180.png"
+  }
+]

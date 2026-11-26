@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Mastodon - Decentralized social media",
+    "url": "https://joinmastodon.org/",
+    "description": "Learn more about Mastodon, the radically different, free and open-source decentralized social media platform.",
+    "keywords": [
+      "joinmastodon",
+      "joinmastodon-org",
+      "joinmastodon.org"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:description",
+      "description",
+      "og:image",
+      "twitter:card",
+      "apple-itunes-app",
+      "twitter:site"
+    ],
+    "popular": 23,
+    "launguage": "en",
+    "image": "https://joinmastodon.org/_next/static/media/preview.3j8ty3n8nhkjn.png"
+  }
+]

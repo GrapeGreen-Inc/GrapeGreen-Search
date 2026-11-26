@@ -1,0 +1,27 @@
+[
+  {
+    "title": "BGR | Industry-Leading Insights In Tech And Entertainment",
+    "url": "https://www.bgr.com/",
+    "description": "Expert analysis of the leading stories in tech and entertainment plus reviews of the latest gadgets.",
+    "keywords": [
+      "bgr",
+      "bgr-com",
+      "bgr.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 33,
+    "launguage": "en",
+    "image": "https://looper-static.s3.amazonaws.com/img/BGR-meta-image-1280x720.png"
+  }
+]

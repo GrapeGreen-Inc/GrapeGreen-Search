@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Launchpad Branches",
+    "url": "https://code.launchpad.net/",
+    "description": "Bazaar will be deprecated in September 2025.",
+    "keywords": [
+      "code",
+      "code-launchpad-net",
+      "code.launchpad.net"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-config",
+      "theme-color",
+      "og:title",
+      "og:type",
+      "og:image",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 64,
+    "launguage": "en",
+    "image": "https://code.launchpad.net/@@/launchpad-og-image.png"
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Home | Microsoft Careers",
+    "url": "https://careers.microsoft.com/",
+    "description": "Do what you love. Create the future you want. Explore the career options that Microsoft has to offer Stage.",
+    "keywords": [
+      "careers",
+      "careers-microsoft-com",
+      "careers.microsoft.com"
+    ],
+    "meta tags": [
+      "template",
+      "content-page-ref",
+      "og:type",
+      "og:url",
+      "og:title",
+      "og:description",
+      "og:image"
+    ],
+    "popular": 31,
+    "launguage": "en",
+    "image": "https://careers.microsoft.com/content/dam/microsoftcareersvnext/en/images/system-icons-do-not-delete-/fav-icon.png"
+  }
+]

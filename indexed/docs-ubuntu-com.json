@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Ubuntu documentation",
+    "url": "https://docs.ubuntu.com/",
+    "description": "The docs directory for all Ubuntu operating systems and products.",
+    "keywords": [
+      "docs",
+      "docs-ubuntu-com",
+      "docs.ubuntu.com"
+    ],
+    "meta tags": [
+      "description"
+    ],
+    "popular": 61,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/8d4630a6-pictogram-heart-mid-grey.svg"
+  }
+]

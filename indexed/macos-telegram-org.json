@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Telegram for macOS",
+    "url": "https://macos.telegram.org/",
+    "description": "Experience Telegram on your mac in a swift and seamless way.",
+    "keywords": [
+      "macos",
+      "macos-telegram-org",
+      "macos.telegram.org"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:image",
+      "og:site_name",
+      "og:description",
+      "fb:app_id",
+      "vk:app_id",
+      "apple-itunes-app",
+      "telegram:channel"
+    ],
+    "popular": 42,
+    "launguage": "en",
+    "image": "https://osx.telegram.org/updates/site/logo.png"
+  }
+]

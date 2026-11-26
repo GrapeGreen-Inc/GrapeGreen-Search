@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Launchpad Translations",
+    "url": "https://translations.launchpad.net/",
+    "description": "Software translations",
+    "keywords": [
+      "translations",
+      "translations-launchpad-net",
+      "translations.launchpad.net"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-config",
+      "theme-color",
+      "og:title",
+      "og:type",
+      "og:image",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 56,
+    "launguage": "en",
+    "image": "https://translations.launchpad.net/@@/launchpad-og-image.png"
+  }
+]

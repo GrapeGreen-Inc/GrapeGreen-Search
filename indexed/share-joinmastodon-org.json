@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Share to Mastodon",
+    "url": "https://share.joinmastodon.org/",
+    "description": "Add a \"Share to Mastodon\" button to your website",
+    "keywords": [
+      "share",
+      "share-joinmastodon-org",
+      "share.joinmastodon.org"
+    ],
+    "meta tags": [
+      "robots"
+    ],
+    "popular": 40,
+    "launguage": "en",
+    "image": "https://share.joinmastodon.org/favicon-32x32.png"
+  }
+]

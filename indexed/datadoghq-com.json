@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cloud Monitoring as a Service | Datadog",
+    "url": "https://www.datadoghq.com/",
+    "description": "See inside any stack, any app, at any scale, anywhere.",
+    "keywords": [
+      "datadoghq",
+      "datadoghq-com",
+      "datadoghq.com"
+    ],
+    "meta tags": [
+      "generator",
+      "msapplication-tilecolor",
+      "theme-color",
+      "description",
+      "author",
+      "twitter:card",
+      "twitter:site",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 51,
+    "launguage": "en",
+    "image": "https://corp.dd-static.net/img/og/og-image-10-25.png?fit=crop&w=1200&h=630"
+  }
+]

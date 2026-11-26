@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Glam | Fashion, Beauty, Wellness Advice, & Inspiration",
+    "url": "https://www.glam.com/",
+    "description": "Covering the latest beauty and fashion trends, relationship advice, wellness tips and more - all from the Glam experts since 2003.",
+    "keywords": [
+      "glam",
+      "glam-com",
+      "glam.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 28,
+    "launguage": "en",
+    "image": "https://www.glam.com/img/glam-share-image-1280x720.png"
+  }
+]

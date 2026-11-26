@@ -1,0 +1,27 @@
+[
+  {
+    "title": "main@lists.cncf.io | Home",
+    "url": "https://lists.cncf.io/",
+    "description": "CNCF is an open source software foundation dedicated to making cloud native computing universal and sustainable. Cloud native computing uses an open source software stack to deploy applications as microservices, packaging each part into its own container, and dynamically orchestrating those containe",
+    "keywords": [
+      "lists",
+      "lists-cncf-io",
+      "lists.cncf.io"
+    ],
+    "meta tags": [
+      "theme-color",
+      "pinterest",
+      "3778517eb4810dfb5d143ed8f1b359b3b5a82923",
+      "msapplication-tilecolor",
+      "msapplication-tileimage",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image"
+    ],
+    "popular": 57,
+    "launguage": "en",
+    "image": "https://groups.io/orgimg/org.10/logofull.png?v=1794523892945914465"
+  }
+]

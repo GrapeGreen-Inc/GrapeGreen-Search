@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Download the latest indie games - itch.io",
+    "url": "https://itch.io/",
+    "description": "itch.io is a simple way to find, download and distribute indie games online. Whether you're a developer looking to upload your game or just someone looking for something new to play itch.io has you covered.",
+    "keywords": [
+      "itch",
+      "itch-io",
+      "itch.io"
+    ],
+    "meta tags": [
+      "generator",
+      "msvalidate.01",
+      "fb:app_id",
+      "csrf_token",
+      "og:title",
+      "og:site_name",
+      "twitter:account_id",
+      "twitter:site",
+      "twitter:title",
+      "twitter:card"
+    ],
+    "popular": 50,
+    "launguage": "en",
+    "image": "https://itch.io/favicon.ico"
+  }
+]

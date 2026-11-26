@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Ubuntu Kernel documentation",
+    "url": "https://canonical-kernel-docs.readthedocs-hosted.com/",
+    "description": "Official Ubuntu kernel documentation. Learn to build, customize, and contribute to Ubuntu kernels. Understand the cadence for stable release updates and HWE kernels.",
+    "keywords": [
+      "canonical-kernel-docs",
+      "canonical-kernel-docs-readthedocs-hosted-com",
+      "canonical-kernel-docs.readthedocs-hosted.com"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "description",
+      "og:title",
+      "og:type",
+      "og:url",
+      "og:site_name",
+      "og:description",
+      "og:image",
+      "og:image:alt",
+      "article:modified_time"
+    ],
+    "popular": 48,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
+  }
+]

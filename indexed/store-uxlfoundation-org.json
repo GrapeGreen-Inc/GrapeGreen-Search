@@ -1,0 +1,30 @@
+[
+  {
+    "title": "UXL Swag Store",
+    "url": "https://store.uxlfoundation.org/",
+    "description": "UXL Swag Store",
+    "keywords": [
+      "store",
+      "store-uxlfoundation-org",
+      "store.uxlfoundation.org",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 31,
+    "launguage": "en",
+    "image": "http://store.uxlfoundation.org/cdn/shop/files/uxl-color_1.png?height=628&pad_color=ffffff&v=1709306571&width=1200"
+  }
+]

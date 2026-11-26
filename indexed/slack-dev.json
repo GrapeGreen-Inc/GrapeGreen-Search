@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Developer Hub | Slack Developers",
+    "url": "https://slack.dev/",
+    "description": "Build context-aware AI apps and agents with Slack, the work operating system. Get tools, documentation, community, and learning resources for developers.",
+    "keywords": [
+      "slack",
+      "slack-dev",
+      "slack.dev"
+    ],
+    "meta tags": [
+      "author",
+      "theme-color",
+      "color-scheme",
+      "google-site-verification",
+      "robots",
+      "description",
+      "og:locale",
+      "og:type",
+      "og:title",
+      "og:description"
+    ],
+    "popular": 43,
+    "launguage": "en",
+    "image": "https://d34u8crftukxnk.cloudfront.net/slack.dev/prod/og-default.jpg"
+  }
+]

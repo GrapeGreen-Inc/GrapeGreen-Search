@@ -1,0 +1,27 @@
+[
+  {
+    "title": "JetBrains Academy",
+    "url": "https://academy.jetbrains.com/",
+    "description": "Learn programming with JetBrains Academy",
+    "keywords": [
+      "academy",
+      "academy-jetbrains-com",
+      "academy.jetbrains.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "description",
+      "robots",
+      "googlebot",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 63,
+    "launguage": "en",
+    "image": "https://academy.jetbrains.com/og-image.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Microsoft Support",
+    "url": "https://support.microsoft.com/",
+    "description": "Microsoft Support is here to help you with Microsoft products. Find how-to articles, videos, and training for Microsoft Copilot, Microsoft 365, Windows 11, Surface, and more.",
+    "keywords": [
+      "support",
+      "support-microsoft-com",
+      "support.microsoft.com"
+    ],
+    "meta tags": [
+      "author",
+      "awa-articleguid",
+      "depot_name",
+      "description",
+      "disable_toc_fallback",
+      "document_id",
+      "document_version_independent_id",
+      "feedback_help_link_type",
+      "feedback_help_link_url",
+      "feedback_product_url"
+    ],
+    "popular": 39,
+    "launguage": "en",
+    "image": "https://support.microsoft.com/apple-touch-icon.png"
+  }
+]

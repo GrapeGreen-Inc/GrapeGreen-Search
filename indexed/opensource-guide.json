@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Open Source Guides | Learn how to launch and grow your project.",
+    "url": "https://opensource.guide/",
+    "description": "Learn how to launch and grow your project.",
+    "keywords": [
+      "opensource",
+      "opensource-guide",
+      "opensource.guide"
+    ],
+    "meta tags": [
+      "google-site-verification",
+      "generator",
+      "og:title",
+      "og:locale",
+      "description",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:type"
+    ],
+    "popular": 70,
+    "launguage": "en",
+    "image": "https://opensource.guide/assets/images/cards/default.png"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Microsoft Developer Community",
+    "url": "https://developercommunity.microsoft.com/",
+    "description": "Microsoft Developer Community",
+    "keywords": [
+      "developercommunity",
+      "developercommunity-microsoft-com",
+      "developercommunity.microsoft.com"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "theme-color",
+      "description"
+    ],
+    "popular": 27,
+    "launguage": "en",
+    "image": "https://developercommunity.visualstudio.com/cardicon-360x360.png?v=1"
+  }
+]

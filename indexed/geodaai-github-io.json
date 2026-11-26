@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GeoDa.AI Project | Spatial Data Analysis for GenAI",
+    "url": "https://geodaai.github.io/",
+    "description": "GeoDa.AI Project",
+    "keywords": [
+      "geodaai",
+      "geodaai-github-io",
+      "geodaai.github.io"
+    ],
+    "meta tags": [
+      "generator",
+      "twitter:card",
+      "og:image",
+      "twitter:image",
+      "og:url",
+      "og:locale",
+      "docusaurus_locale",
+      "docusaurus_tag",
+      "docsearch:language",
+      "docsearch:docusaurus_tag"
+    ],
+    "popular": 75,
+    "launguage": "en",
+    "image": "https://geodaai.github.io/img/docusaurus-social-card.jpg"
+  }
+]

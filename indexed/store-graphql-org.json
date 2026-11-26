@@ -1,0 +1,30 @@
+[
+  {
+    "title": "GraphQL Swag Shop",
+    "url": "https://store.graphql.org/",
+    "description": "GraphQL Swag Shop",
+    "keywords": [
+      "store",
+      "store-graphql-org",
+      "store.graphql.org",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 39,
+    "launguage": "en",
+    "image": "http://store.graphql.org/cdn/shop/files/GraphQL-logo.png?height=628&pad_color=f5f6f8&v=1663253428&width=1200"
+  }
+]

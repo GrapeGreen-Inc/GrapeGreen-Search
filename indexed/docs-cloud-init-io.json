@@ -1,0 +1,22 @@
+[
+  {
+    "title": "cloud-init 26.2 documentation",
+    "url": "https://docs.cloud-init.io/",
+    "description": "Cloud-init documentation",
+    "keywords": [
+      "docs",
+      "docs-cloud-init-io",
+      "docs.cloud-init.io"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "readthedocs-project-slug",
+      "readthedocs-version-slug",
+      "readthedocs-resolver-filename",
+      "readthedocs-http-status"
+    ],
+    "popular": 76,
+    "launguage": "en",
+    "image": "https://docs.cloud-init.io/favicon.ico"
+  }
+]

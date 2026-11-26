@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Daily Meal | Cooking Tips, Restaurants, Food Reviews, Recipes",
+    "url": "https://www.thedailymeal.com/",
+    "description": "The latest food news: celebrity chefs, grocery chains, and fast food plus reviews, rankings, recipes, interviews, and more.",
+    "keywords": [
+      "thedailymeal",
+      "thedailymeal-com",
+      "thedailymeal.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 66,
+    "launguage": "en",
+    "image": "https://www.thedailymeal.com/img/dailymeal-meta-image-1280x720.png"
+  }
+]

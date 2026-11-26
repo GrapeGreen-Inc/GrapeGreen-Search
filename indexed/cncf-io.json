@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cloud Native Computing Foundation",
+    "url": "https://www.cncf.io/",
+    "description": "CNCF is the vendor-neutral hub of cloud native computing, dedicated to making cloud native ubiquitous.",
+    "keywords": [
+      "cncf",
+      "cncf-io",
+      "cncf.io"
+    ],
+    "meta tags": [
+      "robots",
+      "description",
+      "og:type",
+      "og:locale",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:image",
+      "og:image:width"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://www.cncf.io/wp-content/uploads/2022/05/cncf_social_share.jpg"
+  }
+]

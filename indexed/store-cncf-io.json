@@ -1,0 +1,30 @@
+[
+  {
+    "title": "CNCF Store – CNCF Store",
+    "url": "https://store.cncf.io/",
+    "description": "Stickers, t-shirts, hoodies, and other products for Kubernetes, Prometheus and other CNCF-hosted projects",
+    "keywords": [
+      "store",
+      "store-cncf-io",
+      "store.cncf.io",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "shopify-digital-wallet",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width"
+    ],
+    "popular": 29,
+    "launguage": "en",
+    "image": "http://store.cncf.io/cdn/shop/files/CNCF_Store.jpg?v=1670863211"
+  }
+]

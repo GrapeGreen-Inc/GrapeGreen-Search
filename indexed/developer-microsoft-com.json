@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Microsoft Developer",
+    "url": "https://developer.microsoft.com/",
+    "description": "Any platform. Any language. Our tools. Develop solutions, on your terms, using Microsoft products and services.",
+    "keywords": [
+      "developer",
+      "developer-microsoft-com",
+      "developer.microsoft.com"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "awa-env",
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:image:alt",
+      "og:type",
+      "og:site_name",
+      "og:url"
+    ],
+    "popular": 37,
+    "launguage": "en",
+    "image": "https://developer.microsoft.com/_devcom/images/logo-ms-social.jpg"
+  }
+]

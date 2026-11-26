@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Ubuntu Discourse",
+    "url": "https://discourse.ubuntu.com/",
+    "description": "The meeting point for the Ubuntu community.",
+    "keywords": [
+      "discourse",
+      "discourse-ubuntu-com",
+      "discourse.ubuntu.com"
+    ],
+    "meta tags": [
+      "description",
+      "generator",
+      "theme-color",
+      "color-scheme",
+      "discourse-track-view-session-id",
+      "discourse-engagement-tracking-enabled",
+      "google-site-verification",
+      "og:site_name",
+      "og:type",
+      "twitter:card"
+    ],
+    "popular": 30,
+    "launguage": "en",
+    "image": "https://ubuntucommunity.s3.dualstack.us-east-2.amazonaws.com/original/3X/9/0/905b15b7d477513b2af0668c333736b100eef109.svg"
+  }
+]

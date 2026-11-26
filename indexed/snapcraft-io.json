@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Snapcraft - Snaps are universal Linux packages",
+    "url": "https://snapcraft.io/",
+    "description": "Snaps are containerised software packages that are simple to create and install. They auto-update and are safe to run. And because they bundle their dependencies, they work on all major Linux systems without modification.",
+    "keywords": [
+      "snapcraft",
+      "snapcraft-io",
+      "snapcraft.io"
+    ],
+    "meta tags": [
+      "description",
+      "copydoc",
+      "google-site-verification",
+      "og:title",
+      "og:site_name",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 53,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/4726d040-Snap+logo+white+bg.jpg"
+  }
+]

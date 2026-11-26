@@ -1,0 +1,27 @@
+[
+  {
+    "title": "JetBrains Blog: The Drive to Develop",
+    "url": "https://blog.jetbrains.com/",
+    "description": "Developer Tools for Professionals and Teams",
+    "keywords": [
+      "blog",
+      "blog-jetbrains-com",
+      "blog.jetbrains.com"
+    ],
+    "meta tags": [
+      "apple-mobile-web-app-title",
+      "application-name",
+      "msapplication-tilecolor",
+      "theme-color",
+      "twitter:image:src",
+      "description",
+      "robots",
+      "og:locale",
+      "og:type",
+      "og:title"
+    ],
+    "popular": 40,
+    "launguage": "en_us",
+    "image": "https://resources.jetbrains.com/storage/products/jetbrains/img/meta/preview.png"
+  }
+]

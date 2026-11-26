@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Jalopnik | Obsessed with the culture of cars",
+    "url": "https://www.jalopnik.com/",
+    "description": "From cars to motorcycles, Jalopnik is your go-to site covering everything with an engine—including automotive news, buying guides, and expert commentary from our staff.",
+    "keywords": [
+      "jalopnik",
+      "jalopnik-com",
+      "jalopnik.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 61,
+    "launguage": "en",
+    "image": "https://www.jalopnik.com/img/jalopnik-meta-image-1280x720.png"
+  }
+]

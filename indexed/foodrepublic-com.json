@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Food Republic | Restaurants, Reviews, Recipes, Cooking Tips",
+    "url": "https://www.foodrepublic.com/",
+    "description": "Food industry news, cooking tips, reviews, rankings, recipes, and interviews from the experts at Food Republic - since 2010.",
+    "keywords": [
+      "foodrepublic",
+      "foodrepublic-com",
+      "foodrepublic.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 58,
+    "launguage": "en",
+    "image": "https://www.foodrepublic.com/img/food-republic-share-image-1280x720-v3.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "About Google: Our products, technology and company information - About Google",
+    "url": "https://about.google/",
+    "description": "Learn more about Google. Explore our innovative AI products and services, and how we're using technology to help improve lives around the world.",
+    "keywords": [
+      "about",
+      "about-google",
+      "about.google"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:url",
+      "og:image",
+      "og:image:url",
+      "og:image:width",
+      "og:image:height",
+      "og:image:type",
+      "og:image:alt",
+      "og:description",
+      "og:locale"
+    ],
+    "popular": 59,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/marketing-cms/assets/images/af/e1/96b2cf55425fb5aa498c680c8ca5/about-ss.webp=n-w1440-h810-fcrop64=1,0000114effffee75-rw"
+  }
+]

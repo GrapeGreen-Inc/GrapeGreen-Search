@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Telegram Messenger",
+    "url": "https://telegram.org/",
+    "description": "Fast. Secure. Powerful.",
+    "keywords": [
+      "telegram",
+      "telegram-org",
+      "telegram.org"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:image",
+      "og:site_name",
+      "og:description",
+      "fb:app_id",
+      "vk:app_id",
+      "apple-itunes-app",
+      "telegram:channel"
+    ],
+    "popular": 58,
+    "launguage": "en",
+    "image": "https://telegram.org/img/t_logo_2x.png"
+  }
+]

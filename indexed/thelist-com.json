@@ -1,0 +1,27 @@
+[
+  {
+    "title": "The List | Beauty, Entertainment, Royals, Style, Soaps, & Celebrity",
+    "url": "https://www.thelist.com/",
+    "description": "The destination for entertainment and women's lifestyle - from royals news, fashion advice, and beauty tips, to celebrity interviews, and more.",
+    "keywords": [
+      "thelist",
+      "thelist-com",
+      "thelist.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 52,
+    "launguage": "en",
+    "image": "https://www.thelist.com/img/thelist-share-image-1280x720.png"
+  }
+]

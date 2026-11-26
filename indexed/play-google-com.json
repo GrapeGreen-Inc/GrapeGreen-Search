@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Android Apps on Google Play",
+    "url": "https://play.google.com/",
+    "description": "Enjoy millions of the latest Android apps, games, music, movies, TV, books, magazines & more. Anytime, anywhere, across your devices.",
+    "keywords": [
+      "play",
+      "play-google-com",
+      "play.google.com"
+    ],
+    "meta tags": [
+      "referrer",
+      "mobile-web-app-capable",
+      "apple-mobile-web-app-capable",
+      "google-site-verification",
+      "robots",
+      "og:type",
+      "og:url",
+      "twitter:url",
+      "og:title",
+      "description"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/android/market_images/web/favicon_v3.ico"
+  }
+]

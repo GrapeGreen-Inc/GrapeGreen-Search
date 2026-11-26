@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Foodie - Live a Delicious Life: Kitchen Tips, Culinary History, Restaurant Recs",
+    "url": "https://www.foodie.com/",
+    "description": "Foodie is the destination for living a delicious life - from kitchen tips to culinary history, celebrity chefs, restaurant recommendations, and much more.",
+    "keywords": [
+      "foodie",
+      "foodie-com",
+      "foodie.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 46,
+    "launguage": "en",
+    "image": "https://www.foodie.com/img/foodie-share-image-1280x720.png"
+  }
+]

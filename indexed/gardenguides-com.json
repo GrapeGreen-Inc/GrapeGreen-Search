@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Garden Guides - Garden inspiration, from seed to bloom",
+    "url": "https://www.gardenguides.com/",
+    "description": "Garden Guides is your ultimate resource on flowers, vegetable gardening, perennial plants, and more. Here to help you plant smarter, grow better, and bloom brighter.",
+    "keywords": [
+      "gardenguides",
+      "gardenguides-com",
+      "gardenguides.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 40,
+    "launguage": "en",
+    "image": "https://www.gardenguides.com/img/garden-guides-meta-image-1280x720.png"
+  }
+]

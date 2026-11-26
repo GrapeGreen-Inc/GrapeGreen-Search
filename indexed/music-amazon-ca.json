@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Amazon Music | Listen to songs, podcasts, & more",
+    "url": "https://music.amazon.ca/",
+    "description": "Browse & stream your favourite music and podcasts from your web browser now. Listen to your favourite playlists from over millions of songs on Amazon Music Unlimited.",
+    "keywords": [
+      "music",
+      "music-amazon-ca",
+      "music.amazon.ca"
+    ],
+    "meta tags": [
+      "theme-color",
+      "branch:deeplink:$deeplink_path",
+      "description"
+    ],
+    "popular": 66,
+    "launguage": "en",
+    "image": "https://m.media-amazon.com/images/G/01/music/logo/1.0/smile_256x256.png"
+  }
+]

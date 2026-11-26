@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Sunsetting Atom - The GitHub Blog",
+    "url": "https://github.blog/",
+    "description": "We are archiving Atom and all projects under the Atom organization for an official sunset on December 15, 2022.",
+    "keywords": [
+      "github",
+      "github-blog",
+      "github.blog"
+    ],
+    "meta tags": [
+      "robots",
+      "description",
+      "og:locale",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "article:published_time",
+      "article:modified_time"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://github.blog/wp-content/uploads/2022/06/Engineering-Product@2x.png"
+  }
+]

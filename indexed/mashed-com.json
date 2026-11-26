@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Mashed | Fast Food, Celebrity Chefs, Grocery, Reviews",
+    "url": "https://www.mashed.com/",
+    "description": "The latest news on grocery chains, celebrity chefs, and fast food - plus reviews, cooking tips and advice, recipes, and more.",
+    "keywords": [
+      "mashed",
+      "mashed-com",
+      "mashed.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 62,
+    "launguage": "en",
+    "image": "https://www.mashed.com/img/mashed-meta-image-1280x720.png"
+  }
+]

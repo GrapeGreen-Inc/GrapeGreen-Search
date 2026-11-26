@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Linux Foundation - Decentralized innovation, built with trust",
+    "url": "https://www.linuxfoundation.org/",
+    "description": "Helping open technology projects build world class open source software, communities and companies.",
+    "keywords": [
+      "linuxfoundation",
+      "linuxfoundation-org",
+      "linuxfoundation.org"
+    ],
+    "meta tags": [
+      "description",
+      "og:description",
+      "og:title",
+      "twitter:description",
+      "twitter:title",
+      "og:url",
+      "twitter:card",
+      "generator",
+      "facebook-domain-verification"
+    ],
+    "popular": 47,
+    "launguage": "en",
+    "image": "https://www.linuxfoundation.org/favicon.ico"
+  }
+]

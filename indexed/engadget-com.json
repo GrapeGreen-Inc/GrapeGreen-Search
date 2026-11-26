@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Engadget | Technology News & Expert Reviews",
+    "url": "https://www.engadget.com/",
+    "description": "Breaking news from the worlds of technology and entertainment, and expert reviews of the latest consumer tech products.",
+    "keywords": [
+      "engadget",
+      "engadget-com",
+      "engadget.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 76,
+    "launguage": "en",
+    "image": "https://www.engadget.com/img/engadget-meta-image-1280x720.png"
+  }
+]

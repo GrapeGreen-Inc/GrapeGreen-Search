@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Launchpad",
+    "url": "https://launchpad.net/",
+    "description": "One place to track bugs across project boundaries and tools",
+    "keywords": [
+      "launchpad",
+      "launchpad-net",
+      "launchpad.net"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-config",
+      "theme-color",
+      "og:title",
+      "og:type",
+      "og:image",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 32,
+    "launguage": "en",
+    "image": "https://launchpad.net/@@/launchpad-og-image.png"
+  }
+]

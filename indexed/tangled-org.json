@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Tangled · Your code forge for the next decade",
+    "url": "https://tangled.org/",
+    "description": "Tangled is your open, federated code forge for the next decade. Host your code anywhere, review in stacks and run CI on your own machines.",
+    "keywords": [
+      "tangled",
+      "tangled-org",
+      "tangled.org",
+      "git",
+      "code collaboration",
+      "at protocol",
+      "open source",
+      "version control",
+      "social coding",
+      "code hosting"
+    ],
+    "meta tags": [
+      "og:site_name",
+      "og:locale",
+      "twitter:site",
+      "keywords",
+      "author",
+      "og:title",
+      "twitter:title",
+      "description",
+      "og:description",
+      "twitter:description"
+    ],
+    "popular": 38,
+    "launguage": "en",
+    "image": "https://assets.tangled.network/og-landing.png"
+  }
+]

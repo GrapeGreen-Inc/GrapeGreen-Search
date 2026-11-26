@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Masto.host - Fully Managed Mastodon Hosting",
+    "url": "https://masto.host/",
+    "description": "Masto.host was built from the ground up to make running a Mastodon instance easy.",
+    "keywords": [
+      "masto",
+      "masto-host",
+      "masto.host"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "description",
+      "generator",
+      "og:title",
+      "og:site_name",
+      "og:url",
+      "og:description",
+      "og:type",
+      "og:image",
+      "og:image:alt"
+    ],
+    "popular": 73,
+    "launguage": "en",
+    "image": "https://masto.host/img/socialshare.jpg"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Mom.com - Your motherhood manual to pregnancy, parenting, & home.",
+    "url": "https://www.mom.com/",
+    "description": "Mom.com covers every stage of family life, from pregnancy and babies to teenagers—plus trusted parenting advice and recommendations for the home.",
+    "keywords": [
+      "mom",
+      "mom-com",
+      "mom.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 84,
+    "launguage": "en",
+    "image": "https://www.mom.com/img/mom-meta-image-1280x720.png"
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "FINOS Store – Opening Soon",
+    "url": "https://store-finos.myshopify.com/",
+    "description": "FINOS Store",
+    "keywords": [
+      "store-finos",
+      "store-finos-myshopify-com",
+      "store-finos.myshopify.com",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "http://store-finos.myshopify.com/cdn/shop/files/FINOS_Icon_Wordmark_Name_horz_CMYK_c850f50f-b18a-4666-9e99-a953ffec6b82.png?v=1626872290"
+  }
+]

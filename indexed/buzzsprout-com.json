@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Free Podcast Hosting - Buzzsprout",
+    "url": "https://www.buzzsprout.com/",
+    "description": "Start podcasting today with free podcast hosting from Buzzsprout, the easiest podcasting software for hosting, promoting, and tracking your podcast.",
+    "keywords": [
+      "buzzsprout",
+      "buzzsprout-com",
+      "buzzsprout.com",
+      "podcast",
+      "episode",
+      "players",
+      "small",
+      "toggleplay",
+      "turbo",
+      "before",
+      "cache",
+      "document"
+    ],
+    "meta tags": [
+      "csrf-param",
+      "csrf-token",
+      "description",
+      "og:title",
+      "og:type",
+      "og:image",
+      "og:description",
+      "og:url",
+      "twitter:card",
+      "twitter:site"
+    ],
+    "popular": 58,
+    "launguage": "en",
+    "image": "https://assets.buzzsprout.com/assets/home/og/buzzsprout-e8311a2f1a10386551c9310dc921205062cbee429d5bc5640ec94a4b6303e934.png"
+  }
+]

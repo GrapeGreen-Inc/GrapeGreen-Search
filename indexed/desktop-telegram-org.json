@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Telegram Desktop",
+    "url": "https://desktop.telegram.org/",
+    "description": "Experience Telegram on your computer in a swift and seamless way.",
+    "keywords": [
+      "desktop",
+      "desktop-telegram-org",
+      "desktop.telegram.org"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:image",
+      "og:site_name",
+      "og:description",
+      "fb:app_id",
+      "vk:app_id",
+      "apple-itunes-app",
+      "telegram:channel"
+    ],
+    "popular": 28,
+    "launguage": "en",
+    "image": "https://desktop.telegram.org/img/apple-touch-icon.png"
+  }
+]

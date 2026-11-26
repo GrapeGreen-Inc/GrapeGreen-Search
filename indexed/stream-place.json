@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Streamplace",
+    "url": "https://stream.place/",
+    "description": "Streamplace",
+    "keywords": [
+      "stream",
+      "stream-place",
+      "stream.place"
+    ],
+    "meta tags": [
+      "apple-itunes-app",
+      "description",
+      "og:url",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:domain"
+    ],
+    "popular": 45,
+    "launguage": "en",
+    "image": "https://stream.place/linkbanner.png"
+  }
+]

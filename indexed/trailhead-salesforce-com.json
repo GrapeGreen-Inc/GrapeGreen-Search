@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Trailhead | The fun way to learn",
+    "url": "https://trailhead.salesforce.com/",
+    "description": "Learn in-demand skills for free to drive your company and career forward. Skill up and become an Agentblazer who transforms how work gets done.",
+    "keywords": [
+      "trailhead",
+      "trailhead-salesforce-com",
+      "trailhead.salesforce.com"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-config",
+      "theme-color",
+      "twitter:card",
+      "twitter:site",
+      "fb:app_id",
+      "og:site_name",
+      "og:image",
+      "og:image:url",
+      "og:image:height"
+    ],
+    "popular": 22,
+    "launguage": "en",
+    "image": "https://trailhead.salesforce.com/assets/trailhead-og-flogo-9ac90ab0d1b86ea359e1f7b60f6081fa56f0e7d8b61abfffbf572fac2f5ace5a.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Discover — Bluesky",
+    "url": "https://bsky.app/",
+    "description": "Social media as it should be. Find your community among millions of users, unleash your creativity, and have some fun again.",
+    "keywords": [
+      "bsky",
+      "bsky-app",
+      "bsky.app"
+    ],
+    "meta tags": [
+      "referrer",
+      "theme-color",
+      "application-name",
+      "generator",
+      "og:site_name",
+      "og:logo",
+      "twitter:site",
+      "og:title",
+      "og:type",
+      "twitter:title"
+    ],
+    "popular": 31,
+    "launguage": "en",
+    "image": "https://bsky.app/static/social-card-default-gradient.png"
+  }
+]

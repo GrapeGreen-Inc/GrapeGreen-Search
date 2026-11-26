@@ -1,0 +1,27 @@
+[
+  {
+    "title": "JetBrains: Essential tools for software developers and teams",
+    "url": "https://www.jetbrains.com/",
+    "description": "JetBrains is a cutting-edge software vendor specializing in the creation of intelligent development tools, including IntelliJ IDEA – the leading Java IDE, and the Kotlin programming language.",
+    "keywords": [
+      "jetbrains",
+      "jetbrains-com",
+      "jetbrains.com"
+    ],
+    "meta tags": [
+      "apple-mobile-web-app-title",
+      "application-name",
+      "msapplication-tilecolor",
+      "theme-color",
+      "description",
+      "image",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:url"
+    ],
+    "popular": 69,
+    "launguage": "en",
+    "image": "https://resources.jetbrains.com/storage/products/jetbrains/img/meta/preview.png"
+  }
+]

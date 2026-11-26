@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Todo Swag Store",
+    "url": "https://todo-group.myshopify.com/",
+    "description": "Todo Swag Store",
+    "keywords": [
+      "todo-group",
+      "todo-group-myshopify-com",
+      "todo-group.myshopify.com",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 27,
+    "launguage": "en",
+    "image": "http://todo-group.myshopify.com/cdn/shop/files/TODO-logo.png?height=628&pad_color=ffffff&v=1631134059&width=1200"
+  }
+]

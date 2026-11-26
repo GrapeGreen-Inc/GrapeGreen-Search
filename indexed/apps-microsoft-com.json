@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Microsoft Store - Download apps, games & more for your Windows PC",
+    "url": "https://apps.microsoft.com/",
+    "description": "Explore the Microsoft Store for apps and games on Windows. Enjoy exclusive deals, new releases, and your favorite content all in one place.",
+    "keywords": [
+      "apps",
+      "apps-microsoft-com",
+      "apps.microsoft.com"
+    ],
+    "meta tags": [
+      "application-version",
+      "application-commit",
+      "application-build-id",
+      "application-build-time",
+      "description",
+      "og:site_name",
+      "og:type",
+      "og:url",
+      "og:title",
+      "og:description"
+    ],
+    "popular": 40,
+    "launguage": "en",
+    "image": "https://apps.microsoft.com/assets/icons/logo-plated-256x256.png"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "title": "OpenAN - Open Autonomous Networks for Telecom",
+    "url": "https://openan.dev/",
+    "description": "OpenAN is an LF Networking candidate project building an open, vendor-neutral framework for end-to-end closed-loop autonomous networks: A2A-T SDK, Registry Center, and Orchestration Center.",
+    "keywords": [
+      "openan",
+      "openan-dev",
+      "openan.dev"
+    ],
+    "meta tags": [
+      "description"
+    ],
+    "popular": 29,
+    "launguage": "en",
+    "image": "https://openan.dev/src/images/openan-logo.png"
+  }
+]

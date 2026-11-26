@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Junie by JetBrains",
+    "url": "https://junie.jetbrains.com/",
+    "description": "Junie by JetBrains. AI Coding Agent.",
+    "keywords": [
+      "junie",
+      "junie-jetbrains-com",
+      "junie.jetbrains.com"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:description",
+      "image",
+      "og:image",
+      "og:url",
+      "twitter:image:src",
+      "twitter:card",
+      "description",
+      "sentry-trace",
+      "baggage"
+    ],
+    "popular": 41,
+    "launguage": "en",
+    "image": "https://junie.jetbrains.com/preview-image.png"
+  }
+]

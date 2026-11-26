@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Blueprints",
+    "url": "https://blueprints.launchpad.net/",
+    "description": "With Launchpad you can track blueprints (lightweight feature specifications) from discussion through to review, approval, and implementation. (Read our guide)",
+    "keywords": [
+      "blueprints",
+      "blueprints-launchpad-net",
+      "blueprints.launchpad.net"
+    ],
+    "meta tags": [
+      "msapplication-tilecolor",
+      "msapplication-config",
+      "theme-color",
+      "og:title",
+      "og:type",
+      "og:image",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 29,
+    "launguage": "en",
+    "image": "https://blueprints.launchpad.net/@@/launchpad-og-image.png"
+  }
+]

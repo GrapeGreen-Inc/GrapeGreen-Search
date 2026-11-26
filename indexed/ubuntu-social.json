@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Trending - Ubuntu Social",
+    "url": "https://ubuntu.social/",
+    "description": "Mastodon server for official Ubuntu Members. This server is hosted and managed by Canonical.\nTo learn more about Ubuntu Membership, please visit: https://ubuntu.com/community/membership",
+    "keywords": [
+      "ubuntu",
+      "ubuntu-social",
+      "ubuntu.social"
+    ],
+    "meta tags": [
+      "theme-color",
+      "mobile-web-app-capable",
+      "style-nonce",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image"
+    ],
+    "popular": 33,
+    "launguage": "en",
+    "image": "https://cdn.masto.host/ubuntusocial/site_uploads/files/000/000/004/@1x/f8f9ea7a5622e60e.png"
+  }
+]

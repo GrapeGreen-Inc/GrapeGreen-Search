@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Netplan documentation",
+    "url": "https://canonical-netplan.readthedocs-hosted.com/",
+    "description": "Netplan is a network configuration abstraction renderer. It is a utility for network configuration on a Linux system. You create a description of the required interfaces and define what each should...",
+    "keywords": [
+      "canonical-netplan",
+      "canonical-netplan-readthedocs-hosted-com",
+      "canonical-netplan.readthedocs-hosted.com"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "og:title",
+      "og:type",
+      "og:url",
+      "og:site_name",
+      "og:description",
+      "og:image",
+      "og:image:alt",
+      "description",
+      "readthedocs-project-slug"
+    ],
+    "popular": 36,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
+  }
+]

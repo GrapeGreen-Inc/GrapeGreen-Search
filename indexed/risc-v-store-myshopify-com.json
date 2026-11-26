@@ -1,0 +1,30 @@
+[
+  {
+    "title": "RISC-V-store",
+    "url": "https://risc-v-store.myshopify.com/",
+    "description": "RISC-V-store",
+    "keywords": [
+      "risc-v-store",
+      "risc-v-store-myshopify-com",
+      "risc-v-store.myshopify.com",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 29,
+    "launguage": "en",
+    "image": "http://risc-v-store.myshopify.com/cdn/shop/files/Risc-v-header.png?height=628&pad_color=fff&v=1614713728&width=1200"
+  }
+]

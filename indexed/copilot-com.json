@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Microsoft Copilot | Sign in",
+    "url": "https://copilot.com/",
+    "description": "Microsoft Copilot is AI built to help you get things done. Create, brainstorm, learn, and solve problems with AI chat that works across your day.",
+    "keywords": [
+      "copilot",
+      "copilot-com",
+      "copilot.com",
+      "microsoft office online",
+      "collaborate",
+      "free office",
+      "word web app",
+      "outlook.com",
+      "outlook",
+      "onedrive",
+      "office online",
+      "powerpoint web app"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:type",
+      "og:locale",
+      "og:url",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://res.cdn.office.net/officehub/images/content/images/unauth-copilotcom/favicon-copilot-brand-refresh-23392c1f66.ico"
+  }
+]

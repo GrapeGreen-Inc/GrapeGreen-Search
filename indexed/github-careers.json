@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GitHub Careers",
+    "url": "https://www.github.careers/",
+    "description": "GitHub Careers",
+    "keywords": [
+      "github",
+      "github-careers",
+      "github.careers"
+    ],
+    "meta tags": [
+      "fragment",
+      "description",
+      "og:type",
+      "og:title",
+      "og:site_name",
+      "og:description",
+      "og:url",
+      "fb:app_id",
+      "fb:pages",
+      "og:image"
+    ],
+    "popular": 31,
+    "launguage": "en",
+    "image": "https://www.github.careers/OPENGRAPH.IMAGE"
+  }
+]

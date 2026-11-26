@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Trailhead Academy - All Offerings",
+    "url": "https://trailheadacademy.salesforce.com/",
+    "description": "Develop your employees’ expertise with insights and best practices from product experts. Upskill your teams and build foundational AI skills with virtual and in-person classes around the world.",
+    "keywords": [
+      "trailheadacademy",
+      "trailheadacademy-salesforce-com",
+      "trailheadacademy.salesforce.com"
+    ],
+    "meta tags": [
+      "basepath",
+      "deploytarget",
+      "google",
+      "versionkey",
+      "salesforce-community",
+      "salesforce-mode",
+      "salesforce-redirect-uri",
+      "salesforce-authprovider-login",
+      "salesforce-authprovider-signup",
+      "salesforce-init-handler"
+    ],
+    "popular": 30,
+    "launguage": "en",
+    "image": "https://trailheadacademy.salesforce.com/resource/trailhead_favicon_48x48_ico"
+  }
+]

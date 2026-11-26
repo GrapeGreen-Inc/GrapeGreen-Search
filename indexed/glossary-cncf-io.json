@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cloud Native Glossary",
+    "url": "https://glossary.cncf.io/",
+    "description": "Cloud Native Glossary\nThe Cloud Native Glossary aims to make the cloud native space — which is notorious for its complexity — simpler for people by …",
+    "keywords": [
+      "glossary",
+      "glossary-cncf-io",
+      "glossary.cncf.io"
+    ],
+    "meta tags": [
+      "generator",
+      "robots",
+      "description",
+      "og:url",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:locale",
+      "og:type",
+      "og:image"
+    ],
+    "popular": 30,
+    "launguage": "en",
+    "image": "https://glossary.cncf.io/images/cncf-glossary-social.jpg"
+  }
+]

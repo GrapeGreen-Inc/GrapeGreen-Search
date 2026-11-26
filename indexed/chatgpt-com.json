@@ -1,0 +1,27 @@
+[
+  {
+    "title": "ChatGPT: Chat, Work, Create & Code with AI",
+    "url": "https://chatgpt.com/",
+    "description": "Use ChatGPT to answer questions, write, create images, complete work, and code—all in one place. Get started for free or download the app.",
+    "keywords": [
+      "chatgpt",
+      "chatgpt-com",
+      "chatgpt.com"
+    ],
+    "meta tags": [
+      "google",
+      "color-scheme",
+      "theme-color",
+      "mobile-web-app-capable",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style",
+      "apple-mobile-web-app-title",
+      "apple-itunes-app",
+      "robots",
+      "og:title"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://cdn.openai.com/chatgpt/share-og.png"
+  }
+]

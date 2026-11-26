@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Google Labs: Google's home for AI experiments",
+    "url": "https://labs.google/",
+    "description": "Stay up to date with the latest Google AI experiments, innovative tools, and technology. Explore the future of AI responsibly with Google Labs.",
+    "keywords": [
+      "labs",
+      "labs-google",
+      "labs.google"
+    ],
+    "meta tags": [
+      "description",
+      "theme-color",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:type",
+      "og:image:width",
+      "og:image:height",
+      "og:url",
+      "og:title",
+      "og:description"
+    ],
+    "popular": 45,
+    "launguage": "en",
+    "image": "https://labs.google/assets/preview.png"
+  }
+]

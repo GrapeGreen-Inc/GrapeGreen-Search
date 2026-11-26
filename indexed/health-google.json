@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Google for Health - What Is Google for Health?",
+    "url": "https://health.google/",
+    "description": "Google for Health wants to help billions of people be healthier. Learn more about what Google for Health is and how we're aiding in healthcare advancements.",
+    "keywords": [
+      "health",
+      "health-google",
+      "health.google"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:url",
+      "og:description",
+      "og:locale",
+      "og:site_name",
+      "og:type",
+      "twitter:card",
+      "twitter:description",
+      "twitter:site",
+      "twitter:url"
+    ],
+    "popular": 51,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/marketing-cms/assets/images/15/8d/b5f770d74c39b01a3da119f3d9d2/gradient-high-quality.png=s180"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Changelog — LFX Changelog",
+    "url": "https://changelog.lfx.dev/",
+    "description": "Stay up to date with the latest changes across LFX products.",
+    "keywords": [
+      "changelog",
+      "changelog-lfx-dev",
+      "changelog.lfx.dev"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:site_name",
+      "og:image",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image"
+    ],
+    "popular": 31,
+    "launguage": "en",
+    "image": "https://changelog.lfx.dev/logo_lfx.svg"
+  }
+]

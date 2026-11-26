@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home - LF Networking",
+    "url": "https://lfnetworking.org/",
+    "description": "LF Networking is the center of gravity for collaboration so the entire world can access networking innovations and digital transformation.",
+    "keywords": [
+      "lfnetworking",
+      "lfnetworking-org",
+      "lfnetworking.org"
+    ],
+    "meta tags": [
+      "robots",
+      "description",
+      "og:locale",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "article:modified_time",
+      "og:image"
+    ],
+    "popular": 51,
+    "launguage": "en",
+    "image": "https://lfnetworking.org/wp-content/uploads/sites/7/2023/02/LF_Networking_Logo-15inch-wide.png"
+  }
+]

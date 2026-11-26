@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Tasting Table | Food, Restaurants, Reviews, Recipes, Cooking Tips",
+    "url": "https://www.tastingtable.com/",
+    "description": "Breaking food industry news, cooking tips, recipes, reviews, rankings, and interviews - since 2008.",
+    "keywords": [
+      "tastingtable",
+      "tastingtable-com",
+      "tastingtable.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 62,
+    "launguage": "en",
+    "image": "https://www.tastingtable.com/img/tasting-table-meta-image-1280x720.png"
+  }
+]

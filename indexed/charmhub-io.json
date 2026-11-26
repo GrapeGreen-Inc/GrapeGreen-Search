@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Charmhub | The Open Operator Collection",
+    "url": "https://charmhub.io/",
+    "description": "Universal operators for application lifecycle management on Linux, Windows and Kubernetes",
+    "keywords": [
+      "charmhub",
+      "charmhub-io",
+      "charmhub.io"
+    ],
+    "meta tags": [
+      "description",
+      "msvalidate.01",
+      "og:title",
+      "og:site_name",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
+      "og:image:alt"
+    ],
+    "popular": 25,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/5e6fb404-charmhub.svg"
+  }
+]

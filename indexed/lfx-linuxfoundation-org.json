@@ -1,0 +1,27 @@
+[
+  {
+    "title": "LFX — The Linux Foundation's Tool Suite for Open Source",
+    "url": "https://lfx.linuxfoundation.org/",
+    "description": "LFX provides a suite of tools to help open source projects and ecosystems thrive — from analytics and mentorship to CLA management and crowdfunding.",
+    "keywords": [
+      "lfx",
+      "lfx-linuxfoundation-org",
+      "lfx.linuxfoundation.org"
+    ],
+    "meta tags": [
+      "next-size-adjust",
+      "description",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:type",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 20,
+    "launguage": "en",
+    "image": "https://lfx.linuxfoundation.org/icon.svg?3164c9984cf981c8"
+  }
+]

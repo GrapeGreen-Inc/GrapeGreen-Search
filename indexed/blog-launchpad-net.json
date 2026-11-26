@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Launchpad Blog",
+    "url": "https://blog.launchpad.net/",
+    "description": "News and updates from the Launchpad team",
+    "keywords": [
+      "blog",
+      "blog-launchpad-net",
+      "blog.launchpad.net"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:type",
+      "og:url",
+      "og:site_name",
+      "og:locale",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 43,
+    "launguage": "en",
+    "image": "https://blog.launchpad.net/favicon.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home | LFX Crowdfunding",
+    "url": "https://crowdfunding.linuxfoundation.org/",
+    "description": "LFX Crowdfunding connects open source contributors, projects, and organizations. Fund the projects that power the world.",
+    "keywords": [
+      "crowdfunding",
+      "crowdfunding-linuxfoundation-org",
+      "crowdfunding.linuxfoundation.org"
+    ],
+    "meta tags": [
+      "format-detection",
+      "description",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:image:width",
+      "og:image:height",
+      "twitter:card",
+      "twitter:title"
+    ],
+    "popular": 72,
+    "launguage": "en",
+    "image": "https://crowdfunding.linuxfoundation.org/og-image.png"
+  }
+]

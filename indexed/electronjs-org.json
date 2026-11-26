@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Build cross-platform desktop apps with JavaScript, HTML, and CSS | Electron",
+    "url": "https://www.electronjs.org/",
+    "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+    "keywords": [
+      "electronjs",
+      "electronjs-org",
+      "electronjs.org"
+    ],
+    "meta tags": [
+      "generator",
+      "twitter:card",
+      "og:url",
+      "docs-sha",
+      "og:locale",
+      "og:locale:alternate",
+      "docusaurus_locale",
+      "docusaurus_tag",
+      "docsearch:language",
+      "docsearch:docusaurus_tag"
+    ],
+    "popular": 50,
+    "launguage": "en",
+    "image": "https://www.electronjs.org/assets/img/favicon.ico"
+  }
+]

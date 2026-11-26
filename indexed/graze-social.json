@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Graze: Custom Feed Builder for Bluesky · Graze",
+    "url": "https://www.graze.social/",
+    "description": "Design, deploy, and grow custom feeds of any complexity on Bluesky with Graze.social.",
+    "keywords": [
+      "graze",
+      "graze-social",
+      "graze.social"
+    ],
+    "meta tags": [
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:type",
+      "og:image",
+      "og:site_name",
+      "og:locale",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 36,
+    "launguage": "en",
+    "image": "https://www.graze.social/index.png"
+  }
+]

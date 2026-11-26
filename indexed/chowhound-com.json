@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Chowhound - The Site for Food Nerds: Cooking Tips, Culinary How-To's, & More.",
+    "url": "https://www.chowhound.com/",
+    "description": "Chowhound is the site for food nerds - from expert chef tips to culinary how-to's, helpful ingredient lists, baking science, and more.",
+    "keywords": [
+      "chowhound",
+      "chowhound-com",
+      "chowhound.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 37,
+    "launguage": "en",
+    "image": "https://www.chowhound.com/img/chowhound-share-image-1280x720.png"
+  }
+]

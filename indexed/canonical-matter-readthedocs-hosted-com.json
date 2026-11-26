@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Matter on Ubuntu documentation",
+    "url": "https://canonical-matter.readthedocs-hosted.com/",
+    "description": "Matter is an open source connectivity standard for smart home. It is a collection of protocols for connecting compatible devices in a secure and reliable way. This documentation is for building and...",
+    "keywords": [
+      "canonical-matter",
+      "canonical-matter-readthedocs-hosted-com",
+      "canonical-matter.readthedocs-hosted.com"
+    ],
+    "meta tags": [
+      "color-scheme",
+      "og:title",
+      "og:type",
+      "og:url",
+      "og:site_name",
+      "og:description",
+      "og:image",
+      "og:image:alt",
+      "description",
+      "readthedocs-project-slug"
+    ],
+    "popular": 51,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
+  }
+]

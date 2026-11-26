@@ -1,0 +1,25 @@
+[
+  {
+    "title": "EasyCLA",
+    "url": "https://easycla.lfx.linuxfoundation.org/",
+    "description": "Automate your CLA management process, and make it easier for developers to start contributing to your projects while remaining compliant.",
+    "keywords": [
+      "easycla",
+      "easycla-lfx-linuxfoundation-org",
+      "easycla.lfx.linuxfoundation.org",
+      "cla",
+      "open source linux foundation",
+      "lfx",
+      "linux foundation",
+      "contributor license agreement"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "author"
+    ],
+    "popular": 21,
+    "launguage": "en",
+    "image": "https://cdn.platform.linuxfoundation.org/assets/lf-favicon.png"
+  }
+]

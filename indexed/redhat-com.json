@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Red Hat - We make open source technologies for the enterprise",
+    "url": "https://www.redhat.com/",
+    "description": "Red Hat is the world’s leading provider of enterprise open source solutions, including high-performing Linux, cloud, container, and Kubernetes technologies.",
+    "keywords": [
+      "redhat",
+      "redhat-com",
+      "redhat.com"
+    ],
+    "meta tags": [
+      "description",
+      "referrer",
+      "og:url",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:image",
+      "recommendations_id",
+      "generator"
+    ],
+    "popular": 52,
+    "launguage": "en",
+    "image": "https://www.redhat.com/rhdc/managed-files/ConnectedCampaignOpenGraph%401x.png"
+  }
+]

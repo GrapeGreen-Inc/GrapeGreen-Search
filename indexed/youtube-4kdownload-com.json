@@ -1,0 +1,27 @@
+[
+  {
+    "title": "YouTube Video Downloader | 4K Download",
+    "url": "https://youtube.4kdownload.com/",
+    "description": "Get full YouTube videos in up to 4K or HD. Download single videos, playlists, and channels. Extract subtitles and audio effortlessly.",
+    "keywords": [
+      "youtube",
+      "youtube-4kdownload-com",
+      "youtube.4kdownload.com"
+    ],
+    "meta tags": [
+      "description",
+      "application-name",
+      "author",
+      "robots",
+      "deploy-id",
+      "format-detection",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 38,
+    "launguage": "en",
+    "image": "http://static.4kdownload.com/main/img/logo-500.png"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "A safe and modern home for JavaScript technologies | OpenJS Foundation",
+    "url": "https://openjsf.org/",
+    "description": "OpenJS promotes the widespread adoption and continued development of key JavaScript solutions worldwide.",
+    "keywords": [
+      "openjsf",
+      "openjsf-org",
+      "openjsf.org"
+    ],
+    "meta tags": [
+      "description",
+      "application-name",
+      "author",
+      "creator",
+      "publisher",
+      "format-detection",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-title",
+      "apple-mobile-web-app-status-bar-style",
+      "og:title"
+    ],
+    "popular": 64,
+    "launguage": "en",
+    "image": "https://openjsf.org/opengraph-image.png"
+  }
+]

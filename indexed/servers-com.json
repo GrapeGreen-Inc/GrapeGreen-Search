@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Single-Tenant Bare Metal Server Hosting Provider | Servers.com",
+    "url": "https://www.servers.com/",
+    "description": "Rent bare metal servers by the hour or get dedicated servers configured to your workload. Global private network & 24/7 engineer support. Contact",
+    "keywords": [
+      "servers",
+      "servers-com",
+      "servers.com"
+    ],
+    "meta tags": [
+      "description",
+      "apple-mobile-web-app-capable",
+      "keywords",
+      "og:site_name",
+      "og:image",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:type",
+      "twitter:card"
+    ],
+    "popular": 70,
+    "launguage": "en",
+    "image": "https://www.servers.com/dA/cc2d59f24d/openGraphImage/og-main.webp"
+  }
+]

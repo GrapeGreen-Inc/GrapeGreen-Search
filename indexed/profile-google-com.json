@@ -1,0 +1,27 @@
+[
+  {
+    "title": "‎Welcome | Search profile",
+    "url": "https://profile.google.com/",
+    "description": "Claim your Google Search profile: one official, shareable page for your social accounts, websites, posts, and links. Shape how you show up on Google.",
+    "keywords": [
+      "profile",
+      "profile-google-com",
+      "profile.google.com"
+    ],
+    "meta tags": [
+      "referrer",
+      "description",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:type",
+      "og:site_name",
+      "og:image",
+      "og:image:width",
+      "og:image:height"
+    ],
+    "popular": 28,
+    "launguage": "en",
+    "image": "https://www.gstatic.com/creatorprofile/branding/og/search_profile_claim_og_1200x630.png"
+  }
+]

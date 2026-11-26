@@ -1,0 +1,31 @@
+[
+  {
+    "title": "GitJobs",
+    "url": "https://gitjobs.dev/",
+    "description": "GitJobs is an open source job board focused on open source job opportunities.",
+    "keywords": [
+      "gitjobs",
+      "gitjobs-dev",
+      "gitjobs.dev",
+      "community",
+      "organization",
+      "jobs",
+      "job"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "og:type",
+      "og:title",
+      "og:url",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:domain",
+      "twitter:url"
+    ],
+    "popular": 79,
+    "launguage": "en",
+    "image": "https://gitjobs.dev/static/images/index/gitjobs.png"
+  }
+]

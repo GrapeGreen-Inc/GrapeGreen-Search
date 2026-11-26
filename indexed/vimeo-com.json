@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Video Platform Features",
+    "url": "https://vimeo.com/",
+    "description": "Explore Vimeo's video platform features for creating, editing, managing, hosting, playing, and livestreaming video.",
+    "keywords": [
+      "vimeo",
+      "vimeo-com",
+      "vimeo.com"
+    ],
+    "meta tags": [
+      "next-size-adjust",
+      "vimeo:lang",
+      "og:locale",
+      "og:locale:alternative",
+      "description",
+      "robots",
+      "msapplication-tileimage",
+      "msapplication-tilecolor",
+      "business:contact_data:street_address",
+      "business:contact_data:locality"
+    ],
+    "popular": 34,
+    "launguage": "en",
+    "image": "https://f.vimeocdn.com/cms/images/vimeo-logo-black.png"
+  }
+]

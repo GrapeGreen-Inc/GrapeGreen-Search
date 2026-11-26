@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Microsoft Dev Blogs: Code, News, and Insights for Developers",
+    "url": "https://devblogs.microsoft.com/",
+    "description": "Microsoft for Developers - Get the latest information, insights, and news from Microsoft.",
+    "keywords": [
+      "devblogs",
+      "devblogs-microsoft-com",
+      "devblogs.microsoft.com"
+    ],
+    "meta tags": [
+      "awa-ver",
+      "awa-pagetype",
+      "awa-product",
+      "mobile-web-app-capable",
+      "color-scheme",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-title",
+      "robots",
+      "description",
+      "og:locale"
+    ],
+    "popular": 41,
+    "launguage": "en",
+    "image": "https://devblogs.microsoft.com/wp-content/uploads/2024/11/blog-featured.webp"
+  }
+]

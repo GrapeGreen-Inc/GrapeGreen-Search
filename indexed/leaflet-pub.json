@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Leaflet — social publishing on the Atmosphere",
+    "url": "https://leaflet.pub/",
+    "description": "A simple and powerful platform for social publishing — blogs, newsletters, and more!",
+    "keywords": [
+      "leaflet",
+      "leaflet-pub",
+      "leaflet.pub"
+    ],
+    "meta tags": [
+      "next-size-adjust",
+      "theme-color",
+      "description",
+      "mobile-web-app-capable",
+      "apple-mobile-web-app-title",
+      "apple-mobile-web-app-status-bar-style",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card"
+    ],
+    "popular": 74,
+    "launguage": "en",
+    "image": "https://leaflet.pub/open-graph.png"
+  }
+]

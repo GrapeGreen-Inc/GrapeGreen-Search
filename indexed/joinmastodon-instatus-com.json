@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Mastodon - Status",
+    "url": "https://joinmastodon.instatus.com/",
+    "description": "Mastodon Status",
+    "keywords": [
+      "joinmastodon",
+      "joinmastodon-instatus-com",
+      "joinmastodon.instatus.com"
+    ],
+    "meta tags": [
+      "next-size-adjust",
+      "description",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:image:alt",
+      "og:type",
+      "twitter:card"
+    ],
+    "popular": 71,
+    "launguage": "en",
+    "image": "https://joinmastodon.instatus.com/api/og"
+  }
+]

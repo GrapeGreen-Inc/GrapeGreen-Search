@@ -1,0 +1,27 @@
+[
+  {
+    "title": "House Digest | Home Improvement, Design, DIY, & Celebrity Interviews",
+    "url": "https://www.housedigest.com/",
+    "description": "The best tips, guides, and inspiration on home improvement, decor, DIY projects, and interviews with celebrities from your favorite renovation shows.",
+    "keywords": [
+      "housedigest",
+      "housedigest-com",
+      "housedigest.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:card"
+    ],
+    "popular": 46,
+    "launguage": "en",
+    "image": "https://www.housedigest.com/img/housedigest-meta-image-1280x720.png"
+  }
+]

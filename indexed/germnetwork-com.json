@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Germ Network",
+    "url": "https://www.germnetwork.com/",
+    "description": "Share what you want to, when you need to, on Germ DM. The only messenger with multiple profiles, no phone numbers, and end-to-end encryption.",
+    "keywords": [
+      "germnetwork",
+      "germnetwork-com",
+      "germnetwork.com"
+    ],
+    "meta tags": [
+      "og:site_name",
+      "og:title",
+      "og:url",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
+      "twitter:title",
+      "twitter:image"
+    ],
+    "popular": 27,
+    "launguage": "en",
+    "image": "http://static1.squarespace.com/static/66d7ecbbccaf5331f2bedd8c/t/679ac8ae1f9ebe4782745654/1738197166183/Group+7428.png?format=1500w"
+  }
+]

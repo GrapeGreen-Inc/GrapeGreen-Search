@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Juju | Canonical",
+    "url": "https://canonical.com/",
+    "description": "Juju: Canonical's open source orchestration engine for deploying and managing applications on any infrastructure.",
+    "keywords": [
+      "canonical",
+      "canonical-com",
+      "canonical.com"
+    ],
+    "meta tags": [
+      "description",
+      "copydoc",
+      "author",
+      "discourse-url",
+      "theme-color",
+      "twitter:account_id",
+      "twitter:site",
+      "og:type",
+      "og:url",
+      "og:site_name"
+    ],
+    "popular": 40,
+    "launguage": "en",
+    "image": "https://assets.ubuntu.com/v1/c797f1d7-og_%20canonical.png"
+  }
+]

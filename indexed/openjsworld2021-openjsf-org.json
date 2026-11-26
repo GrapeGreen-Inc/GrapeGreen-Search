@@ -1,0 +1,27 @@
+[
+  {
+    "title": "OpenJS World 2021 | OpenJS World 2021",
+    "url": "https://openjsworld2021.openjsf.org/",
+    "description": "Join JavaScript professionals including developers, software engineers, developer advocates and business leaders at the OpenJS virtual global conference. Connect, learn and collaborate with community members from projects including AMP, Dojo, Electron, and Node.js.",
+    "keywords": [
+      "openjsworld2021",
+      "openjsworld2021-openjsf-org",
+      "openjsworld2021.openjsf.org"
+    ],
+    "meta tags": [
+      "description",
+      "application-name",
+      "author",
+      "creator",
+      "publisher",
+      "format-detection",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-title",
+      "apple-mobile-web-app-status-bar-style",
+      "og:title"
+    ],
+    "popular": 55,
+    "launguage": "en",
+    "image": "https://openjsworld2021.openjsf.org/icon.png?88e2f44cee2579b3"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home - Partner Marketing Hub",
+    "url": "https://partnermarketinghub.withgoogle.com/",
+    "description": "Partner Marketing Hub is the go-to resource to help bring your partnership with Google to life – brand guidelines, messaging opportunities, tools, and more.",
+    "keywords": [
+      "partnermarketinghub",
+      "partnermarketinghub-withgoogle-com",
+      "partnermarketinghub.withgoogle.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:image",
+      "og:title",
+      "og:description",
+      "og:site_name",
+      "og:type",
+      "og:url",
+      "twitter:card",
+      "twitter:site",
+      "theme-color"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://storage.googleapis.com/pe-portal-consumer-prod-wagtail-static/images/og_image.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=wagtail%40pe-portal-consumer-prod.iam.gserviceaccount.com%2F20261126%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20261126T022401Z&X-Goog-Expires=86400&X-Goog-SignedHeaders=host&X-Goog-Signature=6b8fadd728c949c074096ce23c7e6b135263b779b424d4ec14219172dda9e502896c16cde73cd6338b262b64f4cfadea17b2a4ea4a82a5ac82756194a84b79da47ea910e0ddc07ba390afbb2e5cd7282439e260243d7e3ebedc9a0a4833e464a3613b2c72c2857e8957628e0fe5ed86d048cf13bbb83fcc9f739e4c532169991a37f60271e3e366fa58741bb1df6e7bd0173d23ee6dc08d211f5f1016f28ef43836caba202fe9017523db6bd9e2d45aec22e2858d865924968d513f1c250d2ab8d0c85eed5be0bde103e2b1b39baef1f60d35fd20aab88f59872d2b6fc305695bd26cfd75555e045db3a12f7ddf8897fd20c9ebe698d2f89889a7aa384099539"
+  }
+]

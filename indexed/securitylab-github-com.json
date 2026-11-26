@@ -1,0 +1,27 @@
+[
+  {
+    "title": "GitHub Security Lab | Securing open source software, together.",
+    "url": "https://securitylab.github.com/",
+    "description": "Securing open source software, together.",
+    "keywords": [
+      "securitylab",
+      "securitylab-github-com",
+      "securitylab.github.com"
+    ],
+    "meta tags": [
+      "generator",
+      "og:title",
+      "og:locale",
+      "description",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:type",
+      "twitter:card"
+    ],
+    "popular": 35,
+    "launguage": "en",
+    "image": "https://securitylab.github.com/assets/img/social-card.png"
+  }
+]

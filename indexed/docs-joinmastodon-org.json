@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Mastodon documentation",
+    "url": "https://docs.joinmastodon.org/",
+    "description": "Welcome to the Mastodon documentation!",
+    "keywords": [
+      "docs",
+      "docs-joinmastodon-org",
+      "docs.joinmastodon.org"
+    ],
+    "meta tags": [
+      "generator",
+      "og:type",
+      "og:url",
+      "description",
+      "og:description",
+      "twitter:site"
+    ],
+    "popular": 29,
+    "launguage": "en",
+    "image": "https://docs.joinmastodon.org/favicon.ico"
+  }
+]

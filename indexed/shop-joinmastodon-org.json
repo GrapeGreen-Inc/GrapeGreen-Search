@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Mastodon Merch Store",
+    "url": "https://shop.joinmastodon.org/",
+    "description": "The official merch store of the open-source, decentralized social media platform Mastodon.",
+    "keywords": [
+      "shop",
+      "shop-joinmastodon-org",
+      "shop.joinmastodon.org",
+      "pixels",
+      "manager",
+      "sandbox"
+    ],
+    "meta tags": [
+      "theme-color",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:title",
+      "og:type",
+      "og:description",
+      "og:image",
+      "og:image:secure_url",
+      "og:image:width"
+    ],
+    "popular": 83,
+    "launguage": "en",
+    "image": "http://shop.joinmastodon.org/cdn/shop/files/PB172588-2.jpg?v=1763425889"
+  }
+]

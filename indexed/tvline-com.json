@@ -1,0 +1,27 @@
+[
+  {
+    "title": "TVLine | All TV. No Interference. TV News & Spoilers by TVLine",
+    "url": "https://www.tvline.com/",
+    "description": "Stay up to date with the latest TV news, previews, spoilers, casting updates, interviews, and more from TVLine. Your go-to source for all things TV.",
+    "keywords": [
+      "tvline",
+      "tvline-com",
+      "tvline.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 28,
+    "launguage": "en",
+    "image": "https://www.tvline.com/img/TVLine-meta-image-1280x720.png"
+  }
+]
