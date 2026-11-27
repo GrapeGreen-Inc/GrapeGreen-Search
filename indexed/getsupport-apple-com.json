@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Apple Support",
+    "url": "https://getsupport.apple.com/",
+    "description": "Contact Customer Support",
+    "keywords": [
+      "getsupport",
+      "getsupport-apple-com",
+      "getsupport.apple.com"
+    ],
+    "meta tags": [
+      "referrer",
+      "apple-itunes-app",
+      "robots",
+      "description",
+      "globalnav-store-key",
+      "globalnav-search-field[name]",
+      "globalnav-search-field[action]",
+      "globalnav-search-field[src]",
+      "globalnav-search-field[type]",
+      "globalnav-search-field[page]"
+    ],
+    "popular": 54,
+    "launguage": "en",
+    "image": "https://getsupport.apple.com/static/favicon.ico"
+  }
+]

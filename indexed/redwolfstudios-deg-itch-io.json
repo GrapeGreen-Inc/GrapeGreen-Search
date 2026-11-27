@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Redwolf Studios. - itch.io",
+    "url": "https://redwolfstudios-deg.itch.io/",
+    "description": "Hi, I'm Redwolf, I love making games — especially horror games with PSX-style retro vibes. I focus on eerie atmospheres, intriguing stories, and low-poly aesthetics that bring back that nostalgic fear.",
+    "keywords": [
+      "redwolfstudios-deg",
+      "redwolfstudios-deg-itch-io",
+      "redwolfstudios-deg.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 24,
+    "launguage": "en",
+    "image": "https://redwolfstudios-deg.itch.io/favicon.ico"
+  }
+]

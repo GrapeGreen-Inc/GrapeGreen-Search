@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home | Figma Weave's Knowledge Center",
+    "url": "https://help.weavy.ai/",
+    "description": "Figma Weave's Knowledge Center",
+    "keywords": [
+      "help",
+      "help-weavy-ai",
+      "help.weavy.ai"
+    ],
+    "meta tags": [
+      "og:title",
+      "twitter:title",
+      "og:description",
+      "twitter:description",
+      "description",
+      "og:type",
+      "twitter:card",
+      "og:image",
+      "twitter:image",
+      "robots"
+    ],
+    "popular": 54,
+    "launguage": "en",
+    "image": "https://help.weavy.ai/assets/favicon"
+  }
+]

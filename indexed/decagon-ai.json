@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Decagon | The AI concierge for every customer",
+    "url": "https://decagon.ai/",
+    "description": "Build, optimize, and scale AI agents that treat every customer like the only one.",
+    "keywords": [
+      "decagon",
+      "decagon-ai",
+      "decagon.ai"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image",
+      "og:type",
+      "twitter:card",
+      "generator"
+    ],
+    "popular": 73,
+    "launguage": "en",
+    "image": "https://cdn.prod.website-files.com/683e5da0b6d8a19de4875ae7/69f0e96abfe89169f04f1d06_decagon-opengraph.webp"
+  }
+]

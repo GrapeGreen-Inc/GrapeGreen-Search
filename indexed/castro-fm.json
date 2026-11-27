@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Castro Podcasts",
+    "url": "https://castro.fm/",
+    "description": "Castro makes it easy to manage lots of podcasts and enjoy the best episodes of all your favorite podcasts.",
+    "keywords": [
+      "castro",
+      "castro-fm",
+      "castro.fm"
+    ],
+    "meta tags": [
+      "description",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image"
+    ],
+    "popular": 30,
+    "launguage": "en",
+    "image": "https://castro.fm/assets/Social-Asset-1.jpg"
+  }
+]

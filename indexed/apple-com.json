@@ -1,27 +1,27 @@
 [
   {
-    "title": "Apple Fitness+ - Apple",
+    "title": "Apple Pay - Apple",
     "url": "https://www.apple.com/",
-    "description": "Apple Fitness+ has something for everyone, from Strength to Meditation. With new workouts every week and personalized recommendations. Try it free.",
+    "description": "Pay easily in stores, online, and in apps — in full, over time, or with rewards — using the built-in privacy and security of your Apple device.",
     "keywords": [
       "apple",
       "apple-com",
       "apple.com"
     ],
     "meta tags": [
-      "media-api-locale",
-      "media-api-lang",
-      "apple-fitness-token",
       "description",
       "og:image",
       "og:title",
       "og:description",
       "og:url",
       "og:locale",
-      "og:site_name"
+      "og:site_name",
+      "og:type",
+      "twitter:site",
+      "twitter:card"
     ],
-    "popular": 81,
+    "popular": 47,
     "launguage": "en",
-    "image": "https://www.apple.com/v/apple-fitness-plus/ac/images/meta/apple-fitness-plus__cidrqiun6tle_og.png?202609161915"
+    "image": "https://www.apple.com/v/apple-pay/w/images/meta/applepay__y5k3pljb97mq_og.png?202609301638"
   }
 ]

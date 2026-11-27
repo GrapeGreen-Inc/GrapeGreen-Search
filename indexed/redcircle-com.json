@@ -1,0 +1,27 @@
+[
+  {
+    "title": "RedCircle | Podcast Advertising Platform for Brands & Creators",
+    "url": "https://redcircle.com/",
+    "description": "RedCircle connects brands with the podcast audiences their customers trust and gives creators everything they need to grow and monetize.",
+    "keywords": [
+      "redcircle",
+      "redcircle-com",
+      "redcircle.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image",
+      "twitter:card",
+      "next-head-count"
+    ],
+    "popular": 54,
+    "launguage": "en",
+    "image": "https://redcircle.com/redcircle-meta-image.png"
+  }
+]

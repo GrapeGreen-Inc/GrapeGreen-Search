@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Dalichrome - itch.io",
+    "url": "https://dalichrome.itch.io/",
+    "description": "Explore Dalichrome - itch.io on dalichrome.itch.io.",
+    "keywords": [
+      "dalichrome",
+      "dalichrome-itch-io",
+      "dalichrome.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 44,
+    "launguage": "en",
+    "image": "https://dalichrome.itch.io/favicon.ico"
+  }
+]

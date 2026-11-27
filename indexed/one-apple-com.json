@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Apple One - Apple - Upgrade Your OS",
+    "url": "https://one.apple.com/",
+    "description": "Bundle your Apple services and pay one convenient price with Apple One. Choose the plan that’s right for you.",
+    "keywords": [
+      "one",
+      "one-apple-com",
+      "one.apple.com"
+    ],
+    "meta tags": [
+      "description",
+      "apple-mobile-web-app-capable",
+      "version",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:description",
+      "og:url",
+      "og:locale",
+      "og:image"
+    ],
+    "popular": 56,
+    "launguage": "en",
+    "image": "https://one.apple.com/assets/og_p.png"
+  }
+]

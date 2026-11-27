@@ -1,0 +1,27 @@
+[
+  {
+    "title": "/Film | Movie & TV News, Trailers, Interviews, & Reviews",
+    "url": "https://www.slashfilm.com/",
+    "description": "The latest movie and television news, reviews, film trailers, exclusive interviews, and opinions - since 2005.",
+    "keywords": [
+      "slashfilm",
+      "slashfilm-com",
+      "slashfilm.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 63,
+    "launguage": "en",
+    "image": "https://www.slashfilm.com/img/slashfilm-meta-image-1280x720.png"
+  }
+]

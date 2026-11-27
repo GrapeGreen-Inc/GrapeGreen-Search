@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Debian -- The Universal Operating System",
+    "url": "https://www.debian.org/",
+    "description": "Debian is an operating system and a distribution of Free Software. It is maintained and updated through the work of many users who volunteer their time and effort.",
+    "keywords": [
+      "debian",
+      "debian-org",
+      "debian.org",
+      "gnu",
+      "linux",
+      "unix",
+      "open source",
+      "free",
+      "dfsg"
+    ],
+    "meta tags": [
+      "description",
+      "generator",
+      "modified",
+      "mobileoptimized",
+      "handheldfriendly",
+      "keywords"
+    ],
+    "popular": 34,
+    "launguage": "en",
+    "image": "https://www.debian.org/favicon.ico"
+  }
+]

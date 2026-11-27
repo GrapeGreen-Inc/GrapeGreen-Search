@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Up For Grabs",
+    "url": "https://up-for-grabs.net/",
+    "description": "Want to contribute to open source, but not sure where to start? This is a list of projects which have curated tasks specifically for new contributors. These are a great way to get started with a project, or to help share the load of working on open source projects.",
+    "keywords": [
+      "up-for-grabs",
+      "up-for-grabs-net",
+      "up-for-grabs.net"
+    ],
+    "meta tags": [
+      "description",
+      "og:url",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:site",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image"
+    ],
+    "popular": 67,
+    "launguage": "en",
+    "image": "https://up-for-grabs.net/images/logo.png"
+  }
+]

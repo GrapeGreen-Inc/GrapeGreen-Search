@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Trending - Fosstodon",
+    "url": "https://fosstodon.org/",
+    "description": "Fosstodon is an invite only Mastodon instance that is open to those who are interested in technology; particularly free & open source software.\n\nIf you wish to join, contact us for an invite.",
+    "keywords": [
+      "fosstodon",
+      "fosstodon-org",
+      "fosstodon.org"
+    ],
+    "meta tags": [
+      "theme-color",
+      "mobile-web-app-capable",
+      "style-nonce",
+      "description",
+      "og:site_name",
+      "og:url",
+      "og:type",
+      "og:title",
+      "og:description",
+      "og:image"
+    ],
+    "popular": 61,
+    "launguage": "en",
+    "image": "https://cdn.fosstodon.org/site_uploads/files/000/000/004/@1x/ec7a05be77b5390f.png"
+  }
+]

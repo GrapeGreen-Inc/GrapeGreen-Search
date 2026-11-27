@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Siactro - itch.io",
+    "url": "https://siactro.itch.io/",
+    "description": "Totally trying to bring back the late 90s game by game, Dude!",
+    "keywords": [
+      "siactro",
+      "siactro-itch-io",
+      "siactro.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 35,
+    "launguage": "en",
+    "image": "https://siactro.itch.io/favicon.ico"
+  }
+]

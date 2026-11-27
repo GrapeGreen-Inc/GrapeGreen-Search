@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Open Source Friday | This Friday, invest a few hours contributing to the software you use and love.",
+    "url": "https://opensourcefriday.com/",
+    "description": "This Friday, invest a few hours contributing to the software you use and love.",
+    "keywords": [
+      "opensourcefriday",
+      "opensourcefriday-com",
+      "opensourcefriday.com"
+    ],
+    "meta tags": [
+      "generator",
+      "og:title",
+      "og:locale",
+      "description",
+      "og:description",
+      "og:url",
+      "og:site_name",
+      "og:image",
+      "og:type",
+      "twitter:card"
+    ],
+    "popular": 69,
+    "launguage": "en",
+    "image": "https://opensourcefriday.com/assets/images/social-graphic.jpg"
+  }
+]

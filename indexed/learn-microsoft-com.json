@@ -1,8 +1,8 @@
 [
   {
-    "title": "Microsoft Learn: Build with answers in reach",
+    "title": "Educator Center Overview - Microsoft Learn Educator Center | Microsoft Learn",
     "url": "https://learn.microsoft.com/",
-    "description": "Find official documentation, practical know-how, and expert guidance for builders working and troubleshooting in Microsoft products.",
+    "description": "Dive deep into learning with interactive lessons, earn professional development hours, acquire certifications and find programs that help meet your goals.",
     "keywords": [
       "learn",
       "learn-microsoft-com",
@@ -10,17 +10,17 @@
     ],
     "meta tags": [
       "color-scheme",
-      "description",
       "twitter:card",
       "twitter:site",
       "og:type",
       "og:image:alt",
       "og:image",
       "og:title",
-      "og:description",
-      "platform_id"
+      "og:url",
+      "platform_id",
+      "locale"
     ],
-    "popular": 33,
+    "popular": 72,
     "launguage": "en",
     "image": "https://learn.microsoft.com/en-us/media/open-graph-image.png"
   }

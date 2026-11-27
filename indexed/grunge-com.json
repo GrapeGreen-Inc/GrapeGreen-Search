@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Grunge | Classic Rock, Music History, Pop Culture & Strange News",
+    "url": "https://www.grunge.com/",
+    "description": "Grunge specializes in informative deep dives - from classic rock and music history to pop culture and everything strange.",
+    "keywords": [
+      "grunge",
+      "grunge-com",
+      "grunge.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:site_name",
+      "og:title",
+      "og:image",
+      "og:description",
+      "og:type",
+      "og:url",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site"
+    ],
+    "popular": 75,
+    "launguage": "en",
+    "image": "https://www.grunge.com/img/grunge-share-image-1280x720.png"
+  }
+]

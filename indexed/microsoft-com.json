@@ -1,16 +1,12 @@
 [
   {
-    "title": "Microsoft – AI, Cloud, Productivity, Computing, Gaming & Apps",
+    "title": "Privacy",
     "url": "https://www.microsoft.com/",
-    "description": "Explore Microsoft products and services and support for your home or business. Shop Microsoft 365, Copilot, Teams, Xbox, Windows, Azure, Surface and more.",
+    "description": "Your data is private at work, at home, and on the go",
     "keywords": [
       "microsoft",
       "microsoft-com",
-      "microsoft.com",
-      "javascript",
-      "required",
-      "sign",
-      "continue"
+      "microsoft.com"
     ],
     "meta tags": [
       "content-page-ref",
@@ -18,13 +14,13 @@
       "template",
       "awa-canvastype",
       "awa-istented",
-      "awa-pgtmp",
       "awa-pagetype",
+      "awa-pgtmp",
+      "awa-pageid",
       "awa-market",
-      "awa-cms",
-      "description"
+      "awa-cms"
     ],
-    "popular": 64,
+    "popular": 48,
     "launguage": "en",
     "image": "https://www.microsoft.com/favicon.ico?v2"
   }

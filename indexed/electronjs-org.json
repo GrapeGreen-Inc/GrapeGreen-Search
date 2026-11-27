@@ -18,9 +18,9 @@
       "docusaurus_tag",
       "docsearch:language",
       "docsearch:docusaurus_tag",
-      "docs-sha"
+      "og:title"
     ],
-    "popular": 71,
+    "popular": 82,
     "launguage": "en",
     "image": "https://www.electronjs.org/assets/img/favicon.ico"
   }

@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Log in with Atlassian account",
+    "url": "https://id.atlassian.com/",
+    "description": "Log in to Jira, Confluence, and all other Atlassian Cloud products here. Not an Atlassian user? Sign up for free.",
+    "keywords": [
+      "id",
+      "id-atlassian-com",
+      "id.atlassian.com"
+    ],
+    "meta tags": [
+      "description",
+      "google-site-verification",
+      "{{#ios_app_id}}apple-itunes-app{{/ios_app_id}}",
+      "{{#slack_app_id}}slack-app-id{{/slack_app_id}}"
+    ],
+    "popular": 39,
+    "launguage": "en",
+    "image": "https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/favicon.9500e2a9.ico"
+  }
+]

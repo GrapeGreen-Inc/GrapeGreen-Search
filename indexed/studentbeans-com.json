@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Student Beans",
+    "url": "https://www.studentbeans.com/",
+    "description": "We're Student Beans, the #1 student loyalty network. Our mission is to empower students to thrive. Choose your country to get started.",
+    "keywords": [
+      "studentbeans",
+      "studentbeans-com",
+      "studentbeans.com"
+    ],
+    "meta tags": [
+      "description",
+      "robots",
+      "og:title",
+      "og:description",
+      "og:type",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description"
+    ],
+    "popular": 58,
+    "launguage": "en",
+    "image": "https://cdn.studentbeans.com/static/web/assets/images/favicon.ico"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Amazon Music | Listen to songs, podcasts, & more",
+    "url": "https://music.amazon.com/",
+    "description": "Browse & stream your favorite music and podcasts from your web browser now. Listen to your favorite playlists from over 100 million songs on Amazon Music Unlimited.",
+    "keywords": [
+      "music",
+      "music-amazon-com",
+      "music.amazon.com"
+    ],
+    "meta tags": [
+      "theme-color",
+      "branch:deeplink:$deeplink_path",
+      "description"
+    ],
+    "popular": 79,
+    "launguage": "en",
+    "image": "https://m.media-amazon.com/images/G/01/music/logo/1.0/smile_256x256.png"
+  }
+]

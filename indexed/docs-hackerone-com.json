@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Home | HackerOne Help Center",
+    "url": "https://docs.hackerone.com/",
+    "description": "HackerOne Help Center",
+    "keywords": [
+      "docs",
+      "docs-hackerone-com",
+      "docs.hackerone.com"
+    ],
+    "meta tags": [
+      "og:title",
+      "twitter:title",
+      "og:description",
+      "twitter:description",
+      "description",
+      "og:type",
+      "twitter:card",
+      "og:image",
+      "twitter:image",
+      "robots"
+    ],
+    "popular": 41,
+    "launguage": "en",
+    "image": "https://docs.hackerone.com/assets/favicon"
+  }
+]

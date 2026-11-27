@@ -1,0 +1,26 @@
+[
+  {
+    "title": "PIZZAPRANKS - itch.io",
+    "url": "https://pizzapranks.itch.io/",
+    "description": "email: indiepocalypse@gmail.com Indiepocalypse Radio - Saturdays, 2-4pm ET Patreon Starter Guide Main Merch Store Other Merch - Threadless, Society6, Redbubble",
+    "keywords": [
+      "pizzapranks",
+      "pizzapranks-itch-io",
+      "pizzapranks.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 60,
+    "launguage": "en",
+    "image": "https://pizzapranks.itch.io/favicon.ico"
+  }
+]

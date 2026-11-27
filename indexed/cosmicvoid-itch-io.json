@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cosmic Void - itch.io",
+    "url": "https://cosmicvoid.itch.io/",
+    "description": "Hello there! I'm Cosmic Void and I'm mainly making adventure games with pixel-art graphics.",
+    "keywords": [
+      "cosmicvoid",
+      "cosmicvoid-itch-io",
+      "cosmicvoid.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 65,
+    "launguage": "en",
+    "image": "https://cosmicvoid.itch.io/favicon.ico"
+  }
+]

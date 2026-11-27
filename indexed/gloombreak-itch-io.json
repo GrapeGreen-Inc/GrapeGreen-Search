@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Gloom Break - itch.io",
+    "url": "https://gloombreak.itch.io/",
+    "description": "Explore Gloom Break - itch.io on gloombreak.itch.io.",
+    "keywords": [
+      "gloombreak",
+      "gloombreak-itch-io",
+      "gloombreak.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 44,
+    "launguage": "en",
+    "image": "https://gloombreak.itch.io/favicon.ico"
+  }
+]
