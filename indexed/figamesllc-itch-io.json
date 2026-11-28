@@ -1,0 +1,27 @@
+[
+  {
+    "title": "fiGames - itch.io",
+    "url": "https://figamesllc.itch.io/",
+    "description": "Explore fiGames - itch.io on figamesllc.itch.io.",
+    "keywords": [
+      "figamesllc",
+      "figamesllc-itch-io",
+      "figamesllc.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 57,
+    "launguage": "en",
+    "image": "https://figamesllc.itch.io/favicon.ico"
+  }
+]

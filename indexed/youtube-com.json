@@ -1,8 +1,8 @@
 [
   {
-    "title": "OpenJS Foundation - YouTube",
+    "title": "YouTube",
     "url": "https://www.youtube.com/",
-    "description": "The OpenJS Foundation supports the healthy growth of JavaScript and web technologies by providing a neutral organization to host and sustain projects. OpenJS...",
+    "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
     "keywords": [
       "youtube",
       "youtube-com",
@@ -16,18 +16,15 @@
     ],
     "meta tags": [
       "apple-itunes-app",
-      "theme-color",
+      "og:image",
+      "og:title",
+      "fb:app_id",
       "description",
       "keywords",
-      "og:title",
-      "og:site_name",
-      "og:url",
-      "og:image",
-      "og:image:width",
-      "og:image:height"
+      "theme-color"
     ],
-    "popular": 20,
+    "popular": 70,
     "launguage": "en",
-    "image": "https://yt3.googleusercontent.com/ytc/AIdro_mR0iqfQzz4fujK26rNYaVtVliNm4nXsKfpRXugcAYB0w=s900-c-k-c0x00ffffff-no-rj"
+    "image": "https://www.youtube.com/img/desktop/yt_1200.png"
   }
 ]

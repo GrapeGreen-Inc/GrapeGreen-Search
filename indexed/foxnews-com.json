@@ -1,33 +1,27 @@
 [
   {
-    "title": "Fox News - Breaking News Updates | Latest News Headlines | Photos & News Videos",
+    "title": "Corporate Info | Fox News Media",
     "url": "https://www.foxnews.com/",
-    "description": "Breaking News, Latest News and Current News from FOXNews.com. Breaking news and video. Latest Current News: U.S., World, Entertainment, Health, Business, Technology, Politics, Sports.",
+    "description": "Fox News Media corporate information, executive leadership, bureau locations, and brand portfolio.",
     "keywords": [
       "foxnews",
       "foxnews-com",
-      "foxnews.com",
-      "news",
-      "breaking news",
-      "latest news",
-      "current news",
-      "world news",
-      "national news"
+      "foxnews.com"
     ],
     "meta tags": [
-      "pagetype",
-      "robots",
       "description",
-      "keywords",
-      "msapplication-square70x70logo",
-      "msapplication-square150x150logo",
-      "msapplication-square310x310logo",
-      "msapplication-wide310x150logo",
-      "msapplication-tilecolor",
-      "theme-color"
+      "robots",
+      "theme-color",
+      "og:site_name",
+      "og:type",
+      "og:locale",
+      "og:url",
+      "og:image",
+      "og:image:width",
+      "og:image:height"
     ],
-    "popular": 74,
+    "popular": 71,
     "launguage": "en",
-    "image": "https://static.foxnews.com/static/orion/styles/img/fox-news/og/og-fox-news.png"
+    "image": "https://www.foxnews.com/press/img/og-fnm-press.jpg"
   }
 ]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "openbadges.me > SignIn",
+    "url": "https://app.us.openbadges.me/",
+    "description": "openbadges.me",
+    "keywords": [
+      "app",
+      "app-us-openbadges-me",
+      "app.us.openbadges.me"
+    ],
+    "meta tags": [
+      "description",
+      "keywords",
+      "og:type",
+      "og:site_name",
+      "og:title",
+      "og:url",
+      "og:description",
+      "og:locale",
+      "og:image",
+      "og:image:type"
+    ],
+    "popular": 81,
+    "launguage": "en",
+    "image": "https://app.us.openbadges.me/img/icons/180.png"
+  }
+]

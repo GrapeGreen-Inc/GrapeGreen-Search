@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Custom BSD Landing Page - Bitly",
+    "url": "https://bitly.com/",
+    "description": "Looking for something?",
+    "keywords": [
+      "bitly",
+      "bitly-com",
+      "bitly.com"
+    ],
+    "meta tags": [
+      "robots",
+      "og:locale",
+      "og:type",
+      "og:title",
+      "og:url",
+      "og:site_name",
+      "article:publisher",
+      "article:modified_time",
+      "og:image",
+      "og:image:width"
+    ],
+    "popular": 35,
+    "launguage": "en",
+    "image": "https://mkt-bitly-media.qrcg.net/wp-content/uploads/2026/11/06141816/bitly_generic_thumb.webp"
+  }
+]

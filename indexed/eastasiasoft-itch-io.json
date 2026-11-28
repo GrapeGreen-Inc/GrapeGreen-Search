@@ -1,0 +1,27 @@
+[
+  {
+    "title": "eastasiasoft - itch.io",
+    "url": "https://eastasiasoft.itch.io/",
+    "description": "Explore eastasiasoft - itch.io on eastasiasoft.itch.io.",
+    "keywords": [
+      "eastasiasoft",
+      "eastasiasoft-itch-io",
+      "eastasiasoft.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 47,
+    "launguage": "en",
+    "image": "https://eastasiasoft.itch.io/favicon.ico"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Oddly Shaped Pixels - itch.io",
+    "url": "https://oddly-shaped-pixels.itch.io/",
+    "description": "Explore Oddly Shaped Pixels - itch.io on oddly-shaped-pixels.itch.io.",
+    "keywords": [
+      "oddly-shaped-pixels",
+      "oddly-shaped-pixels-itch-io",
+      "oddly-shaped-pixels.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 33,
+    "launguage": "en",
+    "image": "https://oddly-shaped-pixels.itch.io/favicon.ico"
+  }
+]

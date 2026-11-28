@@ -9,8 +9,6 @@
       "ignite.microsoft.com"
     ],
     "meta tags": [
-      "theme-color",
-      "referrer",
       "description",
       "og:image",
       "og:title",
@@ -18,9 +16,11 @@
       "og:image:alt",
       "og:type",
       "twitter:title",
-      "twitter:description"
+      "twitter:description",
+      "twitter:image",
+      "twitter:image:alt"
     ],
-    "popular": 27,
+    "popular": 21,
     "launguage": "en",
     "image": "https://eventtools.event.microsoft.com/cdn/Ignite2026/Phase_3_Tools/Open_Graph/FY27_Ignite_NewVisID_Event_OpenGraph_2_EventNameDate.jpg"
   }

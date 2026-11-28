@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Binogure Studio - itch.io",
+    "url": "https://binogure.itch.io/",
+    "description": "Binogure Studio is an independent video game studio based at Montreal. Our goal is to create brilliant, high quality games.",
+    "keywords": [
+      "binogure",
+      "binogure-itch-io",
+      "binogure.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 65,
+    "launguage": "en",
+    "image": "https://binogure.itch.io/favicon.ico"
+  }
+]

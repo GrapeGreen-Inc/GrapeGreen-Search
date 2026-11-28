@@ -1,0 +1,27 @@
+[
+  {
+    "title": "sebacamaru - itch.io",
+    "url": "https://sebacamaru.itch.io/",
+    "description": "Explore sebacamaru - itch.io on sebacamaru.itch.io.",
+    "keywords": [
+      "sebacamaru",
+      "sebacamaru-itch-io",
+      "sebacamaru.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 37,
+    "launguage": "en",
+    "image": "https://sebacamaru.itch.io/favicon.ico"
+  }
+]

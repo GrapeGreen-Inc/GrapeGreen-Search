@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Jack | Red Sauce Games - itch.io",
+    "url": "https://red-sauce.itch.io/",
+    "description": "Jack | Red Sauce Games",
+    "keywords": [
+      "red-sauce",
+      "red-sauce-itch-io",
+      "red-sauce.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 32,
+    "launguage": "en",
+    "image": "https://red-sauce.itch.io/favicon.ico"
+  }
+]

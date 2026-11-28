@@ -11,16 +11,16 @@
     "meta tags": [
       "generator",
       "twitter:card",
-      "google-site-verification",
       "og:url",
       "og:locale",
       "docusaurus_locale",
       "docsearch:language",
+      "google-site-verification",
       "docusaurus_version",
       "docusaurus_tag",
       "docsearch:version"
     ],
-    "popular": 85,
+    "popular": 83,
     "launguage": "en",
     "image": "https://docs.slack.dev/img/logos/favicon.ico"
   }

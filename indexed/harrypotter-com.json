@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Harry Potter | Official home of Harry Potter, Hogwarts Sorting, and the Wizarding World",
+    "url": "https://www.harrypotter.com/",
+    "description": "Join the Harry Potter Fan Club for free to discover your Hogwarts house.",
+    "keywords": [
+      "harrypotter",
+      "harrypotter-com",
+      "harrypotter.com"
+    ],
+    "meta tags": [
+      "description",
+      "og:title",
+      "og:description",
+      "og:image",
+      "twitter:card",
+      "twitter:title",
+      "twitter:description",
+      "twitter:image"
+    ],
+    "popular": 50,
+    "launguage": "en",
+    "image": "https://www.harrypotter.com/images/og-image.jpg"
+  }
+]

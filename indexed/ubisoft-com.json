@@ -1,26 +1,27 @@
 [
   {
-    "title": "Ubisoft | Welcome to the official Ubisoft website",
+    "title": "Tom Clancy's Rainbow Six Siege | Ubisoft (US)",
     "url": "https://www.ubisoft.com/",
-    "description": "Welcome to the official website for Ubisoft, creator of Assassin's Creed, Just Dance, Tom Clancy's video game series, Rayman, Far Cry, Watch Dogs and many others. Learn more about our breathtaking games here!",
+    "description": "Official Website. Master the art of destruction and gadgetry in Tom Clancy’s Rainbow Six Siege. Face intense close quarters combat, high lethality, tactical decision making, team play, and explosive action within every moment. Available on PC, PS5, PS4, Xbox Series X|S and Xbox One.",
     "keywords": [
       "ubisoft",
       "ubisoft-com",
       "ubisoft.com"
     ],
     "meta tags": [
-      "description",
-      "og:title",
-      "og:description",
-      "og:image",
-      "twitter:card",
-      "twitter:title",
-      "twitter:description",
-      "twitter:image",
-      "next-size-adjust"
+      "mobile-web-app-capable",
+      "theme-color",
+      "application-name",
+      "apple-mobile-web-app-capable",
+      "apple-mobile-web-app-status-bar-style",
+      "msapplication-tooltip",
+      "msapplication-config",
+      "msapplication-tilecolor",
+      "msapplication-tileimage",
+      "description"
     ],
-    "popular": 30,
+    "popular": 41,
     "launguage": "en",
-    "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6v8ALR81SgkPhJu48ByOdo/7c2f1c8b10cff19155f929bb8cbd5843/ubi-share.jpg"
+    "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4IZecJyhvcIUxxu0Rd1vjX/99fe1a724d46a4d9ca70c76c7a78496f/r6s-homepage-meta__1_.jpg"
   }
 ]

@@ -6,10 +6,7 @@
     "keywords": [
       "shop",
       "shop-viz-com",
-      "shop.viz.com",
-      "pixels",
-      "manager",
-      "sandbox"
+      "shop.viz.com"
     ],
     "meta tags": [
       "theme-color",
@@ -23,7 +20,7 @@
       "og:image:secure_url",
       "twitter:site"
     ],
-    "popular": 61,
+    "popular": 56,
     "launguage": "en",
     "image": "http://shop.viz.com/cdn/shop/files/Social_Sharing_Image_viz.jpg?v=1725898448"
   }

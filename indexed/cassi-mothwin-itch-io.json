@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Cassi Mothwin - itch.io",
+    "url": "https://cassi-mothwin.itch.io/",
+    "description": "I'm an avid fan of horror, TTRPGs, and hurting my own feelings. I create things I fear and worlds I want to inhabit. I hope you'll join me.",
+    "keywords": [
+      "cassi-mothwin",
+      "cassi-mothwin-itch-io",
+      "cassi-mothwin.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 62,
+    "launguage": "en",
+    "image": "https://cassi-mothwin.itch.io/favicon.ico"
+  }
+]

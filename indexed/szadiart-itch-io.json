@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Szadi art. - itch.io",
+    "url": "https://szadiart.itch.io/",
+    "description": "Szadi art. Discord Community Server: https://discord.gg/SACgN3htEr",
+    "keywords": [
+      "szadiart",
+      "szadiart-itch-io",
+      "szadiart.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 46,
+    "launguage": "en",
+    "image": "https://szadiart.itch.io/favicon.ico"
+  }
+]

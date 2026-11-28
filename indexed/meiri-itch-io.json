@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Meiri - itch.io",
+    "url": "https://meiri.itch.io/",
+    "description": "I'm a queer Brazilian game developer. I go by Meiri Games, but you can call me Mei. I have loved reading, writing, drawing and playing video games since I was a child.",
+    "keywords": [
+      "meiri",
+      "meiri-itch-io",
+      "meiri.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 21,
+    "launguage": "en",
+    "image": "https://meiri.itch.io/favicon.ico"
+  }
+]

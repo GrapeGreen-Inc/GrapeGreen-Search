@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Quaternius - itch.io",
+    "url": "https://quaternius.itch.io/",
+    "description": "Explore Quaternius - itch.io on quaternius.itch.io.",
+    "keywords": [
+      "quaternius",
+      "quaternius-itch-io",
+      "quaternius.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 78,
+    "launguage": "en",
+    "image": "https://quaternius.itch.io/favicon.ico"
+  }
+]

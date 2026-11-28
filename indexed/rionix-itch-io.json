@@ -1,0 +1,27 @@
+[
+  {
+    "title": "rionix - itch.io",
+    "url": "https://rionix.itch.io/",
+    "description": "We are a small team that specializes in developing casual games. We make small, fun and interesting games. And we try to bring something new and memorable to each of our games. We hope to please you with our creations in the future!",
+    "keywords": [
+      "rionix",
+      "rionix-itch-io",
+      "rionix.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://rionix.itch.io/favicon.ico"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Paramount",
+    "url": "https://www.paramount.com/",
+    "description": "Paramount is one of the world’s leading producers of premium entertainment content that connects billions of people in nearly every country in the world.",
+    "keywords": [
+      "paramount",
+      "paramount-com",
+      "paramount.com"
+    ],
+    "meta tags": [
+      "mobileoptimized",
+      "handheldfriendly",
+      "description",
+      "og:site_name",
+      "og:title",
+      "keywords",
+      "robots",
+      "og:type",
+      "og:url",
+      "og:description"
+    ],
+    "popular": 82,
+    "launguage": "en",
+    "image": "https://www.paramount.com/themes/custom/paramount/images/favicon/favicon-96x96.png"
+  }
+]

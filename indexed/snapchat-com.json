@@ -1,26 +1,26 @@
 [
   {
-    "title": "Snapchat - Say It In A Snap",
+    "title": "Top Stories on Snapchat",
     "url": "https://www.snapchat.com/",
-    "description": "Chat, send Snaps, explore Stories, and try Lenses on desktop, or download the app on mobile! See how to connect & create with friends on Snapchat, wherever you are.",
+    "description": "Explore popular Snapchat Stories to see what's trending, discover top creators, and connect with new friends.",
     "keywords": [
       "snapchat",
       "snapchat-com",
       "snapchat.com"
     ],
     "meta tags": [
-      "theme-color",
-      "description",
-      "rating",
-      "apple-itunes-app",
+      "next-head-count",
       "og:title",
-      "og:description",
+      "og:type",
       "og:url",
+      "og:image",
+      "og:image:width",
+      "og:image:height",
       "og:site_name",
-      "og:locale",
-      "og:image"
+      "og:description",
+      "fb:app_id"
     ],
-    "popular": 72,
+    "popular": 82,
     "launguage": "en",
     "image": "https://www.snapchat.com/images/default-preview/facebook.png"
   }

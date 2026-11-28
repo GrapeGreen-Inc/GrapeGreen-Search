@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Felix G. Rios - itch.io",
+    "url": "https://iamfelixrios.itch.io/",
+    "description": "I love games. I make games.",
+    "keywords": [
+      "iamfelixrios",
+      "iamfelixrios-itch-io",
+      "iamfelixrios.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 85,
+    "launguage": "en",
+    "image": "https://iamfelixrios.itch.io/favicon.ico"
+  }
+]

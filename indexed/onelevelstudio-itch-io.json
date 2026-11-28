@@ -1,0 +1,27 @@
+[
+  {
+    "title": "One Level Studio - itch.io",
+    "url": "https://onelevelstudio.itch.io/",
+    "description": "An indie game studio Contact us: onelevelstudio@gmail.com",
+    "keywords": [
+      "onelevelstudio",
+      "onelevelstudio-itch-io",
+      "onelevelstudio.itch.io"
+    ],
+    "meta tags": [
+      "csrf_token",
+      "og:site_name",
+      "twitter:account_id",
+      "itch:path",
+      "twitter:creator",
+      "twitter:title",
+      "twitter:description",
+      "twitter:site",
+      "twitter:card",
+      "twitter:image"
+    ],
+    "popular": 28,
+    "launguage": "en",
+    "image": "https://onelevelstudio.itch.io/favicon.ico"
+  }
+]
